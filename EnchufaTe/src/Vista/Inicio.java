@@ -3,27 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
-import Main.Principal;
-import javax.swing.JDesktopPane;
 
 /**
  *
- * @author Prueba
+ * @author usuario
  */
 public class Inicio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Panel
-     */
-    private static JDesktopPane jDesktopPane_menu;
     public Inicio() {
         initComponents();
-        /*
-        btnAdministrador.putClientProperty("JButton.buttonType", "roundRect" );
-        btnCliente.putClientProperty("JButton.buttonType", "roundRect" );*/
-        btnCliente.setContentAreaFilled(false);
-        btnAdministrador.setContentAreaFilled(false);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,9 +23,7 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCliente = new javax.swing.JButton();
-        btnAdministrador = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        Panelprin = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         CLT_Cubiculos = new javax.swing.JMenuItem();
@@ -44,36 +32,6 @@ public class Inicio extends javax.swing.JFrame {
         ADM_Cubiculos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnCliente.setBackground(new java.awt.Color(0, 204, 0));
-        btnCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/User-80_icon-icons.com_57249.png"))); // NOI18N
-        btnCliente.setText("Cliente");
-        btnCliente.setBorderPainted(false);
-        btnCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 440, 320, 70));
-
-        btnAdministrador.setBackground(new java.awt.Color(0, 204, 0));
-        btnAdministrador.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnAdministrador.setForeground(new java.awt.Color(255, 255, 255));
-        btnAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/manager_icon_129392 (1).png"))); // NOI18N
-        btnAdministrador.setText("Restaurante");
-        btnAdministrador.setBorder(javax.swing.BorderFactory.createLineBorder(null));
-        btnAdministrador.setBorderPainted(false);
-        btnAdministrador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdministradorActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 290, 330, 70));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/MR 1.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jMenu1.setText("CLIENTE");
 
@@ -109,87 +67,52 @@ public class Inicio extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1306, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Panelprin, javax.swing.GroupLayout.PREFERRED_SIZE, 1300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Panelprin, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
-
-    }//GEN-LAST:event_btnClienteActionPerformed
-
-    private void btnAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdministradorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdministradorActionPerformed
-
     private void CLT_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_CubiculosActionPerformed
-        Cliente_Reservacion Reservacion = new Cliente_Reservacion();
-        jDesktopPane_menu.add(Reservacion);
-        Reservacion.setVisible(true);
-// TODO add your handling code here:
+
+
     }//GEN-LAST:event_CLT_CubiculosActionPerformed
 
     private void CLT_SVADActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_SVADActionPerformed
-        Cliente_ServiciosAdicionales Servicios_Adicionales = new Cliente_ServiciosAdicionales();
-        jDesktopPane_menu.add(Servicios_Adicionales);
-        Servicios_Adicionales.setVisible(true);
-// TODO add your handling code here:
+    
     }//GEN-LAST:event_CLT_SVADActionPerformed
 
     private void ADM_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADM_CubiculosActionPerformed
-        ADM_Cubiculos ADM_Cubiculos = new ADM_Cubiculos();
-        jDesktopPane_menu.add(ADM_Cubiculos);
-        ADM_Cubiculos.setVisible(true);
-// TODO add your handling code here:
+
     }//GEN-LAST:event_ADM_CubiculosActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Inicio().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem ADM_Cubiculos;
-    private javax.swing.JMenuItem CLT_Cubiculos;
-    private javax.swing.JMenuItem CLT_SVAD;
-    public javax.swing.JButton btnAdministrador;
-    public javax.swing.JButton btnCliente;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    public javax.swing.JMenuItem ADM_Cubiculos;
+    public javax.swing.JMenuItem CLT_Cubiculos;
+    public javax.swing.JMenuItem CLT_SVAD;
+    public javax.swing.JPanel Panelprin;
+    public javax.swing.JMenu jMenu1;
+    public javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
-
-    public void setJDesktopPane(JDesktopPane jDesktopPane_menu) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

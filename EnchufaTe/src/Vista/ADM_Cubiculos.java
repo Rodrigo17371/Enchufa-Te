@@ -8,7 +8,7 @@ package Vista;
  *
  * @author aldom
  */
-public class ADM_Cubiculos extends javax.swing.JPanel {
+public class ADM_Cubiculos extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ADM_Cubiculos

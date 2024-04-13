@@ -1,21 +1,19 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package Vista;
-import Main.Principal;
+
 import java.awt.Color;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+
 /**
  *
- * @author Prueba
+ * @author usuario
  */
 public class Cliente_Visa extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Panel
-     */
     public Cliente_Visa() {
         initComponents();
         /*
@@ -211,6 +209,7 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
         });
         
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -220,7 +219,6 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnGuardarDatos = new javax.swing.JButton();
         btnAdministrador1 = new javax.swing.JButton();
         txtnumerotarjeta = new javax.swing.JTextField();
         txtmontototal = new javax.swing.JTextField();
@@ -232,25 +230,12 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
         txtprovincia = new javax.swing.JTextField();
         txtitular = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jMenuBar3 = new javax.swing.JMenuBar();
 
-        btnGuardarDatos.setBackground(new java.awt.Color(0, 204, 0));
-        btnGuardarDatos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnGuardarDatos.setText("SIGUIENTE");
-        btnGuardarDatos.setBorderPainted(false);
-        btnGuardarDatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarDatosActionPerformed(evt);
-            }
-        });
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAdministrador1.setBackground(new java.awt.Color(0, 204, 0));
         btnAdministrador1.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
         btnAdministrador1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAdministrador1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnpagarahora.png"))); // NOI18N
         btnAdministrador1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAdministrador1.setBorderPainted(false);
         btnAdministrador1.addActionListener(new java.awt.event.ActionListener() {
@@ -295,14 +280,9 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/fondovisa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 390));
-        setJMenuBar(jMenuBar3);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnGuardarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarDatosActionPerformed
-
-    }//GEN-LAST:event_btnGuardarDatosActionPerformed
 
     private void btnAdministrador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdministrador1ActionPerformed
         // TODO add your handling code here:
@@ -312,11 +292,10 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdireccionActionPerformed
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAdministrador1;
-    public javax.swing.JButton btnGuardarDatos;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenuBar jMenuBar3;
     public javax.swing.JTextField txtciudad;
     public javax.swing.JTextField txtcodigopostal;
     public javax.swing.JTextField txtcvc;
