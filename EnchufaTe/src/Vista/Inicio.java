@@ -4,6 +4,8 @@
  */
 package Vista;
 import Main.Principal;
+import javax.swing.JDesktopPane;
+
 /**
  *
  * @author Prueba
@@ -13,6 +15,7 @@ public class Inicio extends javax.swing.JFrame {
     /**
      * Creates new form Panel
      */
+    private static JDesktopPane jDesktopPane_menu;
     public Inicio() {
         initComponents();
         /*
@@ -30,21 +33,15 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnGuardarDatos = new javax.swing.JButton();
         btnCliente = new javax.swing.JButton();
         btnAdministrador = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jMenuBar3 = new javax.swing.JMenuBar();
-
-        btnGuardarDatos.setBackground(new java.awt.Color(0, 204, 0));
-        btnGuardarDatos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnGuardarDatos.setText("SIGUIENTE");
-        btnGuardarDatos.setBorderPainted(false);
-        btnGuardarDatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarDatosActionPerformed(evt);
-            }
-        });
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        CLT_Cubiculos = new javax.swing.JMenuItem();
+        CLT_SVAD = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        ADM_Cubiculos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,7 +63,7 @@ public class Inicio extends javax.swing.JFrame {
         btnAdministrador.setForeground(new java.awt.Color(255, 255, 255));
         btnAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/manager_icon_129392 (1).png"))); // NOI18N
         btnAdministrador.setText("Restaurante");
-        btnAdministrador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnAdministrador.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnAdministrador.setBorderPainted(false);
         btnAdministrador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,14 +74,43 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/MR 1.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        setJMenuBar(jMenuBar3);
+
+        jMenu1.setText("CLIENTE");
+
+        CLT_Cubiculos.setText("Cubiculos");
+        CLT_Cubiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLT_CubiculosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(CLT_Cubiculos);
+
+        CLT_SVAD.setText("Servicios Adicionales");
+        CLT_SVAD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLT_SVADActionPerformed(evt);
+            }
+        });
+        jMenu1.add(CLT_SVAD);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("ADMINISTRADOR");
+
+        ADM_Cubiculos.setText("Gestion Cubiculos");
+        ADM_Cubiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ADM_CubiculosActionPerformed(evt);
+            }
+        });
+        jMenu2.add(ADM_Cubiculos);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnGuardarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarDatosActionPerformed
-
-    }//GEN-LAST:event_btnGuardarDatosActionPerformed
 
     private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
 
@@ -93,6 +119,27 @@ public class Inicio extends javax.swing.JFrame {
     private void btnAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdministradorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAdministradorActionPerformed
+
+    private void CLT_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_CubiculosActionPerformed
+        Reservacion Reservacion = new Reservacion();
+        jDesktopPane_menu.add(Reservacion);
+        Reservacion.setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_CLT_CubiculosActionPerformed
+
+    private void CLT_SVADActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_SVADActionPerformed
+        Servicios_Adicionales Servicios_Adicionales = new Servicios_Adicionales();
+        jDesktopPane_menu.add(Servicios_Adicionales);
+        Servicios_Adicionales.setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_CLT_SVADActionPerformed
+
+    private void ADM_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADM_CubiculosActionPerformed
+        ADM_Cubiculos ADM_Cubiculos = new ADM_Cubiculos();
+        jDesktopPane_menu.add(ADM_Cubiculos);
+        ADM_Cubiculos.setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_ADM_CubiculosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,10 +178,14 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem ADM_Cubiculos;
+    private javax.swing.JMenuItem CLT_Cubiculos;
+    private javax.swing.JMenuItem CLT_SVAD;
     public javax.swing.JButton btnAdministrador;
     public javax.swing.JButton btnCliente;
-    public javax.swing.JButton btnGuardarDatos;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
