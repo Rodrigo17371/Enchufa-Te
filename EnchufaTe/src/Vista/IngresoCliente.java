@@ -148,7 +148,6 @@ public class IngresoCliente extends javax.swing.JFrame {
         btnRetrocederCli = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnRegistroEmpleadoCon = new javax.swing.JButton();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -219,17 +218,6 @@ public class IngresoCliente extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Cliente.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, -1));
 
-        btnRegistroEmpleadoCon.setBackground(new java.awt.Color(255, 255, 255));
-        btnRegistroEmpleadoCon.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistroEmpleadoCon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Activity 1.png"))); // NOI18N
-        btnRegistroEmpleadoCon.setBorderPainted(false);
-        btnRegistroEmpleadoCon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistroEmpleadoConActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnRegistroEmpleadoCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, 160, 50));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -240,10 +228,6 @@ public class IngresoCliente extends javax.swing.JFrame {
     private void btnRetrocederCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederCliActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederCliActionPerformed
-
-    private void btnRegistroEmpleadoConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroEmpleadoConActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistroEmpleadoConActionPerformed
 
     private void txtDniClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniClienteActionPerformed
         // TODO add your handling code here:
@@ -281,7 +265,6 @@ public static void main(String args[])  {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnRegistroEmpleadoCon;
     public javax.swing.JButton btnRetrocederCli;
     public javax.swing.JButton btnSiguienteCliente;
     public javax.swing.JComboBox<String> cbxMesaCliente;
