@@ -8,12 +8,12 @@ package Vista;
  *
  * @author aldom
  */
-public class Servicios_Adicionales extends javax.swing.JPanel {
+public class Cliente_Reservacion extends javax.swing.JPanel {
 
     /**
-     * Creates new form Servicios_Adicionales
+     * Creates new form Reservacion
      */
-    public Servicios_Adicionales() {
+    public Cliente_Reservacion() {
         initComponents();
     }
 
@@ -26,16 +26,7 @@ public class Servicios_Adicionales extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
     }// </editor-fold>//GEN-END:initComponents
 
 

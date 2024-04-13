@@ -121,14 +121,14 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAdministradorActionPerformed
 
     private void CLT_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_CubiculosActionPerformed
-        Reservacion Reservacion = new Reservacion();
+        Cliente_Reservacion Reservacion = new Cliente_Reservacion();
         jDesktopPane_menu.add(Reservacion);
         Reservacion.setVisible(true);
 // TODO add your handling code here:
     }//GEN-LAST:event_CLT_CubiculosActionPerformed
 
     private void CLT_SVADActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_SVADActionPerformed
-        Servicios_Adicionales Servicios_Adicionales = new Servicios_Adicionales();
+        Cliente_ServiciosAdicionales Servicios_Adicionales = new Cliente_ServiciosAdicionales();
         jDesktopPane_menu.add(Servicios_Adicionales);
         Servicios_Adicionales.setVisible(true);
 // TODO add your handling code here:
