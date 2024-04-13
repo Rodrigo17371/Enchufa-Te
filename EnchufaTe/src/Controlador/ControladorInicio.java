@@ -8,11 +8,18 @@ import javax.swing.JInternalFrame;
 
 public class ControladorInicio implements ActionListener {
     Inicio panel;
-    public ControladorInicio(Inicio panel){
+    IngresoCliente ic;
+    Cliente_ServiciosAdicionales csa;
+    public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa,IngresoCliente ic  ){
         this.panel=panel;
+        this.ic=ic;
+        this.csa=csa;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
+        ic.btnSiguienteCliente.addActionListener(this);
+        csa.btnSiguienteCliente.addActionListener(this);
+        
     }
     
     @Override
@@ -35,6 +42,12 @@ public class ControladorInicio implements ActionListener {
             AgregarFrame(icj);
             icj.setTitle("Cubiculos");
             icj.setVisible(true);
+        }
+        if(e.getSource()==ic.btnSiguienteCliente){
+            Cliente_ServiciosAdicionales csa= new Cliente_ServiciosAdicionales();
+            AgregarFrame(csa);
+            csa.setTitle("Productos");
+            csa.setVisible(true);
         }
     }
     void AgregarFrame(JInternalFrame frame){

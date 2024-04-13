@@ -8,7 +8,7 @@ package Vista;
  *
  * @author aldom
  */
-public class Cliente_ServiciosAdicionales extends javax.swing.JPanel {
+public class Cliente_ServiciosAdicionales extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Servicios_Adicionales
@@ -26,19 +26,28 @@ public class Cliente_ServiciosAdicionales extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        btnSiguienteCliente = new javax.swing.JButton();
+
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnSiguienteCliente.setBackground(new java.awt.Color(255, 0, 0));
+        btnSiguienteCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnSiguienteCliente.setText("Siguiente");
+        btnSiguienteCliente.setBorderPainted(false);
+        btnSiguienteCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguienteClienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 400, 50));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSiguienteClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteClienteActionPerformed
+
+    }//GEN-LAST:event_btnSiguienteClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnSiguienteCliente;
     // End of variables declaration//GEN-END:variables
 }
