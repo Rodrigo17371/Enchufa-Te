@@ -33,7 +33,6 @@ public class ControladorInicio implements ActionListener {
         emtp.btnPlin.addActionListener(this);
         emtp.btnVisa.addActionListener(this);
         emtp.btnYape.addActionListener(this);
-        
     }
     
     @Override
@@ -56,11 +55,6 @@ public class ControladorInicio implements ActionListener {
             icj.setVisible(true);
         }
         if (e.getSource() == ic.btnSiguienteCliente) {
-            AgregarFrame(csa);
-            csa.setTitle("Productos");
-            csa.setVisible(true);
-        }
-        if (e.getSource() == panel.btnSiguienteCliente123) {
             AgregarFrame(csa);
             csa.setTitle("Productos");
             csa.setVisible(true);

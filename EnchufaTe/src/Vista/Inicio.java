@@ -23,7 +23,6 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnSiguienteCliente123 = new javax.swing.JButton();
         dspEscritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -33,8 +32,6 @@ public class Inicio extends javax.swing.JFrame {
         ADM_Cubiculos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btnSiguienteCliente123.setText("jButton1");
 
         dspEscritorio.setBackground(new java.awt.Color(51, 0, 0));
         dspEscritorio.setForeground(new java.awt.Color(102, 0, 51));
@@ -77,19 +74,12 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnSiguienteCliente123)
-                .addGap(18, 18, 18)
-                .addComponent(dspEscritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 1203, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(dspEscritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 1300, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSiguienteCliente123)
-                .addGap(294, 294, 294))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(dspEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -147,7 +137,6 @@ public class Inicio extends javax.swing.JFrame {
     public javax.swing.JMenuItem ADM_Cubiculos;
     public javax.swing.JMenuItem CLT_Cubiculos;
     public javax.swing.JMenuItem CLT_SVAD;
-    public javax.swing.JButton btnSiguienteCliente123;
     public javax.swing.JDesktopPane dspEscritorio;
     public javax.swing.JMenu jMenu1;
     public javax.swing.JMenu jMenu2;
