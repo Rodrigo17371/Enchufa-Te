@@ -141,6 +141,7 @@ public class IngresoCajero extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtDniCliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N

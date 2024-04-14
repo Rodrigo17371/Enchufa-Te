@@ -16,116 +16,9 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
 
     public IngresoCliente() {
         initComponents();
-        btnRetrocederCli.setContentAreaFilled(false);
-        txtDniCliente.setBackground(new java.awt.Color(0,0,0,1));
-        txtNombreCliente.setBackground(new java.awt.Color(0,0,0,1));
-        txtApellidoPaCliente.setBackground(new java.awt.Color(0,0,0,1));
-        txtApellidoMaCliente.setBackground(new java.awt.Color(0,0,0,1));
-        cbxMesaCliente.setBackground(new java.awt.Color(0,0,0,1));
-        btnSiguienteCliente.putClientProperty("JButton.buttonType", "roundRect" );
-        cbxMesaCliente.putClientProperty("JComponent.roundRect", true );
-        configurarTextosIngresoCliente();
+
     }
-    public void BorrarBordesIngresoCliente() {
-        txtDniCliente.setBorder(null);
-        txtNombreCliente.setBorder(null);
-        txtApellidoPaCliente.setBorder(null);
-        txtApellidoMaCliente.setBorder(null);
-    }
-    public void configurarTextosIngresoCliente() {
-        txtDniCliente.setText("DNI"); // Establece el texto inicial
-        txtNombreCliente.setText("Nombre");
-        txtApellidoPaCliente.setText("Apellido Paterno");
-        txtApellidoMaCliente.setText("Apellido Materno");
-        txtDniCliente.setForeground(Color.LIGHT_GRAY); // Establece el color de texto en gris
-        txtNombreCliente.setForeground(Color.LIGHT_GRAY);
-        txtApellidoPaCliente.setForeground(Color.LIGHT_GRAY);
-        txtApellidoMaCliente.setForeground(Color.LIGHT_GRAY);
-        // Agrega un FocusListener para el campo DNI
-        txtDniCliente.addFocusListener(new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                // Cuando el campo obtiene el foco, borra el texto y cambia el color del texto a negro
-                if (txtDniCliente.getText().equals("DNI")) {
-                    txtDniCliente.setText("");
-                    txtDniCliente.setForeground(Color.WHITE);
-                }
-            }
-
-            @Override
-            public void focusLost(FocusEvent e) {
-                // Cuando el campo pierde el foco y está vacío, vuelve a mostrar "DNI" en gris
-                if (txtDniCliente.getText().isEmpty()) {
-                    txtDniCliente.setText("DNI");
-                    txtDniCliente.setForeground(Color.LIGHT_GRAY);
-                }
-            }
-            
-        });
-        //Nombre 
-        txtNombreCliente.addFocusListener(new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                // Cuando el campo obtiene el foco, borra el texto y cambia el color del texto a negro
-                if (txtNombreCliente.getText().equals("Nombre")) {
-                    txtNombreCliente.setText("");
-                    txtNombreCliente.setForeground(Color.WHITE);
-                }
-            }
-
-            @Override
-            public void focusLost(FocusEvent e) {
-                // Cuando el campo pierde el foco y está vacío, vuelve a mostrar "DNI" en gris
-                if (txtNombreCliente.getText().isEmpty()) {
-                    txtNombreCliente.setText("Nombre");
-                    txtNombreCliente.setForeground(Color.LIGHT_GRAY);
-                }
-            }
-            
-        });
-        //Apellido Paterno
-        txtApellidoPaCliente.addFocusListener(new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                // Cuando el campo obtiene el foco, borra el texto y cambia el color del texto a negro
-                if (txtApellidoPaCliente.getText().equals("Apellido Paterno")) {
-                    txtApellidoPaCliente.setText("");
-                    txtApellidoPaCliente.setForeground(Color.WHITE);
-                }
-            }
-
-            @Override
-            public void focusLost(FocusEvent e) {
-                // Cuando el campo pierde el foco y está vacío, vuelve a mostrar "DNI" en gris
-                if (txtApellidoPaCliente.getText().isEmpty()) {
-                    txtApellidoPaCliente.setText("Apellido Paterno");
-                    txtApellidoPaCliente.setForeground(Color.LIGHT_GRAY);
-                }
-            }
-            
-        });
-        //Apellido Materno
-        txtApellidoMaCliente.addFocusListener(new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                // Cuando el campo obtiene el foco, borra el texto y cambia el color del texto a negro
-                if (txtApellidoMaCliente.getText().equals("Apellido Materno")) {
-                    txtApellidoMaCliente.setText("");
-                    txtApellidoMaCliente.setForeground(Color.WHITE);
-                }
-            }
-
-            @Override
-            public void focusLost(FocusEvent e) {
-                // Cuando el campo pierde el foco y está vacío, vuelve a mostrar "DNI" en gris
-                if (txtApellidoMaCliente.getText().isEmpty()) {
-                    txtApellidoMaCliente.setText("Apellido Materno");
-                    txtApellidoMaCliente.setForeground(Color.LIGHT_GRAY);
-                }
-            }
-        });
-        
-    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -143,6 +36,7 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         btnSiguienteCliente = new javax.swing.JButton();
 
+        setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtDniCliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N

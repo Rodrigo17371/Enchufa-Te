@@ -26,16 +26,16 @@ public class Cliente_ServiciosAdicionales extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnSiguienteCliente = new javax.swing.JButton();
+        btnComprar = new javax.swing.JButton();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 260, 80));
+        getContentPane().add(btnComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 40, 260, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnSiguienteCliente;
+    public javax.swing.JButton btnComprar;
     // End of variables declaration//GEN-END:variables
 }
