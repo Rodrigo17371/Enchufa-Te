@@ -1,17 +1,17 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package Vista;
 
 /**
  *
- * @author aldom
+ * @author usuario
  */
 public class Cliente_ServiciosAdicionales extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form Servicios_Adicionales
+     * Creates new form Cliente_ServiciosAdicionales1
      */
     public Cliente_ServiciosAdicionales() {
         initComponents();
@@ -29,22 +29,10 @@ public class Cliente_ServiciosAdicionales extends javax.swing.JInternalFrame {
         btnSiguienteCliente = new javax.swing.JButton();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 260, 80));
 
-        btnSiguienteCliente.setBackground(new java.awt.Color(255, 0, 0));
-        btnSiguienteCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnSiguienteCliente.setText("Siguiente");
-        btnSiguienteCliente.setBorderPainted(false);
-        btnSiguienteCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSiguienteClienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 400, 50));
+        pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSiguienteClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteClienteActionPerformed
-
-    }//GEN-LAST:event_btnSiguienteClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

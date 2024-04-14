@@ -132,7 +132,6 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
 
         txtDniCliente = new javax.swing.JTextField();
         cbxMesaCliente = new javax.swing.JComboBox<>();
-        btnSiguienteCliente = new javax.swing.JButton();
         txtApellidoMaCliente = new javax.swing.JTextField();
         txtNombreCliente = new javax.swing.JTextField();
         txtApellidoPaCliente = new javax.swing.JTextField();
@@ -142,6 +141,7 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         btnRetrocederCli = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnSiguienteCliente = new javax.swing.JButton();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -158,17 +158,6 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
         cbxMesaCliente.setForeground(new java.awt.Color(255, 255, 255));
         cbxMesaCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mesa 1", "Mesa 2", "Mesa 3", "Mesa 4", "Mesa 5", "Mesa 6", "Mesa 7", "Mesa 8" }));
         getContentPane().add(cbxMesaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 360, 50));
-
-        btnSiguienteCliente.setBackground(new java.awt.Color(255, 0, 0));
-        btnSiguienteCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnSiguienteCliente.setText("Siguiente");
-        btnSiguienteCliente.setBorderPainted(false);
-        btnSiguienteCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSiguienteClienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, 400, 50));
 
         txtApellidoMaCliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         getContentPane().add(txtApellidoMaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 340, 40));
@@ -205,6 +194,7 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 70, 60));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 30, 30));
+        getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 260, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -212,10 +202,6 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
     private void txtDniClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDniClienteActionPerformed
-
-    private void btnSiguienteClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteClienteActionPerformed
-
-    }//GEN-LAST:event_btnSiguienteClienteActionPerformed
 
     private void btnRetrocederCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederCliActionPerformed
         // TODO add your handling code here:

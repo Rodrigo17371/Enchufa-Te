@@ -10,13 +10,14 @@ public class ControladorInicio implements ActionListener {
     Inicio panel;
     IngresoCliente ic;
     Cliente_ServiciosAdicionales csa;
-    public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa,IngresoCliente ic  ){
+    public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa,IngresoCliente ic ){
         this.panel=panel;
         this.ic=ic;
         this.csa=csa;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
+        panel.btnSiguienteCliente123.addActionListener(this);
         ic.btnSiguienteCliente.addActionListener(this);
         csa.btnSiguienteCliente.addActionListener(this);
         
@@ -44,6 +45,9 @@ public class ControladorInicio implements ActionListener {
             icj.setVisible(true);
         }
         if(e.getSource()==ic.btnSiguienteCliente){
+            System.out.println("GAAAAAAAA");
+        }
+        if(e.getSource()==panel.btnSiguienteCliente123){
             Cliente_ServiciosAdicionales csa= new Cliente_ServiciosAdicionales();
             AgregarFrame(csa);
             csa.setTitle("Productos");
@@ -51,8 +55,9 @@ public class ControladorInicio implements ActionListener {
         }
     }
     void AgregarFrame(JInternalFrame frame){
-        panel.Panelprin.removeAll();// Elimina cualquier InternalFrame existente en el panel de escritorio
-        panel.Panelprin.add(frame);// Agrega el InternalFrame al panel de escritorio
-        panel.Panelprin.repaint();// Vuelve a pintar el panel de escritorio para mostrar el InternalFrame agregado
+        panel.dspEscritorio.removeAll();// Elimina cualquier InternalFrame existente en el panel de escritorio
+        panel.dspEscritorio.add(frame);// Agrega el InternalFrame al panel de escritorio
+        panel.dspEscritorio.repaint();// Vuelve a pintar el panel de escritorio para mostrar el InternalFrame agregado
     }
+    
 }
