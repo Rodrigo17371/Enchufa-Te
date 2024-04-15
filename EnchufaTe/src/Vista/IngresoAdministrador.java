@@ -91,6 +91,7 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         btnIngresarAdm = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -132,6 +133,7 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnIngresarAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 330, 50));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 310, 30, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,6 +151,7 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnIngresarAdm;
     public javax.swing.JButton btnRetrocederAdm;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

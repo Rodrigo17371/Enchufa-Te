@@ -19,7 +19,7 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
         /*
         btnAdministrador.putClientProperty("JButton.buttonType", "roundRect" );
         btnCliente.putClientProperty("JButton.buttonType", "roundRect" );*/
-        btnAdministrador1.setContentAreaFilled(false);
+        btnpagarahora.setContentAreaFilled(false);
         configurarTextosPago();
     }
     public void configurarTextosPago() {
@@ -219,7 +219,7 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAdministrador1 = new javax.swing.JButton();
+        btnpagarahora = new javax.swing.JButton();
         txtnumerotarjeta = new javax.swing.JTextField();
         txtmontototal = new javax.swing.JTextField();
         txtciudad = new javax.swing.JTextField();
@@ -233,17 +233,18 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAdministrador1.setBackground(new java.awt.Color(0, 204, 0));
-        btnAdministrador1.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnAdministrador1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAdministrador1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnAdministrador1.setBorderPainted(false);
-        btnAdministrador1.addActionListener(new java.awt.event.ActionListener() {
+        btnpagarahora.setBackground(new java.awt.Color(0, 204, 0));
+        btnpagarahora.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnpagarahora.setForeground(new java.awt.Color(255, 255, 255));
+        btnpagarahora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/btnpagarahora.png"))); // NOI18N
+        btnpagarahora.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnpagarahora.setBorderPainted(false);
+        btnpagarahora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdministrador1ActionPerformed(evt);
+                btnpagarahoraActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAdministrador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 370, 60));
+        getContentPane().add(btnpagarahora, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 370, 60));
 
         txtnumerotarjeta.setBackground(new java.awt.Color(237, 237, 237));
         getContentPane().add(txtnumerotarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 254, 47));
@@ -284,9 +285,9 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAdministrador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdministrador1ActionPerformed
+    private void btnpagarahoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpagarahoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdministrador1ActionPerformed
+    }//GEN-LAST:event_btnpagarahoraActionPerformed
 
     private void txtdireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdireccionActionPerformed
         // TODO add your handling code here:
@@ -294,7 +295,7 @@ public class Cliente_Visa extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAdministrador1;
+    public javax.swing.JButton btnpagarahora;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JTextField txtciudad;
     public javax.swing.JTextField txtcodigopostal;

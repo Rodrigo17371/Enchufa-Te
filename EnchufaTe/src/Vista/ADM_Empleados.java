@@ -4,23 +4,16 @@
  */
 package Vista;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Insets;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import javax.swing.JCheckBox;
-
 /**
  *
- * @author Prueba
+ * @author usuario
  */
 public class ADM_Empleados extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form Pedidos
+     * Creates new form ADM_Cubiculos1
      */
-    public void RegistroEmpleados() {
+    public ADM_Empleados() {
         initComponents();
         btnEliminarEmpleado.setContentAreaFilled(false);
         btnEliminarEmpleado.setBorder(null);
@@ -35,6 +28,7 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         txtpuestoemp.setBackground(new java.awt.Color(0,0,0,1));
         txtdniemp.setBackground(new java.awt.Color(0,0,0,1));
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,8 +38,6 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtDniCliente = new javax.swing.JTextField();
-        txtDniCliente1 = new javax.swing.JTextField();
         btnEliminarEmpleado = new javax.swing.JButton();
         btnActualizarEmpleado = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -63,24 +55,12 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         jCheckBox6 = new javax.swing.JCheckBox();
         txtdniemp = new javax.swing.JTextField();
         btnRegistrarEmpleado = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-
-        txtDniCliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtDniCliente.setBorder(null);
-
-        txtDniCliente1.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtDniCliente1.setBorder(null);
-        txtDniCliente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDniCliente1ActionPerformed(evt);
-            }
-        });
+        jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnEliminarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnEliminarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminarempleado.png"))); // NOI18N
         btnEliminarEmpleado.setBorderPainted(false);
         btnEliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +71,6 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
 
         btnActualizarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnActualizarEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizarempleado.png"))); // NOI18N
         btnActualizarEmpleado.setBorderPainted(false);
         btnActualizarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +168,6 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
 
         btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Activity 3.png"))); // NOI18N
         btnRegistrarEmpleado.setBorderPainted(false);
         btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,9 +175,7 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 160, 40));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro de empleados.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -215,10 +191,6 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
     private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox5ActionPerformed
-
-    private void txtDniCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniCliente1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDniCliente1ActionPerformed
 
     private void txtApepaempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApepaempActionPerformed
         // TODO add your handling code here:
@@ -248,6 +220,7 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarEmpleado;
     public javax.swing.JButton btnEliminarEmpleado;
@@ -258,13 +231,11 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
     public javax.swing.JCheckBox jCheckBox4;
     public javax.swing.JCheckBox jCheckBox5;
     public javax.swing.JCheckBox jCheckBox6;
-    public javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tblDatosEmp;
     public javax.swing.JTextField txtApemaemp;
     public javax.swing.JTextField txtApepaemp;
-    public javax.swing.JTextField txtDniCliente;
-    public javax.swing.JTextField txtDniCliente1;
     public javax.swing.JTextField txtNombreemp;
     public javax.swing.JTextField txtdniemp;
     public javax.swing.JTextField txtedademp;

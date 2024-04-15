@@ -35,6 +35,7 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
         btnRetrocederCli = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnSiguienteCliente = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -89,6 +90,7 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
         getContentPane().add(btnRetrocederCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 70, 60));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 30, 30));
         getContentPane().add(btnSiguienteCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 260, 80));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,6 +109,7 @@ public class IngresoCliente extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnSiguienteCliente;
     public javax.swing.JComboBox<String> cbxMesaCliente;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

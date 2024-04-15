@@ -16,7 +16,12 @@ public class Principal {
     public static Cliente_Plin cp;
     public static Cliente_Yape cy;
     public static Cliente_PagoEfectivo cpe;
-    
+    public static Cliente_Boleta cb;
+    public static Cajero_Cubiculos ccb;
+    public static InterfazAdmin ina;
+    public static ADM_Cubiculos admc;
+    public static ADM_Empleados adme;
+    public static ADM_Productos admp;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -28,6 +33,12 @@ public class Principal {
          cp= new Cliente_Plin();
          cy= new Cliente_Yape();
          cpe= new Cliente_PagoEfectivo();
+         cb= new Cliente_Boleta();
+         ccb= new Cajero_Cubiculos();
+         ina= new InterfazAdmin();
+         admc= new ADM_Cubiculos();
+         adme= new ADM_Empleados();
+         admp= new ADM_Productos();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
@@ -39,7 +50,13 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(cp);
         SwingUtilities.updateComponentTreeUI(cy);
         SwingUtilities.updateComponentTreeUI(cpe);
-        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe);
+        SwingUtilities.updateComponentTreeUI(cb);
+        SwingUtilities.updateComponentTreeUI(ccb);
+        SwingUtilities.updateComponentTreeUI(ina);
+        SwingUtilities.updateComponentTreeUI(admc);
+        SwingUtilities.updateComponentTreeUI(adme);
+        SwingUtilities.updateComponentTreeUI(admp);
+        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc,adme,admp);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         iad.BorrarBordesIngresoAdmin();
