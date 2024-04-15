@@ -36,7 +36,7 @@ public class Inicio extends javax.swing.JFrame {
 
         dspEscritorio.setBackground(new java.awt.Color(51, 0, 0));
         dspEscritorio.setForeground(new java.awt.Color(102, 0, 51));
-        getContentPane().add(dspEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 660));
+        getContentPane().add(dspEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 670));
 
         jMenu1.setText("CLIENTE");
 

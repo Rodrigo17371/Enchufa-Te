@@ -16,6 +16,8 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
 
     public IngresoAdministrador() {
         initComponents();
+        btnIngresarAdm.setContentAreaFilled(false);
+        btnIngresarAdm.setBorder(null);
         btnRetrocederAdm.setContentAreaFilled(false);
         txtUsuarioAdm.setBackground(new java.awt.Color(0,0,0,1));
         txtContraseñaAdm.setBackground(new java.awt.Color(0,0,0,1));
@@ -86,9 +88,7 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
         btnRetrocederAdm = new javax.swing.JButton();
         txtUsuarioAdm = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         txtContraseñaAdm = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         btnIngresarAdm = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -108,32 +108,25 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
 
         txtUsuarioAdm.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtUsuarioAdm.setBorder(null);
-        getContentPane().add(txtUsuarioAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 340, 40));
+        getContentPane().add(txtUsuarioAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 300, 40));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 390, 30, 30));
 
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("___________________________________________________________________");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, -1, -1));
-
         txtContraseñaAdm.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        getContentPane().add(txtContraseñaAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 340, 40));
-
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("___________________________________________________________________");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, -1));
+        getContentPane().add(txtContraseñaAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 300, 40));
 
         btnIngresarAdm.setBackground(new java.awt.Color(255, 0, 0));
         btnIngresarAdm.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnIngresarAdm.setText("Ingresar");
         btnIngresarAdm.setBorderPainted(false);
         btnIngresarAdm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarAdmActionPerformed(evt);
             }
         });
-        getContentPane().add(btnIngresarAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 330, 50));
+        getContentPane().add(btnIngresarAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 160, 40));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 310, 30, 30));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 600));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/LOGINadm.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,8 +146,6 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     public javax.swing.JTextField txtContraseñaAdm;
     public javax.swing.JTextField txtUsuarioAdm;
     // End of variables declaration//GEN-END:variables

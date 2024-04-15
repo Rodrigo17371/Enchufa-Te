@@ -47,7 +47,7 @@ public class ControladorInicio implements ActionListener {
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
         ic.btnSiguienteCliente.addActionListener(this);
-        csa.btnComprar.addActionListener(this);
+        csa.btnpagar12.addActionListener(this);
         emtp.btnPagoEfectivo.addActionListener(this);
         emtp.btnPlin.addActionListener(this);
         emtp.btnVisa.addActionListener(this);
@@ -59,6 +59,9 @@ public class ControladorInicio implements ActionListener {
         ina.btnCubiculos.addActionListener(this);
         ina.btnEmpleados.addActionListener(this);
         ina.btnProductos.addActionListener(this);
+        admc.btnRetrocederAdmin.addActionListener(this);
+        adme.btnRetrocederAdmin.addActionListener(this);
+        admp.btnRetrocederAdmin.addActionListener(this);
     }
     
     @Override
@@ -83,7 +86,12 @@ public class ControladorInicio implements ActionListener {
             csa.setTitle("Productos");
             csa.setVisible(true);
         }
-        if (e.getSource()==csa.btnComprar){
+        if (e.getSource()==csa.btnpagar12){
+            AgregarFrame(emtp);
+            emtp.setTitle("Metodos de Pago");
+            emtp.setVisible(true);
+        }
+        if (e.getSource()==csa.btnpagar1){
             AgregarFrame(emtp);
             emtp.setTitle("Metodos de Pago");
             emtp.setVisible(true);
@@ -129,19 +137,34 @@ public class ControladorInicio implements ActionListener {
             ina.setVisible(true);
         }
         if (e.getSource()==ina.btnCubiculos){
-            AgregarFrameadm(admc);
+            AgregarFrame(admc);
             admc.setTitle("Estado de Cubiculos");
             admc.setVisible(true);
         }
+        if (e.getSource()==admc.btnRetrocederAdmin){
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
         if (e.getSource()==ina.btnEmpleados){
-            AgregarFrameadm(adme);
-            adme.setTitle("Registro de Empleados");
+            AgregarFrame(adme);
+            adme.setTitle("Registro de empleados");
             adme.setVisible(true);
         }
+        if (e.getSource()==adme.btnRetrocederAdmin){
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
         if (e.getSource()==ina.btnProductos){
-            AgregarFrameadm(admp);
-            admp.setTitle("Registro de Productos");
+            AgregarFrame(admp);
+            admp.setTitle("Registro de productos");
             admp.setVisible(true);
+        }
+        if (e.getSource()==admp.btnRetrocederAdmin){
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
         }
         
     }
@@ -156,9 +179,5 @@ public class ControladorInicio implements ActionListener {
         emtp.dspEscritorio.add(frame);// Agrega el InternalFrame al panel de escritorio
         emtp.dspEscritorio.repaint();// Vuelve a pintar el panel de escritorio para mostrar el InternalFrame agregado
     }
-    void AgregarFrameadm(JInternalFrame frame) {
-        ina.dspEscritorio.removeAll();// Elimina cualquier InternalFrame existente en el panel de escritorio
-        ina.dspEscritorio.add(frame);// Agrega el InternalFrame al panel de escritorio
-        ina.dspEscritorio.repaint();// Vuelve a pintar el panel de escritorio para mostrar el InternalFrame agregado
-    }
+
 }

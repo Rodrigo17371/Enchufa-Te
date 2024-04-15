@@ -15,14 +15,14 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
      */
     public InterfazAdmin() {
         initComponents();
-        /*btnRetrocederAdmin.setContentAreaFilled(false);
+        btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
         btnCubiculos.setContentAreaFilled(false);
         btnCubiculos.setBorder(null);
         btnEmpleados.setContentAreaFilled(false);
         btnEmpleados.setBorder(null);
         btnProductos.setContentAreaFilled(false);
-        btnProductos.setBorder(null);*/
+        btnProductos.setBorder(null);
     }
 
     /**
@@ -34,7 +34,6 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dspEscritorio = new javax.swing.JDesktopPane();
         btnProductos = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
         btnCubiculos = new javax.swing.JButton();
@@ -42,10 +41,6 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        dspEscritorio.setBackground(new java.awt.Color(51, 0, 0));
-        dspEscritorio.setForeground(new java.awt.Color(102, 0, 51));
-        getContentPane().add(dspEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 970, 630));
 
         btnProductos.setBackground(new java.awt.Color(255, 255, 255));
         btnProductos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -55,7 +50,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
                 btnProductosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 220, 50));
+        getContentPane().add(btnProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 160, 40));
 
         btnEmpleados.setBackground(new java.awt.Color(255, 255, 255));
         btnEmpleados.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -65,7 +60,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
                 btnEmpleadosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 220, 50));
+        getContentPane().add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 160, 40));
 
         btnCubiculos.setBackground(new java.awt.Color(255, 255, 255));
         btnCubiculos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -75,7 +70,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
                 btnCubiculosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 220, 50));
+        getContentPane().add(btnCubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 160, 40));
 
         btnRetrocederAdmin.setBackground(new java.awt.Color(255, 255, 255));
         btnRetrocederAdmin.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -86,6 +81,8 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Adminenchufat.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 640));
 
         pack();
@@ -113,7 +110,6 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnProductos;
     public javax.swing.JButton btnRetrocederAdmin;
-    public javax.swing.JDesktopPane dspEscritorio;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

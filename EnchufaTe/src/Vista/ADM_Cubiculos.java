@@ -15,18 +15,12 @@ public class ADM_Cubiculos extends javax.swing.JInternalFrame {
      */
     public ADM_Cubiculos() {
         initComponents();
-        btnEliminarEmpleado.setContentAreaFilled(false);
-        btnEliminarEmpleado.setBorder(null);
-        btnActualizarEmpleado.setContentAreaFilled(false);
-        btnActualizarEmpleado.setBorder(null);
-        btnRegistrarEmpleado.setContentAreaFilled(false);
-        btnRegistrarEmpleado.setBorder(null);
-        txtNombreemp.setBackground(new java.awt.Color(0,0,0,1));
-        txtApepaemp.setBackground(new java.awt.Color(0,0,0,1));
-        txtApemaemp.setBackground(new java.awt.Color(0,0,0,1));
-        txtedademp.setBackground(new java.awt.Color(0,0,0,1));
-        txtpuestoemp.setBackground(new java.awt.Color(0,0,0,1));
-        txtdniemp.setBackground(new java.awt.Color(0,0,0,1));
+        btnRetrocederAdmin.setContentAreaFilled(false);
+        btnRetrocederAdmin.setBorder(null);
+        btnEmpleados.setContentAreaFilled(false);
+        btnEmpleados.setBorder(null);
+        btnProductos.setContentAreaFilled(false);
+        btnProductos.setBorder(null);
     }
 
     /**
@@ -38,207 +32,67 @@ public class ADM_Cubiculos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnEliminarEmpleado = new javax.swing.JButton();
-        btnActualizarEmpleado = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblDatosEmp = new javax.swing.JTable();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        txtApepaemp = new javax.swing.JTextField();
-        txtApemaemp = new javax.swing.JTextField();
-        txtedademp = new javax.swing.JTextField();
-        txtpuestoemp = new javax.swing.JTextField();
-        txtNombreemp = new javax.swing.JTextField();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        txtdniemp = new javax.swing.JTextField();
-        btnRegistrarEmpleado = new javax.swing.JButton();
+        btnProductos = new javax.swing.JButton();
+        btnEmpleados = new javax.swing.JButton();
+        btnRetrocederAdmin = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnEliminarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarEmpleado.setBorderPainted(false);
-        btnEliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+        btnProductos.setBackground(new java.awt.Color(255, 255, 255));
+        btnProductos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnProductos.setBorderPainted(false);
+        btnProductos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarEmpleadoActionPerformed(evt);
+                btnProductosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 530, 160, 40));
+        getContentPane().add(btnProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 160, 30));
 
-        btnActualizarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
-        btnActualizarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnActualizarEmpleado.setBorderPainted(false);
-        btnActualizarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+        btnEmpleados.setBackground(new java.awt.Color(255, 255, 255));
+        btnEmpleados.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnEmpleados.setBorderPainted(false);
+        btnEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarEmpleadoActionPerformed(evt);
+                btnEmpleadosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, 160, 40));
+        getContentPane().add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 160, 30));
 
-        tblDatosEmp.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(tblDatosEmp);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 700, 440));
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
-        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
-        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, -1, -1));
-        getContentPane().add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
-
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        btnRetrocederAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        btnRetrocederAdmin.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRetrocederAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Button - Symbol.png"))); // NOI18N
+        btnRetrocederAdmin.setBorderPainted(false);
+        btnRetrocederAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                btnRetrocederAdminActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
+        getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtApepaemp.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtApepaemp.setText("Apellido Paterno");
-        txtApepaemp.setBorder(null);
-        txtApepaemp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApepaempActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtApepaemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 150, 40));
-
-        txtApemaemp.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtApemaemp.setText("Apellido Materno");
-        txtApemaemp.setBorder(null);
-        txtApemaemp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApemaempActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtApemaemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 150, 40));
-
-        txtedademp.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtedademp.setText("Edad");
-        txtedademp.setBorder(null);
-        txtedademp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtedadempActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtedademp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 150, 40));
-
-        txtpuestoemp.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtpuestoemp.setText("Puesto");
-        txtpuestoemp.setBorder(null);
-        txtpuestoemp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpuestoempActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtpuestoemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 150, 40));
-
-        txtNombreemp.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtNombreemp.setText("Nombre");
-        txtNombreemp.setBorder(null);
-        txtNombreemp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreempActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtNombreemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 150, 40));
-        getContentPane().add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, -1, -1));
-
-        txtdniemp.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtdniemp.setText("DNI");
-        txtdniemp.setBorder(null);
-        txtdniemp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdniempActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtdniemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, 150, 40));
-
-        btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarEmpleado.setBorderPainted(false);
-        btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarEmpleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 160, 40));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 620));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ClienteEnchufat.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
+    private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
+    }//GEN-LAST:event_btnProductosActionPerformed
 
-    private void btnActualizarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarEmpleadoActionPerformed
+    private void btnEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpleadosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarEmpleadoActionPerformed
+    }//GEN-LAST:event_btnEmpleadosActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void btnRetrocederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederAdminActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
-
-    private void txtApepaempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApepaempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtApepaempActionPerformed
-
-    private void txtApemaempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApemaempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtApemaempActionPerformed
-
-    private void txtedadempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtedadempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtedadempActionPerformed
-
-    private void txtpuestoempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpuestoempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpuestoempActionPerformed
-
-    private void txtNombreempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreempActionPerformed
-
-    private void txtdniempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdniempActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtdniempActionPerformed
-
-    private void btnRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
+    }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnActualizarEmpleado;
-    public javax.swing.JButton btnEliminarEmpleado;
-    public javax.swing.JButton btnRegistrarEmpleado;
-    public javax.swing.JCheckBox jCheckBox1;
-    public javax.swing.JCheckBox jCheckBox2;
-    public javax.swing.JCheckBox jCheckBox3;
-    public javax.swing.JCheckBox jCheckBox4;
-    public javax.swing.JCheckBox jCheckBox5;
-    public javax.swing.JCheckBox jCheckBox6;
+    public javax.swing.JButton btnEmpleados;
+    public javax.swing.JButton btnProductos;
+    public javax.swing.JButton btnRetrocederAdmin;
     private javax.swing.JLabel jLabel2;
-    public javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable tblDatosEmp;
-    public javax.swing.JTextField txtApemaemp;
-    public javax.swing.JTextField txtApepaemp;
-    public javax.swing.JTextField txtNombreemp;
-    public javax.swing.JTextField txtdniemp;
-    public javax.swing.JTextField txtedademp;
-    public javax.swing.JTextField txtpuestoemp;
     // End of variables declaration//GEN-END:variables
 }

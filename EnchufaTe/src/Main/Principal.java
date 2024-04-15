@@ -60,6 +60,9 @@ public class Principal {
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         iad.BorrarBordesIngresoAdmin();
+        icj.BorrarBordesIngresoCliente();
+        ic.BorrarBordesIngresoCliente();
         panel.setVisible(true);
+        
     }
 }

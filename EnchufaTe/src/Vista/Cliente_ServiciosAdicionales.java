@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+
 /**
  *
  * @author usuario
@@ -12,9 +15,55 @@ public class Cliente_ServiciosAdicionales extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Cliente_ServiciosAdicionales1
-     */
+     */private JPanel panelContenedor;
+    private JScrollBar jScrollBar;
     public Cliente_ServiciosAdicionales() {
         initComponents();
+        
+        btnpagar.setContentAreaFilled(false);
+        btnpagar.setBorder(null);
+        btnpagar1.setContentAreaFilled(false);
+        btnpagar1.setBorder(null);
+        btnpagar2.setContentAreaFilled(false);
+        btnpagar2.setBorder(null);
+        btnpagar3.setContentAreaFilled(false);
+        btnpagar3.setBorder(null);
+        btnpagar4.setContentAreaFilled(false);
+        btnpagar4.setBorder(null);
+        btnpagar5.setContentAreaFilled(false);
+        btnpagar5.setBorder(null);
+        btnpagar6.setContentAreaFilled(false);
+        btnpagar6.setBorder(null);
+        btnpagar7.setContentAreaFilled(false);
+        btnpagar7.setBorder(null);
+        btnpagar8.setContentAreaFilled(false);
+        btnpagar8.setBorder(null);
+        btnpagar9.setContentAreaFilled(false);
+        btnpagar9.setBorder(null);
+        btnpagar10.setContentAreaFilled(false);
+        btnpagar10.setBorder(null);
+        btnpagar11.setContentAreaFilled(false);
+        btnpagar11.setBorder(null);
+        btnpagar12.setContentAreaFilled(false);
+        btnpagar12.setBorder(null);
+        btnpagar13.setContentAreaFilled(false);
+        btnpagar13.setBorder(null);
+        btnpagar14.setContentAreaFilled(false);
+        btnpagar14.setBorder(null);
+        btnpagar15.setContentAreaFilled(false);
+        btnpagar15.setBorder(null);
+        btnpagar16.setContentAreaFilled(false);
+        btnpagar16.setBorder(null);
+        btnpagar17.setContentAreaFilled(false);
+        btnpagar17.setBorder(null);
+        btnpagar18.setContentAreaFilled(false);
+        btnpagar18.setBorder(null);
+        btnpagar19.setContentAreaFilled(false);
+        btnpagar19.setBorder(null);
+        btnpagar20.setContentAreaFilled(false);
+        btnpagar20.setBorder(null);
+        btnpagar21.setContentAreaFilled(false);
+        btnpagar21.setBorder(null);
     }
 
     /**
@@ -26,16 +75,114 @@ public class Cliente_ServiciosAdicionales extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnComprar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        btnpagar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        btnpagar1 = new javax.swing.JButton();
+        btnpagar2 = new javax.swing.JButton();
+        btnpagar3 = new javax.swing.JButton();
+        btnpagar4 = new javax.swing.JButton();
+        btnpagar5 = new javax.swing.JButton();
+        btnpagar6 = new javax.swing.JButton();
+        btnpagar7 = new javax.swing.JButton();
+        btnpagar8 = new javax.swing.JButton();
+        btnpagar9 = new javax.swing.JButton();
+        btnpagar10 = new javax.swing.JButton();
+        btnpagar11 = new javax.swing.JButton();
+        btnpagar12 = new javax.swing.JButton();
+        btnpagar13 = new javax.swing.JButton();
+        btnpagar14 = new javax.swing.JButton();
+        btnpagar15 = new javax.swing.JButton();
+        btnpagar16 = new javax.swing.JButton();
+        btnpagar17 = new javax.swing.JButton();
+        btnpagar18 = new javax.swing.JButton();
+        btnpagar19 = new javax.swing.JButton();
+        btnpagar20 = new javax.swing.JButton();
+        btnpagar21 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(btnComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 40, 260, 80));
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1331, 2560));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(btnpagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 1200, 160, 50));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 1300, -1));
+        jPanel1.add(btnpagar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 1200, 160, 50));
+        jPanel1.add(btnpagar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 2350, 160, 50));
+        jPanel1.add(btnpagar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 5020, 210, 50));
+        jPanel1.add(btnpagar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 6360, 210, 50));
+        jPanel1.add(btnpagar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 3410, 160, 50));
+        jPanel1.add(btnpagar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 3410, 160, 50));
+        jPanel1.add(btnpagar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 3410, 160, 50));
+        jPanel1.add(btnpagar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 5830, 220, 50));
+        jPanel1.add(btnpagar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 4700, 210, 50));
+        jPanel1.add(btnpagar10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 2360, 160, 50));
+        jPanel1.add(btnpagar11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 4700, 220, 50));
+        jPanel1.add(btnpagar12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 1199, 160, 50));
+        jPanel1.add(btnpagar13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 8850, 210, 50));
+        jPanel1.add(btnpagar14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 8850, 210, 50));
+        jPanel1.add(btnpagar15, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 8050, 210, 50));
+        jPanel1.add(btnpagar16, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 7180, 210, 50));
+        jPanel1.add(btnpagar17, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 7090, 210, 50));
+        jPanel1.add(btnpagar18, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 8050, 210, 50));
+        jPanel1.add(btnpagar19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 7090, 210, 50));
+        jPanel1.add(btnpagar20, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 6070, 210, 50));
+        jPanel1.add(btnpagar21, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 8850, 210, 50));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/servicios.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 10010));
+
+        jScrollPane1.setViewportView(jPanel1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1466, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1466, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10013, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 10001, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnComprar;
+    public javax.swing.JButton btnpagar;
+    public javax.swing.JButton btnpagar1;
+    public javax.swing.JButton btnpagar10;
+    public javax.swing.JButton btnpagar11;
+    public javax.swing.JButton btnpagar12;
+    public javax.swing.JButton btnpagar13;
+    public javax.swing.JButton btnpagar14;
+    public javax.swing.JButton btnpagar15;
+    public javax.swing.JButton btnpagar16;
+    public javax.swing.JButton btnpagar17;
+    public javax.swing.JButton btnpagar18;
+    public javax.swing.JButton btnpagar19;
+    public javax.swing.JButton btnpagar2;
+    public javax.swing.JButton btnpagar20;
+    public javax.swing.JButton btnpagar21;
+    public javax.swing.JButton btnpagar3;
+    public javax.swing.JButton btnpagar4;
+    public javax.swing.JButton btnpagar5;
+    public javax.swing.JButton btnpagar6;
+    public javax.swing.JButton btnpagar7;
+    public javax.swing.JButton btnpagar8;
+    public javax.swing.JButton btnpagar9;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
