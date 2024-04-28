@@ -4,6 +4,7 @@ import Controlador.*;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
+import javax.swing.JInternalFrame;
 import javax.swing.UnsupportedLookAndFeelException;
 public class Principal {
     public static Inicio panel;
@@ -22,6 +23,10 @@ public class Principal {
     public static ADM_Cubiculos admc;
     public static ADM_Empleados adme;
     public static ADM_Productos admp;
+    public static Fondo fond;
+    public static Cajero_CubiculoG cbg;
+    public static Cajero_CubiculoV cbv;
+    public static Cajero_CubiculoUV cbuv;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -39,6 +44,10 @@ public class Principal {
          admc= new ADM_Cubiculos();
          adme= new ADM_Empleados();
          admp= new ADM_Productos();
+         fond= new Fondo();
+         cbg= new Cajero_CubiculoG();
+         cbv= new Cajero_CubiculoV();
+         cbuv= new Cajero_CubiculoUV();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
@@ -56,13 +65,18 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(admc);
         SwingUtilities.updateComponentTreeUI(adme);
         SwingUtilities.updateComponentTreeUI(admp);
-        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc,adme,admp);
+        SwingUtilities.updateComponentTreeUI(fond);
+        SwingUtilities.updateComponentTreeUI(cbg);
+        SwingUtilities.updateComponentTreeUI(cbv);
+        SwingUtilities.updateComponentTreeUI(cbuv);
+        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc,adme,admp,cbg,cbv,cbuv);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
+        
         iad.BorrarBordesIngresoAdmin();
         icj.BorrarBordesIngresoCliente();
         ic.BorrarBordesIngresoCliente();
         panel.setVisible(true);
-        
     }
+    
 }
