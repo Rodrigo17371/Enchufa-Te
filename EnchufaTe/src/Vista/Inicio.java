@@ -34,8 +34,9 @@ public class Inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        dspEscritorio.setBackground(new java.awt.Color(51, 0, 0));
-        dspEscritorio.setForeground(new java.awt.Color(102, 0, 51));
+        dspEscritorio.setBackground(new java.awt.Color(0, 0, 51));
+        dspEscritorio.setForeground(new java.awt.Color(0, 0, 153));
+        dspEscritorio.setToolTipText("");
         getContentPane().add(dspEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1470, 690));
 
         jMenu1.setText("CLIENTE");

@@ -71,7 +71,7 @@ public class Cajero_CubiculoUV extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnadquirir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 570, 120, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Cubiculos ultra VIP.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Cubiculos U VIP.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -10, 1440, 690));
 
         pack();
