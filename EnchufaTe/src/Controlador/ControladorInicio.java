@@ -1,5 +1,6 @@
 package Controlador;
 
+import DAO.CRUD_Administrador;
 import Main.Principal;
 import Vista.*;
 import java.awt.event.ActionEvent;
@@ -28,6 +29,7 @@ public class ControladorInicio implements ActionListener {
     Cajero_CubiculoG cbg;
     Cajero_CubiculoV cbv;
     Cajero_CubiculoUV cbuv;
+    CRUD_Administrador crudadm;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
              InterfazAdmin ina, ADM_Cubiculos admc, ADM_Empleados adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv) {
@@ -86,7 +88,13 @@ public class ControladorInicio implements ActionListener {
         cbuv.btnadquirir1.addActionListener(this);
         
     } 
-
+    void TablaEmp() {
+        AgregarFrame(adme);
+        adme.setTitle("Registro de Empleados");
+        adme.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaEmpleados(adme.tblDatosEmp);
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == panel.ADM_Cubiculos) {
@@ -240,9 +248,7 @@ public class ControladorInicio implements ActionListener {
             ina.setVisible(true);
         }
         if (e.getSource() == ina.btnEmpleados) {
-            AgregarFrame(adme);
-            adme.setTitle("Registro de empleados");
-            adme.setVisible(true);
+            TablaEmp();
         }
         if (e.getSource() == adme.btnRetrocederAdmin) {
             AgregarFrame(ina);

@@ -30,6 +30,11 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblDatosEmp = new javax.swing.JTable();
+        btnRegistrarEmpleado = new javax.swing.JButton();
+        btnActualizarEmpleado = new javax.swing.JButton();
+        btnEliminarEmpleado = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,6 +50,51 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
+        tblDatosEmp.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tblDatosEmp);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 740, 440));
+
+        btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
+        btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarEmpleado.setBorderPainted(false);
+        btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarEmpleadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, 160, 40));
+
+        btnActualizarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
+        btnActualizarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarEmpleado.setBorderPainted(false);
+        btnActualizarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarEmpleadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 160, 40));
+
+        btnEliminarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
+        btnEliminarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnEliminarEmpleado.setBorderPainted(false);
+        btnEliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarEmpleadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 530, 160, 40));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Registro.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 640));
 
@@ -55,9 +105,26 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
+    private void btnRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
+
+    private void btnActualizarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnActualizarEmpleadoActionPerformed
+
+    private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnActualizarEmpleado;
+    public javax.swing.JButton btnEliminarEmpleado;
+    public javax.swing.JButton btnRegistrarEmpleado;
     public javax.swing.JButton btnRetrocederAdmin;
     private javax.swing.JLabel jLabel2;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable tblDatosEmp;
     // End of variables declaration//GEN-END:variables
 }
