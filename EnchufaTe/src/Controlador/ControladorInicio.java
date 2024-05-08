@@ -24,15 +24,22 @@ public class ControladorInicio implements ActionListener {
     Cajero_Cubiculos ccb;
     InterfazAdmin ina;
     ADM_Cubiculos admc;
-    ADM_Empleados adme;
+    ADM_GesEmpleado adme;
     ADM_Productos admp;
+    ADM_Proovedor admpro;
+    ADM_GesArea adga;
+    ADM_GesLocal adgl;
     Cajero_CubiculoG cbg;
     Cajero_CubiculoV cbv;
     Cajero_CubiculoUV cbuv;
     CRUD_Administrador crudadm;
+    ADM_Clientes admcli;
+    ADM_Compras admco;
+    ADM_Reservas admr;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
-             InterfazAdmin ina, ADM_Cubiculos admc, ADM_Empleados adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv) {
+             InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
+             ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr) {
         this.panel = panel;
         this.ic = ic;
         this.csa = csa;
@@ -52,6 +59,12 @@ public class ControladorInicio implements ActionListener {
         this.cbg= cbg;
         this.cbv= cbv;
         this.cbuv=cbuv;
+        this.adga=adga;
+        this.adgl=adgl;
+        this.admpro=admpro;
+        this.admcli=admcli;
+        this.admco=admco;
+        this.admr=admr;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
@@ -74,9 +87,20 @@ public class ControladorInicio implements ActionListener {
         ina.btnCubiculos.addActionListener(this);
         ina.btnEmpleados.addActionListener(this);
         ina.btnProductos.addActionListener(this);
+        ina.btnClientes.addActionListener(this);
         admc.btnRetrocederAdmin.addActionListener(this);
         adme.btnRetrocederAdmin.addActionListener(this);
+        adme.btnEmpleados.addActionListener(this);
+        adme.btnarea.addActionListener(this);
+        adme.btnlocales.addActionListener(this);
+        adga.btnRetrocederAdmin.addActionListener(this);
+        adga.btnEmpleados.addActionListener(this);
+        adga.btnlocales.addActionListener(this);
+        adgl.btnRetrocederAdmin.addActionListener(this);
+        adgl.btnEmpleados.addActionListener(this);
+        adgl.btnarea.addActionListener(this);
         admp.btnRetrocederAdmin.addActionListener(this);
+        admp.btnproveedor.addActionListener(this);
         cbg.btnRetrocederAdmin.addActionListener(this);
         cbg.btnadquirir.addActionListener(this);
         cbg.btnadquirir1.addActionListener(this);
@@ -86,7 +110,20 @@ public class ControladorInicio implements ActionListener {
         cbuv.btnRetrocederAdmin.addActionListener(this);
         cbuv.btnadquirir.addActionListener(this);
         cbuv.btnadquirir1.addActionListener(this);
-        
+        admpro.btnRetrocederAdmin.addActionListener(this);
+        admpro.btnproductos.addActionListener(this);
+        admcli.btnRetrocederAdmin.addActionListener(this);
+        admcli.btnClientes.addActionListener(this);
+        admcli.btnCompras.addActionListener(this);
+        admcli.btnReservas.addActionListener(this);
+        admco.btnRetrocederAdmin.addActionListener(this);
+        admco.btnClientes.addActionListener(this);
+        admco.btnCompras.addActionListener(this);
+        admco.btnReservas.addActionListener(this);
+        admr.btnRetrocederAdmin.addActionListener(this);
+        admr.btnClientes.addActionListener(this);
+        admr.btnCompras.addActionListener(this);
+        admr.btnReservas.addActionListener(this);
     } 
     void TablaEmp() {
         AgregarFrame(adme);
@@ -94,6 +131,55 @@ public class ControladorInicio implements ActionListener {
         adme.setVisible(true);
         crudadm = new CRUD_Administrador();
         crudadm.MostrarTablaEmpleados(adme.tblDatosEmp);
+    }
+    void TablaArea() {
+        AgregarFrame(adga);
+        adga.setTitle("Registro de Area");
+        adga.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaArea(adga.tblDatosArea);
+    }
+    void TablaLocales() {
+        AgregarFrame(adgl);
+        adgl.setTitle("Registro de Locales");
+        adgl.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaLocales(adgl.tblDatosLocales);
+    }
+    void TablaProductos() {
+        AgregarFrame(admp);
+        admp.setTitle("Registro de Productos");
+        admp.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaProductos(admp.tblDatosProductos);
+    }
+    void TablaProovedores() {
+        AgregarFrame(admpro);
+        admpro.setTitle("Registro de Proveedores");
+        admpro.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaProveedor(admpro.tblDatosProveedor);
+    }
+    void TablaClientes() {
+        AgregarFrame(admcli);
+        admcli.setTitle("Registro de Clientes");
+        admcli.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaClientes(admcli.tblDatosClientes);
+    }
+    void TablaCompras() {
+        AgregarFrame(admco);
+        admco.setTitle("Registro de Compras");
+        admco.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaCompras(admco.tblDatosCompras);
+    }
+    void TablaReservas() {
+        AgregarFrame(admr);
+        admr.setTitle("Registro de Reservas");
+        admr.setVisible(true);
+        crudadm = new CRUD_Administrador();
+        crudadm.MostrarTablaReservas(admr.tblDatosReservas);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -250,20 +336,96 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == ina.btnEmpleados) {
             TablaEmp();
         }
+        if (e.getSource() == adme.btnEmpleados) {
+            TablaEmp();
+        }
+        if (e.getSource() == adme.btnarea) {
+            TablaArea();
+        }
+        if (e.getSource() == adme.btnlocales) {
+            TablaLocales();
+        }
+        if (e.getSource() == adga.btnRetrocederAdmin) {
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
+        if (e.getSource() == adga.btnEmpleados) {
+            TablaEmp();
+        }
+        if (e.getSource() == adga.btnlocales) {
+            TablaLocales();
+        }
+        if (e.getSource() == adgl.btnRetrocederAdmin) {
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
+        if (e.getSource() == adgl.btnEmpleados) {
+            TablaEmp();
+        }
+        if (e.getSource() == adgl.btnarea) {
+            TablaArea();
+        }
         if (e.getSource() == adme.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
             ina.setVisible(true);
         }
         if (e.getSource() == ina.btnProductos) {
-            AgregarFrame(admp);
-            admp.setTitle("Registro de productos");
-            admp.setVisible(true);
+            TablaProductos();
         }
         if (e.getSource() == admp.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
             ina.setVisible(true);
+        }
+        if (e.getSource() == admp.btnproveedor) {
+            TablaProovedores();
+        }
+        if (e.getSource() == admpro.btnRetrocederAdmin) {
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
+        if (e.getSource() == admpro.btnproductos) {
+            TablaProductos();
+        }
+        if (e.getSource() == ina.btnClientes) {
+            TablaClientes();
+        }
+        if (e.getSource() == admcli.btnRetrocederAdmin) {
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
+        if (e.getSource() == admcli.btnCompras) {
+            TablaCompras();
+        }
+        if (e.getSource() == admcli.btnReservas) {
+            TablaReservas();
+        }
+        if (e.getSource() == admco.btnRetrocederAdmin) {
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
+        if (e.getSource() == admco.btnClientes) {
+            TablaClientes();
+        }
+        if (e.getSource() == admco.btnReservas) {
+            TablaReservas();
+        }
+        if (e.getSource() == admr.btnRetrocederAdmin) {
+            AgregarFrame(ina);
+            ina.setTitle("Interfaz Admin");
+            ina.setVisible(true);
+        }
+        if (e.getSource() == admr.btnClientes) {
+            TablaClientes();
+        }
+        if (e.getSource() == admr.btnCompras) {
+            TablaCompras();
         }
     }
 

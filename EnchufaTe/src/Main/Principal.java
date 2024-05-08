@@ -21,12 +21,18 @@ public class Principal {
     public static Cajero_Cubiculos ccb;
     public static InterfazAdmin ina;
     public static ADM_Cubiculos admc;
-    public static ADM_Empleados adme;
+    public static ADM_GesEmpleado adme;
     public static ADM_Productos admp;
     public static Fondo fond;
     public static Cajero_CubiculoG cbg;
     public static Cajero_CubiculoV cbv;
     public static Cajero_CubiculoUV cbuv;
+    public static ADM_GesArea adga;
+    public static ADM_GesLocal adgl;
+    public static ADM_Proovedor admpro;
+    public static ADM_Clientes admcli;
+    public static ADM_Compras admco;
+    public static ADM_Reservas admr;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -42,12 +48,18 @@ public class Principal {
          ccb= new Cajero_Cubiculos();
          ina= new InterfazAdmin();
          admc= new ADM_Cubiculos();
-         adme= new ADM_Empleados();
+         adme= new ADM_GesEmpleado();
          admp= new ADM_Productos();
          fond= new Fondo();
          cbg= new Cajero_CubiculoG();
          cbv= new Cajero_CubiculoV();
          cbuv= new Cajero_CubiculoUV();
+         adga= new ADM_GesArea();
+         adgl= new ADM_GesLocal();
+         admpro= new ADM_Proovedor();
+         admcli= new ADM_Clientes();
+         admco= new ADM_Compras();
+         admr= new ADM_Reservas();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
@@ -69,7 +81,13 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(cbg);
         SwingUtilities.updateComponentTreeUI(cbv);
         SwingUtilities.updateComponentTreeUI(cbuv);
-        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc,adme,admp,cbg,cbv,cbuv);
+        SwingUtilities.updateComponentTreeUI(adga);
+        SwingUtilities.updateComponentTreeUI(adgl);
+        SwingUtilities.updateComponentTreeUI(admpro);
+        SwingUtilities.updateComponentTreeUI(admcli);
+        SwingUtilities.updateComponentTreeUI(admco);
+        SwingUtilities.updateComponentTreeUI(admr);
+        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         

@@ -23,6 +23,8 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
         btnEmpleados.setBorder(null);
         btnProductos.setContentAreaFilled(false);
         btnProductos.setBorder(null);
+        btnClientes.setContentAreaFilled(false);
+        btnClientes.setBorder(null);
     }
 
     /**
@@ -38,6 +40,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
         btnEmpleados = new javax.swing.JButton();
         btnCubiculos = new javax.swing.JButton();
         btnRetrocederAdmin = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,7 +53,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
                 btnProductosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 160, 40));
+        getContentPane().add(btnProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 160, 30));
 
         btnEmpleados.setBackground(new java.awt.Color(255, 255, 255));
         btnEmpleados.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -60,7 +63,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
                 btnEmpleadosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 160, 40));
+        getContentPane().add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 160, 30));
 
         btnCubiculos.setBackground(new java.awt.Color(255, 255, 255));
         btnCubiculos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -70,7 +73,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
                 btnCubiculosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 160, 40));
+        getContentPane().add(btnCubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 160, 30));
 
         btnRetrocederAdmin.setBackground(new java.awt.Color(255, 255, 255));
         btnRetrocederAdmin.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -82,8 +85,18 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Adminenchufat.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 640));
+        btnClientes.setBackground(new java.awt.Color(255, 255, 255));
+        btnClientes.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnClientes.setBorderPainted(false);
+        btnClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClientesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 160, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Adminenchufat1.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, -20, 1380, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -104,8 +117,13 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
+    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClientesActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnClientes;
     public javax.swing.JButton btnCubiculos;
     public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnProductos;

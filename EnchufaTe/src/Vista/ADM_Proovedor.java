@@ -8,12 +8,12 @@ package Vista;
  *
  * @author usuario
  */
-public class ADM_Productos extends javax.swing.JInternalFrame {
+public class ADM_Proovedor extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ADM_Cubiculos1
      */
-    public ADM_Productos() {
+    public ADM_Proovedor() {
         initComponents();
 
         btnRetrocederAdmin.setContentAreaFilled(false);
@@ -37,10 +37,10 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
         btnproductos = new javax.swing.JButton();
         btnproveedor = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDatosProductos = new javax.swing.JTable();
-        btnRegistrarProducto = new javax.swing.JButton();
-        btnActualizarProducto = new javax.swing.JButton();
-        btnEliminarProducto = new javax.swing.JButton();
+        tblDatosProveedor = new javax.swing.JTable();
+        btnRegistrarProveedor = new javax.swing.JButton();
+        btnActualizarProveedor = new javax.swing.JButton();
+        btnEliminarProveedor = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -76,7 +76,7 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnproveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 160, 30));
 
-        tblDatosProductos.setModel(new javax.swing.table.DefaultTableModel(
+        tblDatosProveedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -87,39 +87,39 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblDatosProductos);
+        jScrollPane1.setViewportView(tblDatosProveedor);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 740, 440));
 
-        btnRegistrarProducto.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistrarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarProducto.setBorderPainted(false);
-        btnRegistrarProducto.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarProveedor.setBackground(new java.awt.Color(153, 153, 153));
+        btnRegistrarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarProveedor.setBorderPainted(false);
+        btnRegistrarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarProductoActionPerformed(evt);
+                btnRegistrarProveedorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
 
-        btnActualizarProducto.setBackground(new java.awt.Color(153, 153, 153));
-        btnActualizarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnActualizarProducto.setBorderPainted(false);
-        btnActualizarProducto.addActionListener(new java.awt.event.ActionListener() {
+        btnActualizarProveedor.setBackground(new java.awt.Color(153, 153, 153));
+        btnActualizarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarProveedor.setBorderPainted(false);
+        btnActualizarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarProductoActionPerformed(evt);
+                btnActualizarProveedorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
+        getContentPane().add(btnActualizarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
 
-        btnEliminarProducto.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarProducto.setBorderPainted(false);
-        btnEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminarProveedor.setBackground(new java.awt.Color(153, 153, 153));
+        btnEliminarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnEliminarProveedor.setBorderPainted(false);
+        btnEliminarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarProductoActionPerformed(evt);
+                btnEliminarProveedorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnEliminarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
@@ -139,28 +139,28 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnproveedorActionPerformed
 
-    private void btnRegistrarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarProductoActionPerformed
+    private void btnRegistrarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarProductoActionPerformed
+    }//GEN-LAST:event_btnRegistrarProveedorActionPerformed
 
-    private void btnActualizarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarProductoActionPerformed
+    private void btnActualizarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarProductoActionPerformed
+    }//GEN-LAST:event_btnActualizarProveedorActionPerformed
 
-    private void btnEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProductoActionPerformed
+    private void btnEliminarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarProductoActionPerformed
+    }//GEN-LAST:event_btnEliminarProveedorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnActualizarProducto;
-    public javax.swing.JButton btnEliminarProducto;
-    public javax.swing.JButton btnRegistrarProducto;
+    public javax.swing.JButton btnActualizarProveedor;
+    public javax.swing.JButton btnEliminarProveedor;
+    public javax.swing.JButton btnRegistrarProveedor;
     public javax.swing.JButton btnRetrocederAdmin;
     public javax.swing.JButton btnproductos;
     public javax.swing.JButton btnproveedor;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable tblDatosProductos;
+    public javax.swing.JTable tblDatosProveedor;
     // End of variables declaration//GEN-END:variables
 }

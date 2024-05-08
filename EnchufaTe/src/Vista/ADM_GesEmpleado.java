@@ -8,16 +8,22 @@ package Vista;
  *
  * @author usuario
  */
-public class ADM_Empleados extends javax.swing.JInternalFrame {
+public class ADM_GesEmpleado extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ADM_Cubiculos1
      */
-    public ADM_Empleados() {
+    public ADM_GesEmpleado() {
         initComponents();
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        btnEmpleados.setContentAreaFilled(false);
+        btnEmpleados.setBorder(null);
+        btnarea.setContentAreaFilled(false);
+        btnarea.setBorder(null);
+        btnlocales.setContentAreaFilled(false);
+        btnlocales.setBorder(null);
     }
 
     /**
@@ -35,6 +41,9 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         btnRegistrarEmpleado = new javax.swing.JButton();
         btnActualizarEmpleado = new javax.swing.JButton();
         btnEliminarEmpleado = new javax.swing.JButton();
+        btnlocales = new javax.swing.JButton();
+        btnarea = new javax.swing.JButton();
+        btnEmpleados = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,7 +72,7 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tblDatosEmp);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 740, 440));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 740, 440));
 
         btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -73,7 +82,7 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
                 btnRegistrarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, 160, 40));
+        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
 
         btnActualizarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -83,7 +92,7 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
                 btnActualizarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 160, 40));
+        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
 
         btnEliminarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnEliminarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -93,10 +102,40 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
                 btnEliminarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 530, 160, 40));
+        getContentPane().add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Registro.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 640));
+        btnlocales.setBackground(new java.awt.Color(255, 255, 255));
+        btnlocales.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnlocales.setBorderPainted(false);
+        btnlocales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlocalesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnlocales, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 160, 30));
+
+        btnarea.setBackground(new java.awt.Color(255, 255, 255));
+        btnarea.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnarea.setBorderPainted(false);
+        btnarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnareaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 160, 30));
+
+        btnEmpleados.setBackground(new java.awt.Color(255, 255, 255));
+        btnEmpleados.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnEmpleados.setBorderPainted(false);
+        btnEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmpleadosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 160, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,12 +156,27 @@ public class ADM_Empleados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
 
+    private void btnlocalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlocalesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnlocalesActionPerformed
+
+    private void btnareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnareaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnareaActionPerformed
+
+    private void btnEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpleadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEmpleadosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarEmpleado;
     public javax.swing.JButton btnEliminarEmpleado;
+    public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnRegistrarEmpleado;
     public javax.swing.JButton btnRetrocederAdmin;
+    public javax.swing.JButton btnarea;
+    public javax.swing.JButton btnlocales;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tblDatosEmp;
