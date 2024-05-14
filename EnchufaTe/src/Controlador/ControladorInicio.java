@@ -36,10 +36,11 @@ public class ControladorInicio implements ActionListener {
     ADM_Clientes admcli;
     ADM_Compras admco;
     ADM_Reservas admr;
+    RegistrarEmpleado rem;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
              InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
-             ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr) {
+             ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,RegistrarEmpleado rem) {
         this.panel = panel;
         this.ic = ic;
         this.csa = csa;
@@ -65,6 +66,7 @@ public class ControladorInicio implements ActionListener {
         this.admcli=admcli;
         this.admco=admco;
         this.admr=admr;
+        this.rem=rem;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
@@ -124,6 +126,7 @@ public class ControladorInicio implements ActionListener {
         admr.btnClientes.addActionListener(this);
         admr.btnCompras.addActionListener(this);
         admr.btnReservas.addActionListener(this);
+        adme.btnRegistrarEmpleado.addActionListener(this);
     } 
     void TablaEmp() {
         AgregarFrame(adme);
@@ -345,6 +348,11 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == adme.btnlocales) {
             TablaLocales();
         }
+        if (e.getSource() == adme.btnRegistrarEmpleado) {
+            AgregarFrame(rem);
+            rem.setTitle("Registrar empleado");
+            rem.setVisible(true);
+        }
         if (e.getSource() == adga.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
@@ -437,7 +445,6 @@ public class ControladorInicio implements ActionListener {
         frame.setLocation(x, y);
         panel.dspEscritorio.repaint();
     }
-
     void AgregarFrameemtp(JInternalFrame frame) {
         emtp.dspEscritorio.removeAll();
         emtp.dspEscritorio.add(frame);

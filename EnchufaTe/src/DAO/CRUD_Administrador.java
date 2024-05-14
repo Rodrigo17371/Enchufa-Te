@@ -239,5 +239,57 @@ public class CRUD_Administrador extends ConectarBD {
                     "ERROR no se puede recuperar consulta" + ex);
         }
     }
+    public void RegistrarEmpleados(JTable tabla){
+        String titulos[] = {"CodReserva", "CodCliente", "CodEmpleado", "Fecha", "Hora","CodServicio ", "TipoPago","Cantidad"};
+        DefaultTableModel modelo = new DefaultTableModel(null, titulos);
+        tabla.setModel(modelo);
+        //recuperar los datos
+        String consulta = "SELECT r.CodReserva, r.CodCliente, r.CodEmpleado, r.Fecha, r.Hora,\n"
+                + "       dr.CodServicio, dr.TipoPago, dr.Cantidad\n"
+                + "FROM Reserva r\n"
+                + "JOIN DetalleReserva dr ON r.CodReserva = dr.CodReserva;";
+        try {
+            rs = st.executeQuery(consulta);
+            int num = 0;
+            while (rs.next()) {
+                num++;
+                Object[] row = new Object[8];
+                row[0] = rs.getInt(1);
+                row[1] = rs.getInt(2);
+                row[2] = rs.getInt(3);
+                row[3] = rs.getDate(4);
+                row[4] = rs.getTime(5);
+                row[5] = rs.getInt(6);
+                row[6] = rs.getString(7);
+                row[7] = rs.getInt(8);
+                modelo.addRow(row);
+            }//fin del while
+            //etiqueta.setText("Cantidad de registros : "+num);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null,
+                    "ERROR no se puede recuperar consulta" + ex);
+        }
+    }
+    public void RegistrarEmpleado(Empleados em) {
+        try {
+            ps = conexion.prepareStatement("INSERT INTO empleados (DNI_Emp, Nombre_Emp, ApellidoPA_Emp, ApellidoMA_Emp, Sueldo_Emp, RUC) VALUES (?,?,?,?,?,?);");
+            ps.setInt(1, em.getCoddempleado());
+            ps.setInt(2, em.getCodlocal());
+            ps.setInt(3, em.getCodarea());
+            ps.setString(4, em.getNombre_emp());
+            ps.setString(5, em.getApellido_emp());
+            ps.setString(6, em.getFechanacimiento_emp());
+            ps.setString(7, em.getDni_emp());
+            ps.setString(8, em.getSexo_emp());
+            ps.setString(9, em.getCelular_emp());
+            ps.setString(10, em.getCorreo_emp());
+            ps.setDouble(11, em.getSalario_emp());
+            ps.executeUpdate();
+            
+            conexion.close();
+        } catch (Exception ex) {
+            Mensajes.M1("ERROR no se puede insertar." + ex);
+        }
+    }
 
 }

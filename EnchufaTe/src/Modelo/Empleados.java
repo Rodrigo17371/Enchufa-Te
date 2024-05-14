@@ -8,17 +8,35 @@ package Modelo;
  *
  * @author usuario
  */
-public class Empleados {
+public class Empleados{
     int coddempleado;
+    int codlocal;
+    int codarea;
     String nombre_emp;
     String apellido_emp;
-    int fechanacimiento_emp;
-    int dni_emp;
+    String fechanacimiento_emp;
+    String dni_emp;
     String sexo_emp;
-    int celular_emp;
-    int correo_emp;
+    String celular_emp;
+    String correo_emp;
     double salario_emp;
     //Getter and Setter
+
+    public int getCodlocal() {
+        return codlocal;
+    }
+
+    public void setCodlocal(int codlocal) {
+        this.codlocal = codlocal;
+    }
+
+    public int getCodarea() {
+        return codarea;
+    }
+
+    public void setCodarea(int codarea) {
+        this.codarea = codarea;
+    }
 
     public int getCoddempleado() {
         return coddempleado;
@@ -44,19 +62,19 @@ public class Empleados {
         this.apellido_emp = apellido_emp;
     }
 
-    public int getFechanacimiento_emp() {
+    public String getFechanacimiento_emp() {
         return fechanacimiento_emp;
     }
 
-    public void setFechanacimiento_emp(int fechanacimiento_emp) {
+    public void setFechanacimiento_emp(String fechanacimiento_emp) {
         this.fechanacimiento_emp = fechanacimiento_emp;
     }
 
-    public int getDni_emp() {
+    public String getDni_emp() {
         return dni_emp;
     }
 
-    public void setDni_emp(int dni_emp) {
+    public void setDni_emp(String dni_emp) {
         this.dni_emp = dni_emp;
     }
 
@@ -68,19 +86,19 @@ public class Empleados {
         this.sexo_emp = sexo_emp;
     }
 
-    public int getCelular_emp() {
+    public String getCelular_emp() {
         return celular_emp;
     }
 
-    public void setCelular_emp(int celular_emp) {
+    public void setCelular_emp(String celular_emp) {
         this.celular_emp = celular_emp;
     }
 
-    public int getCorreo_emp() {
+    public String getCorreo_emp() {
         return correo_emp;
     }
 
-    public void setCorreo_emp(int correo_emp) {
+    public void setCorreo_emp(String correo_emp) {
         this.correo_emp = correo_emp;
     }
 

@@ -76,6 +76,7 @@ public class ADM_GesEmpleado extends javax.swing.JInternalFrame {
 
         btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarEmpleado.setText("Registrar");
         btnRegistrarEmpleado.setBorderPainted(false);
         btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
