@@ -2,7 +2,9 @@ package Controlador;
 
 import DAO.CRUD_Administrador;
 import Main.Principal;
+import Procesos.ProcesosAdmin;
 import Vista.*;
+import Modelo.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JDesktopPane;
@@ -37,6 +39,7 @@ public class ControladorInicio implements ActionListener {
     ADM_Compras admco;
     ADM_Reservas admr;
     RegistrarEmpleado rem;
+    Empleados em;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
              InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
@@ -127,6 +130,7 @@ public class ControladorInicio implements ActionListener {
         admr.btnCompras.addActionListener(this);
         admr.btnReservas.addActionListener(this);
         adme.btnRegistrarEmpleado.addActionListener(this);
+        rem.btnRegistrarEmpleado.addActionListener(this);
     } 
     void TablaEmp() {
         AgregarFrame(adme);
@@ -352,6 +356,11 @@ public class ControladorInicio implements ActionListener {
             AgregarFrame(rem);
             rem.setTitle("Registrar empleado");
             rem.setVisible(true);
+        }
+        if (e.getSource()==rem.btnRegistrarEmpleado){
+            em = ProcesosAdmin.LeerDatosEmpleado(rem);
+                crudadm = new CRUD_Administrador();
+                crudadm.RegistrarEmpleado(em);
         }
         if (e.getSource() == adga.btnRetrocederAdmin) {
             AgregarFrame(ina);

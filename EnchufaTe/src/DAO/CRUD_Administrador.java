@@ -272,18 +272,17 @@ public class CRUD_Administrador extends ConectarBD {
     }
     public void RegistrarEmpleado(Empleados em) {
         try {
-            ps = conexion.prepareStatement("INSERT INTO empleados (DNI_Emp, Nombre_Emp, ApellidoPA_Emp, ApellidoMA_Emp, Sueldo_Emp, RUC) VALUES (?,?,?,?,?,?);");
-            ps.setInt(1, em.getCoddempleado());
-            ps.setInt(2, em.getCodlocal());
-            ps.setInt(3, em.getCodarea());
-            ps.setString(4, em.getNombre_emp());
-            ps.setString(5, em.getApellido_emp());
-            ps.setString(6, em.getFechanacimiento_emp());
-            ps.setString(7, em.getDni_emp());
-            ps.setString(8, em.getSexo_emp());
-            ps.setString(9, em.getCelular_emp());
-            ps.setString(10, em.getCorreo_emp());
-            ps.setDouble(11, em.getSalario_emp());
+            ps = conexion.prepareStatement("INSERT INTO Empleado (CodLocal, CodArea, Nombre, Apellidos, FechaNacimiento, DNI, Sexo, Celular, Correo, Salario) VALUES (?,?,?,?,?,?,?,?,?,?);");
+            ps.setInt(1, em.getCodlocal());
+            ps.setInt(2, em.getCodarea());
+            ps.setString(3, em.getNombre_emp());
+            ps.setString(4, em.getApellido_emp());
+            ps.setString(5, em.getFechanacimiento_emp());
+            ps.setString(6, em.getDni_emp());
+            ps.setString(7, em.getSexo_emp());
+            ps.setString(8, em.getCelular_emp());
+            ps.setString(9, em.getCorreo_emp());
+            ps.setDouble(10, em.getSalario_emp());
             ps.executeUpdate();
             
             conexion.close();

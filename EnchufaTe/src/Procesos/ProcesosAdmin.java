@@ -13,7 +13,6 @@ public class ProcesosAdmin {
     
     public static Empleados LeerDatosEmpleado(RegistrarEmpleado rem){
        Empleados em= new Empleados();
-       em.setCoddempleado(Integer.parseInt(rem.txtcodempleado.getText()));
        em.setCodlocal(Integer.parseInt(rem.txtcodlocal.getText()));
        em.setCodarea(Integer.parseInt(rem.txtcodarea.getText()));
        em.setNombre_emp(rem.txtnombreempleado.getText());

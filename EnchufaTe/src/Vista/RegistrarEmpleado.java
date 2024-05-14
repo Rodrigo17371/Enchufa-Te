@@ -41,7 +41,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
         txtcelularempleado = new javax.swing.JTextField();
         txtcorreoempleado = new javax.swing.JTextField();
         txtsalarioempleado = new javax.swing.JTextField();
-        btnRegistrarEmpleado1 = new javax.swing.JButton();
+        btnRegistrarEmpleado = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -156,16 +156,16 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
         });
         getContentPane().add(txtsalarioempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 210, 40));
 
-        btnRegistrarEmpleado1.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistrarEmpleado1.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarEmpleado1.setText("Registrar");
-        btnRegistrarEmpleado1.setBorderPainted(false);
-        btnRegistrarEmpleado1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
+        btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarEmpleado.setText("Registrar");
+        btnRegistrarEmpleado.setBorderPainted(false);
+        btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarEmpleado1ActionPerformed(evt);
+                btnRegistrarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarEmpleado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, 160, 40));
+        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
@@ -221,13 +221,13 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtsalarioempleadoActionPerformed
 
-    private void btnRegistrarEmpleado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleado1ActionPerformed
+    private void btnRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarEmpleado1ActionPerformed
+    }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnRegistrarEmpleado1;
+    public javax.swing.JButton btnRegistrarEmpleado;
     public javax.swing.JButton btnRetrocederAdmin;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JTextField txtapempleado;
