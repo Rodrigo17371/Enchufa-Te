@@ -40,7 +40,6 @@ public class ADM_GesLocal extends javax.swing.JInternalFrame {
         tblDatosLocales = new javax.swing.JTable();
         btnRegistrarLocal = new javax.swing.JButton();
         btnActualizarLocal = new javax.swing.JButton();
-        btnEliminarLocal = new javax.swing.JButton();
         btnlocales = new javax.swing.JButton();
         btnarea = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
@@ -76,33 +75,25 @@ public class ADM_GesLocal extends javax.swing.JInternalFrame {
 
         btnRegistrarLocal.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarLocal.setText("Registrar");
         btnRegistrarLocal.setBorderPainted(false);
         btnRegistrarLocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarLocalActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 540, 160, 40));
 
         btnActualizarLocal.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarLocal.setText("Actualizar");
         btnActualizarLocal.setBorderPainted(false);
         btnActualizarLocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarLocalActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
-
-        btnEliminarLocal.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarLocal.setBorderPainted(false);
-        btnEliminarLocal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarLocalActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnActualizarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 540, 160, 40));
 
         btnlocales.setBackground(new java.awt.Color(255, 255, 255));
         btnlocales.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -152,10 +143,6 @@ public class ADM_GesLocal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarLocalActionPerformed
 
-    private void btnEliminarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarLocalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarLocalActionPerformed
-
     private void btnlocalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlocalesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnlocalesActionPerformed
@@ -171,7 +158,6 @@ public class ADM_GesLocal extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarLocal;
-    public javax.swing.JButton btnEliminarLocal;
     public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnRegistrarLocal;
     public javax.swing.JButton btnRetrocederAdmin;

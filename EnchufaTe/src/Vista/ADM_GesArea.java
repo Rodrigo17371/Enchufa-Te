@@ -40,7 +40,6 @@ public class ADM_GesArea extends javax.swing.JInternalFrame {
         tblDatosArea = new javax.swing.JTable();
         btnRegistrarArea = new javax.swing.JButton();
         btnActualizarArea = new javax.swing.JButton();
-        btnEliminarArea = new javax.swing.JButton();
         btnarea = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
         btnlocales = new javax.swing.JButton();
@@ -76,33 +75,25 @@ public class ADM_GesArea extends javax.swing.JInternalFrame {
 
         btnRegistrarArea.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarArea.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarArea.setText("Registrar");
         btnRegistrarArea.setBorderPainted(false);
         btnRegistrarArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarAreaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, 160, 40));
 
         btnActualizarArea.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarArea.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarArea.setText("Actualizar");
         btnActualizarArea.setBorderPainted(false);
         btnActualizarArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarAreaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
-
-        btnEliminarArea.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarArea.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarArea.setBorderPainted(false);
-        btnEliminarArea.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarAreaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnActualizarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 530, 160, 40));
 
         btnarea.setBackground(new java.awt.Color(255, 255, 255));
         btnarea.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -152,10 +143,6 @@ public class ADM_GesArea extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarAreaActionPerformed
 
-    private void btnEliminarAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarAreaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarAreaActionPerformed
-
     private void btnareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnareaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnareaActionPerformed
@@ -171,7 +158,6 @@ public class ADM_GesArea extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarArea;
-    public javax.swing.JButton btnEliminarArea;
     public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnRegistrarArea;
     public javax.swing.JButton btnRetrocederAdmin;

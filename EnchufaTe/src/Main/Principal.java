@@ -33,7 +33,12 @@ public class Principal {
     public static ADM_Clientes admcli;
     public static ADM_Compras admco;
     public static ADM_Reservas admr;
-    public static RegistrarEmpleado rem;
+    public static ADM_RegistrarEmpleado rem;
+    public static ADM_ActualizarEmpleado raem;
+    public static ADM_RegistrarArea ram;
+    public static ADM_ActualizarArea acarea;
+    public static ADM_RegistrarLocal rl;
+    public static ADM_ActualizarLocal acloc;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -61,7 +66,12 @@ public class Principal {
          admcli= new ADM_Clientes();
          admco= new ADM_Compras();
          admr= new ADM_Reservas();
-         rem= new RegistrarEmpleado();
+         rem= new ADM_RegistrarEmpleado();
+         raem= new ADM_ActualizarEmpleado();
+         ram= new ADM_RegistrarArea();
+         acarea= new ADM_ActualizarArea();
+         rl= new ADM_RegistrarLocal();
+         acloc= new ADM_ActualizarLocal();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
@@ -90,7 +100,13 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(admco);
         SwingUtilities.updateComponentTreeUI(admr);
         SwingUtilities.updateComponentTreeUI(rem);
-        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr,rem);
+        SwingUtilities.updateComponentTreeUI(raem);
+        SwingUtilities.updateComponentTreeUI(ram);
+        SwingUtilities.updateComponentTreeUI(acarea);
+        SwingUtilities.updateComponentTreeUI(rl);
+        SwingUtilities.updateComponentTreeUI(acloc);
+        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc
+                ,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         

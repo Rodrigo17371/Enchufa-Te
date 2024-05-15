@@ -8,12 +8,12 @@ package Vista;
  *
  * @author usuario
  */
-public class RegistrarEmpleado extends javax.swing.JInternalFrame {
+public class ADM_ActualizarEmpleado extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ADM_Cubiculos1
      */
-    public RegistrarEmpleado() {
+    public ADM_ActualizarEmpleado() {
         initComponents();
 
         btnRetrocederAdmin.setContentAreaFilled(false);
@@ -30,7 +30,6 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
-        txtcodempleado = new javax.swing.JTextField();
         txtcodlocal = new javax.swing.JTextField();
         txtcodarea = new javax.swing.JTextField();
         txtnombreempleado = new javax.swing.JTextField();
@@ -41,7 +40,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
         txtcelularempleado = new javax.swing.JTextField();
         txtcorreoempleado = new javax.swing.JTextField();
         txtsalarioempleado = new javax.swing.JTextField();
-        btnRegistrarEmpleado = new javax.swing.JButton();
+        btnActualizarEmpleado = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -57,15 +56,6 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtcodempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodempleado.setBorder(null);
-        txtcodempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 220, 40));
-
         txtcodlocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcodlocal.setBorder(null);
         txtcodlocal.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +63,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcodlocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 210, 40));
+        getContentPane().add(txtcodlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
 
         txtcodarea.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcodarea.setBorder(null);
@@ -82,7 +72,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcodareaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 210, 30));
+        getContentPane().add(txtcodarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
 
         txtnombreempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtnombreempleado.setBorder(null);
@@ -91,7 +81,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtnombreempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombreempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 210, 30));
+        getContentPane().add(txtnombreempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 210, 40));
 
         txtapempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtapempleado.setBorder(null);
@@ -100,7 +90,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtapempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtapempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 210, 40));
+        getContentPane().add(txtapempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
 
         txtfechaempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtfechaempleado.setBorder(null);
@@ -109,7 +99,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtfechaempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtfechaempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 210, 30));
+        getContentPane().add(txtfechaempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
 
         txtdniempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtdniempleado.setBorder(null);
@@ -118,7 +108,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtdniempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtdniempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 220, 40));
+        getContentPane().add(txtdniempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
 
         txtsexoempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtsexoempleado.setBorder(null);
@@ -127,7 +117,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtsexoempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 210, 40));
+        getContentPane().add(txtsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 210, 40));
 
         txtcelularempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcelularempleado.setBorder(null);
@@ -136,7 +126,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcelularempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcelularempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 210, 30));
+        getContentPane().add(txtcelularempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, 210, 40));
 
         txtcorreoempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcorreoempleado.setBorder(null);
@@ -145,7 +135,7 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcorreoempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcorreoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, 210, 30));
+        getContentPane().add(txtcorreoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 210, 30));
 
         txtsalarioempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtsalarioempleado.setBorder(null);
@@ -154,18 +144,18 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtsalarioempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtsalarioempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 210, 40));
+        getContentPane().add(txtsalarioempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 430, 210, 40));
 
-        btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarEmpleado.setText("Registrar");
-        btnRegistrarEmpleado.setBorderPainted(false);
-        btnRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+        btnActualizarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
+        btnActualizarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarEmpleado.setText("Actualizar");
+        btnActualizarEmpleado.setBorderPainted(false);
+        btnActualizarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarEmpleadoActionPerformed(evt);
+                btnActualizarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, 160, 40));
+        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
@@ -176,10 +166,6 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
     private void btnRetrocederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederAdminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
-
-    private void txtcodempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodempleadoActionPerformed
 
     private void txtcodlocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodlocalActionPerformed
         // TODO add your handling code here:
@@ -221,19 +207,18 @@ public class RegistrarEmpleado extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtsalarioempleadoActionPerformed
 
-    private void btnRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEmpleadoActionPerformed
+    private void btnActualizarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarEmpleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarEmpleadoActionPerformed
+    }//GEN-LAST:event_btnActualizarEmpleadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnRegistrarEmpleado;
+    public javax.swing.JButton btnActualizarEmpleado;
     public javax.swing.JButton btnRetrocederAdmin;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JTextField txtapempleado;
     public javax.swing.JTextField txtcelularempleado;
     public javax.swing.JTextField txtcodarea;
-    public javax.swing.JTextField txtcodempleado;
     public javax.swing.JTextField txtcodlocal;
     public javax.swing.JTextField txtcorreoempleado;
     public javax.swing.JTextField txtdniempleado;

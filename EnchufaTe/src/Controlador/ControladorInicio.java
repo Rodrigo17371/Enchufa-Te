@@ -9,10 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
-
+import Formatos.Mensajes;
 public class ControladorInicio implements ActionListener {
 
     Inicio panel;
+    Empleados em;
+    Area ar;
     IngresoCliente ic;
     IngresoCajero icj;
     IngresoAdministrador iad;
@@ -38,12 +40,19 @@ public class ControladorInicio implements ActionListener {
     ADM_Clientes admcli;
     ADM_Compras admco;
     ADM_Reservas admr;
-    RegistrarEmpleado rem;
-    Empleados em;
+    ADM_RegistrarEmpleado rem;
+    ADM_ActualizarEmpleado raem;
+    ADM_RegistrarArea ram;
+    ADM_ActualizarArea acarea;
+    ADM_RegistrarLocal rl;
+    ADM_ActualizarLocal acloc;
+    int ID_emp;
+    int ID_Area;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
              InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
-             ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,RegistrarEmpleado rem) {
+             ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,ADM_RegistrarEmpleado rem,ADM_ActualizarEmpleado raem,
+             ADM_RegistrarArea ram,ADM_ActualizarArea acarea,ADM_RegistrarLocal rl,ADM_ActualizarLocal acloc) {
         this.panel = panel;
         this.ic = ic;
         this.csa = csa;
@@ -70,6 +79,11 @@ public class ControladorInicio implements ActionListener {
         this.admco=admco;
         this.admr=admr;
         this.rem=rem;
+        this.raem=raem;
+        this.ram=ram;
+        this.acarea=acarea;
+        this.rl=rl;
+        this.acloc=acloc;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
@@ -98,10 +112,15 @@ public class ControladorInicio implements ActionListener {
         adme.btnEmpleados.addActionListener(this);
         adme.btnarea.addActionListener(this);
         adme.btnlocales.addActionListener(this);
+        adme.btnActualizarEmpleado.addActionListener(this);
         adga.btnRetrocederAdmin.addActionListener(this);
+        adga.btnRegistrarArea.addActionListener(this);
+        adga.btnActualizarArea.addActionListener(this);
         adga.btnEmpleados.addActionListener(this);
         adga.btnlocales.addActionListener(this);
         adgl.btnRetrocederAdmin.addActionListener(this);
+        adgl.btnRegistrarLocal.addActionListener(this);
+        adgl.btnActualizarLocal.addActionListener(this);
         adgl.btnEmpleados.addActionListener(this);
         adgl.btnarea.addActionListener(this);
         admp.btnRetrocederAdmin.addActionListener(this);
@@ -131,6 +150,17 @@ public class ControladorInicio implements ActionListener {
         admr.btnReservas.addActionListener(this);
         adme.btnRegistrarEmpleado.addActionListener(this);
         rem.btnRegistrarEmpleado.addActionListener(this);
+        rem.btnRetrocederAdmin.addActionListener(this);
+        raem.btnRetrocederAdmin.addActionListener(this);
+        raem.btnActualizarEmpleado.addActionListener(this);
+        ram.btnRetrocederAdmin.addActionListener(this);
+        ram.btnRegistrarArea.addActionListener(this);
+        acarea.btnRetrocederAdmin.addActionListener(this);
+        acarea.btnActualizarArea.addActionListener(this);
+        rl.btnRetrocederAdmin.addActionListener(this);
+        rl.btnRegistrarLocal.addActionListener(this);
+        acloc.btnRetrocederAdmin.addActionListener(this);
+        acloc.btnActualizarLocal.addActionListener(this);
     } 
     void TablaEmp() {
         AgregarFrame(adme);
@@ -352,20 +382,97 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == adme.btnlocales) {
             TablaLocales();
         }
+        //Registrar Empleados
         if (e.getSource() == adme.btnRegistrarEmpleado) {
             AgregarFrame(rem);
             rem.setTitle("Registrar empleado");
             rem.setVisible(true);
         }
+        if (e.getSource() == rem.btnRetrocederAdmin) {
+            TablaEmp();
+        }
         if (e.getSource()==rem.btnRegistrarEmpleado){
             em = ProcesosAdmin.LeerDatosEmpleado(rem);
                 crudadm = new CRUD_Administrador();
                 crudadm.RegistrarEmpleado(em);
+                TablaEmp();
         }
+        //Actualizar Empleados
+        if (e.getSource() == adme.btnActualizarEmpleado) {
+            ID_emp = Mensajes.M2("Ingrese el ID del empleado a buscar..");
+            AgregarFrame(raem);
+            raem.setTitle("Actualizar Empleado");
+            raem.setVisible(true);
+            crudadm = new CRUD_Administrador();
+            em = crudadm.BuscarEmpleado(ID_emp);
+            if (em == null) {
+                Mensajes.M1("El id " + ID_emp + " no existe en la tabla de empleados");
+                TablaEmp();
+            } else {
+                raem.txtcodlocal.setText(Integer.toString(em.getCodlocal()));
+                raem.txtcodarea.setText(Integer.toString(em.getCodarea()));
+                raem.txtnombreempleado.setText(em.getNombre_emp());
+                raem.txtapempleado.setText(em.getApellido_emp());
+                raem.txtfechaempleado.setText(em.getFechanacimiento_emp());
+                raem.txtdniempleado.setText(em.getDni_emp());
+                raem.txtsexoempleado.setText(em.getSexo_emp());
+                raem.txtcelularempleado.setText(em.getCelular_emp());
+                raem.txtcorreoempleado.setText(em.getCorreo_emp());
+                raem.txtsalarioempleado.setText(Double.toString(em.getSalario_emp()));
+            }
+        }
+        else if (e.getSource() == raem.btnActualizarEmpleado) {
+            em = ProcesosAdmin.ActualizarDatosEmpleado(raem);
+            crudadm = new CRUD_Administrador();
+            crudadm.ActualizarEmpleado(em, ID_emp);
+            TablaEmp();
+        }
+        if (e.getSource() == raem.btnRetrocederAdmin) {
+            TablaEmp();
+        }
+        //Registrar Area
         if (e.getSource() == adga.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
             ina.setVisible(true);
+        }
+        if (e.getSource() == adga.btnRegistrarArea) {
+            AgregarFrame(ram);
+            ram.setTitle("Registrar Area");
+            ram.setVisible(true);
+        }
+        if (e.getSource() == ram.btnRetrocederAdmin) {
+            TablaArea();
+        }
+        if (e.getSource()==ram.btnRegistrarArea){
+            ar = ProcesosAdmin.LeerDatosArea(ram);
+                crudadm = new CRUD_Administrador();
+                crudadm.RegistrarArea(ar);
+            TablaArea();
+        }
+        //Actualizar Area
+        if (e.getSource() == acarea.btnRetrocederAdmin) {
+            TablaArea();
+        }
+        if (e.getSource()==adga.btnActualizarArea){
+            ID_Area = Mensajes.M2("Ingrese el ID del Area a buscar..");
+            AgregarFrame(acarea);
+            acarea.setTitle("Actualizar Area");
+            acarea.setVisible(true);
+            crudadm = new CRUD_Administrador();
+            ar = crudadm.BuscarArea(ID_Area);
+            if (ar == null) {
+                Mensajes.M1("El id " + ID_Area + " no existe en la tabla de area");
+                TablaArea();
+            } else {
+                acarea.txtdescripcionarea.setText(ar.getDescripcionarea());
+            }
+        }
+        if (e.getSource()==acarea.btnActualizarArea){
+            ar = ProcesosAdmin.ActualizarDatosArea(acarea);
+            crudadm = new CRUD_Administrador();
+            crudadm.ActualizarArea(ar, ID_Area);
+            TablaArea();
         }
         if (e.getSource() == adga.btnEmpleados) {
             TablaEmp();
@@ -373,6 +480,7 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == adga.btnlocales) {
             TablaLocales();
         }
+        //Registrar Local
         if (e.getSource() == adgl.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
@@ -383,6 +491,11 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == adgl.btnarea) {
             TablaArea();
+        }
+        if (e.getSource() == adgl.btnRegistrarLocal) {
+            AgregarFrame(rem);
+            rem.setTitle("Registrar empleado");
+            rem.setVisible(true);
         }
         if (e.getSource() == adme.btnRetrocederAdmin) {
             AgregarFrame(ina);

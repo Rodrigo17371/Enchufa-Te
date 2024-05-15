@@ -40,7 +40,6 @@ public class ADM_GesEmpleado extends javax.swing.JInternalFrame {
         tblDatosEmp = new javax.swing.JTable();
         btnRegistrarEmpleado = new javax.swing.JButton();
         btnActualizarEmpleado = new javax.swing.JButton();
-        btnEliminarEmpleado = new javax.swing.JButton();
         btnlocales = new javax.swing.JButton();
         btnarea = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
@@ -83,27 +82,18 @@ public class ADM_GesEmpleado extends javax.swing.JInternalFrame {
                 btnRegistrarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, 160, 40));
 
         btnActualizarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarEmpleado.setText("Actualizar");
         btnActualizarEmpleado.setBorderPainted(false);
         btnActualizarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
-
-        btnEliminarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarEmpleado.setBorderPainted(false);
-        btnEliminarEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarEmpleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnActualizarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 540, 160, 40));
 
         btnlocales.setBackground(new java.awt.Color(255, 255, 255));
         btnlocales.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -153,10 +143,6 @@ public class ADM_GesEmpleado extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarEmpleadoActionPerformed
 
-    private void btnEliminarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEmpleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarEmpleadoActionPerformed
-
     private void btnlocalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlocalesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnlocalesActionPerformed
@@ -172,7 +158,6 @@ public class ADM_GesEmpleado extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarEmpleado;
-    public javax.swing.JButton btnEliminarEmpleado;
     public javax.swing.JButton btnEmpleados;
     public javax.swing.JButton btnRegistrarEmpleado;
     public javax.swing.JButton btnRetrocederAdmin;

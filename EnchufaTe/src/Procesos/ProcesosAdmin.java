@@ -11,7 +11,7 @@ import Vista.*;
  */
 public class ProcesosAdmin {
     
-    public static Empleados LeerDatosEmpleado(RegistrarEmpleado rem){
+    public static Empleados LeerDatosEmpleado(ADM_RegistrarEmpleado rem){
        Empleados em= new Empleados();
        em.setCodlocal(Integer.parseInt(rem.txtcodlocal.getText()));
        em.setCodarea(Integer.parseInt(rem.txtcodarea.getText()));
@@ -24,5 +24,29 @@ public class ProcesosAdmin {
        em.setCorreo_emp(rem.txtcorreoempleado.getText());
        em.setSalario_emp(Double.parseDouble(rem.txtsalarioempleado.getText()));
        return em;
+  }
+    public static Empleados ActualizarDatosEmpleado(ADM_ActualizarEmpleado raem){
+       Empleados em= new Empleados();
+       em.setCodlocal(Integer.parseInt(raem.txtcodlocal.getText()));
+       em.setCodarea(Integer.parseInt(raem.txtcodarea.getText()));
+       em.setNombre_emp(raem.txtnombreempleado.getText());
+       em.setApellido_emp(raem.txtapempleado.getText());
+       em.setFechanacimiento_emp(raem.txtfechaempleado.getText());
+       em.setDni_emp(raem.txtdniempleado.getText());
+       em.setSexo_emp(raem.txtsexoempleado.getText());
+       em.setCelular_emp(raem.txtcelularempleado.getText());
+       em.setCorreo_emp(raem.txtcorreoempleado.getText());
+       em.setSalario_emp(Double.parseDouble(raem.txtsalarioempleado.getText()));
+       return em;
+  }
+    public static Area LeerDatosArea(ADM_RegistrarArea ram){
+       Area ar= new Area();
+       ar.setDescripcionarea(ram.txtdescripcionarea.getText());
+       return ar;
+  }
+    public static Area ActualizarDatosArea(ADM_ActualizarArea acarea){
+       Area ar= new Area();
+       ar.setDescripcionarea(acarea.txtdescripcionarea.getText());
+       return ar;
   }
 }
