@@ -40,7 +40,6 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
         tblDatosProductos = new javax.swing.JTable();
         btnRegistrarProducto = new javax.swing.JButton();
         btnActualizarProducto = new javax.swing.JButton();
-        btnEliminarProducto = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,33 +92,25 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
 
         btnRegistrarProducto.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarProducto.setText("Registrar");
         btnRegistrarProducto.setBorderPainted(false);
         btnRegistrarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarProductoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, 160, 40));
 
         btnActualizarProducto.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarProducto.setText("Actualizar");
         btnActualizarProducto.setBorderPainted(false);
         btnActualizarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarProductoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
-
-        btnEliminarProducto.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarProducto.setBorderPainted(false);
-        btnEliminarProducto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarProductoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnActualizarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 540, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
@@ -147,14 +138,9 @@ public class ADM_Productos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarProductoActionPerformed
 
-    private void btnEliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProductoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarProductoActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarProducto;
-    public javax.swing.JButton btnEliminarProducto;
     public javax.swing.JButton btnRegistrarProducto;
     public javax.swing.JButton btnRetrocederAdmin;
     public javax.swing.JButton btnproductos;

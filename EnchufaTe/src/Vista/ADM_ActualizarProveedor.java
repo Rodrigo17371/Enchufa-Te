@@ -8,12 +8,12 @@ package Vista;
  *
  * @author usuario
  */
-public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
+public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ADM_Cubiculos1
      */
-    public ADM_RegistrarLocal() {
+    public ADM_ActualizarProveedor() {
         initComponents();
 
         btnRetrocederAdmin.setContentAreaFilled(false);
@@ -30,10 +30,10 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
-        txtdireccionlocal = new javax.swing.JTextField();
-        txtnombrelocal = new javax.swing.JTextField();
-        txtelefonolocal = new javax.swing.JTextField();
-        btnRegistrarLocal = new javax.swing.JButton();
+        txtnombreprov = new javax.swing.JTextField();
+        txtcontactoprov = new javax.swing.JTextField();
+        txtpaisprov = new javax.swing.JTextField();
+        btnActualizarProveedor = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,43 +49,43 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtdireccionlocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtdireccionlocal.setBorder(null);
-        txtdireccionlocal.addActionListener(new java.awt.event.ActionListener() {
+        txtnombreprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtnombreprov.setBorder(null);
+        txtnombreprov.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdireccionlocalActionPerformed(evt);
+                txtnombreprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtdireccionlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtnombreprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
 
-        txtnombrelocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtnombrelocal.setBorder(null);
-        txtnombrelocal.addActionListener(new java.awt.event.ActionListener() {
+        txtcontactoprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcontactoprov.setBorder(null);
+        txtcontactoprov.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombrelocalActionPerformed(evt);
+                txtcontactoprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtcontactoprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
 
-        txtelefonolocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtelefonolocal.setBorder(null);
-        txtelefonolocal.addActionListener(new java.awt.event.ActionListener() {
+        txtpaisprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtpaisprov.setBorder(null);
+        txtpaisprov.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtelefonolocalActionPerformed(evt);
+                txtpaisprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtelefonolocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 210, 40));
+        getContentPane().add(txtpaisprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 210, 40));
 
-        btnRegistrarLocal.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistrarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarLocal.setText("Registrar");
-        btnRegistrarLocal.setBorderPainted(false);
-        btnRegistrarLocal.addActionListener(new java.awt.event.ActionListener() {
+        btnActualizarProveedor.setBackground(new java.awt.Color(153, 153, 153));
+        btnActualizarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarProveedor.setText("Actualizar");
+        btnActualizarProveedor.setBorderPainted(false);
+        btnActualizarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarLocalActionPerformed(evt);
+                btnActualizarProveedorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
+        getContentPane().add(btnActualizarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
@@ -97,29 +97,29 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
-    private void txtdireccionlocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdireccionlocalActionPerformed
+    private void txtnombreprovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreprovActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtdireccionlocalActionPerformed
+    }//GEN-LAST:event_txtnombreprovActionPerformed
 
-    private void txtnombrelocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombrelocalActionPerformed
+    private void txtcontactoprovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontactoprovActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtnombrelocalActionPerformed
+    }//GEN-LAST:event_txtcontactoprovActionPerformed
 
-    private void txtelefonolocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtelefonolocalActionPerformed
+    private void txtpaisprovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpaisprovActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtelefonolocalActionPerformed
+    }//GEN-LAST:event_txtpaisprovActionPerformed
 
-    private void btnRegistrarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarLocalActionPerformed
+    private void btnActualizarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarLocalActionPerformed
+    }//GEN-LAST:event_btnActualizarProveedorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnRegistrarLocal;
+    public javax.swing.JButton btnActualizarProveedor;
     public javax.swing.JButton btnRetrocederAdmin;
     private javax.swing.JLabel jLabel2;
-    public javax.swing.JTextField txtdireccionlocal;
-    public javax.swing.JTextField txtelefonolocal;
-    public javax.swing.JTextField txtnombrelocal;
+    public javax.swing.JTextField txtcontactoprov;
+    public javax.swing.JTextField txtnombreprov;
+    public javax.swing.JTextField txtpaisprov;
     // End of variables declaration//GEN-END:variables
 }

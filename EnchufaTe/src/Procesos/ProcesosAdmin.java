@@ -49,4 +49,51 @@ public class ProcesosAdmin {
        ar.setDescripcionarea(acarea.txtdescripcionarea.getText());
        return ar;
   }
+    public static Locales LeerDatosLocal(ADM_RegistrarLocal rl){
+       Locales loc= new Locales();
+       loc.setDireccionlocal(rl.txtdireccionlocal.getText());
+       loc.setNombrelocal(rl.txtnombrelocal.getText());
+       loc.setTelefonolocal(rl.txtelefonolocal.getText());
+       return loc;
+  }
+    public static Locales ActualizarDatosLocal(ADM_ActualizarLocal acloc){
+       Locales loc= new Locales();
+       loc.setDireccionlocal(acloc.txtdireccionlocal.getText());
+       loc.setNombrelocal(acloc.txtnombrelocal.getText());
+       loc.setTelefonolocal(acloc.txtelefonolocal.getText());
+       return loc;
+  }
+    public static Productos LeerDatosProducto(ADM_RegistrarProducto rep){
+       Productos prod= new Productos();
+       prod.setCodCategoria(Integer.parseInt(rep.txtcodcategoria.getText()));
+       prod.setCodProveedor(Integer.parseInt(rep.txtcodprov.getText()));
+       prod.setPrecioprod(Double.parseDouble(rep.txtprecioprod.getText()));
+       prod.setNombreprod(rep.txtnombreprod.getText());
+       prod.setFechavencimientoprod(rep.txtfechavencimientoprod.getText());
+       return prod;
+  }
+    public static Productos ActualizarDatosProducto(ADM_ActualizarProducto acprod){
+       Productos prod= new Productos();
+       prod.setCodCategoria(Integer.parseInt(acprod.txtcodcategoria.getText()));
+       prod.setCodProveedor(Integer.parseInt(acprod.txtcodprov.getText()));
+       prod.setPrecioprod(Double.parseDouble(acprod.txtprecioprod.getText()));
+       prod.setNombreprod(acprod.txtnombreprod.getText());
+       prod.setFechavencimientoprod(acprod.txtfechavencimientoprod.getText());
+       return prod;
+  }
+    public static Proveedor LeerDatosProveedor(ADM_RegistrarProveedor repv){
+       Proveedor prov= new Proveedor();
+       prov.setNombreprov(repv.txtnombreprov.getText());
+       prov.setContactoprov(repv.txtcontactoprov.getText());
+       prov.setPaisprov(repv.txtpaisprov.getText());
+       return prov;
+  }
+    public static Proveedor ActualizarDatosProveedor(ADM_ActualizarProveedor acprov){
+       Proveedor prov= new Proveedor();
+       prov.setNombreprov(acprov.txtnombreprov.getText());
+       prov.setContactoprov(acprov.txtcontactoprov.getText());
+       prov.setPaisprov(acprov.txtpaisprov.getText());
+       return prov;
+  }
+    
 }

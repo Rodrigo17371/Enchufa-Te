@@ -39,6 +39,10 @@ public class Principal {
     public static ADM_ActualizarArea acarea;
     public static ADM_RegistrarLocal rl;
     public static ADM_ActualizarLocal acloc;
+    public static ADM_RegistrarProducto rep;
+    public static ADM_ActualizarProducto acprod;
+    public static ADM_RegistrarProveedor repv;
+    public static ADM_ActualizarProveedor acprov;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -72,6 +76,10 @@ public class Principal {
          acarea= new ADM_ActualizarArea();
          rl= new ADM_RegistrarLocal();
          acloc= new ADM_ActualizarLocal();
+         rep= new ADM_RegistrarProducto();
+         acprod= new ADM_ActualizarProducto();
+         repv=new ADM_RegistrarProveedor();
+         acprov= new ADM_ActualizarProveedor();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
@@ -105,8 +113,13 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(acarea);
         SwingUtilities.updateComponentTreeUI(rl);
         SwingUtilities.updateComponentTreeUI(acloc);
+        SwingUtilities.updateComponentTreeUI(rep);
+        SwingUtilities.updateComponentTreeUI(acprod);
+        SwingUtilities.updateComponentTreeUI(repv);
+        SwingUtilities.updateComponentTreeUI(acprov);
         ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc
-                ,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc);
+                ,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc
+                ,rep,acprod,repv,acprov);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         

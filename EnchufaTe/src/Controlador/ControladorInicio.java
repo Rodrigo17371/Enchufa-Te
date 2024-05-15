@@ -1,6 +1,8 @@
 package Controlador;
 
-import DAO.CRUD_Administrador;
+import DAO.CRUD_GestionEmpresa;
+import DAO.CRUD_Productos;
+import DAO.CRUD_Clientes;
 import Main.Principal;
 import Procesos.ProcesosAdmin;
 import Vista.*;
@@ -15,6 +17,9 @@ public class ControladorInicio implements ActionListener {
     Inicio panel;
     Empleados em;
     Area ar;
+    Locales loc;
+    Productos prod;
+    Proveedor prov;
     IngresoCliente ic;
     IngresoCajero icj;
     IngresoAdministrador iad;
@@ -36,7 +41,9 @@ public class ControladorInicio implements ActionListener {
     Cajero_CubiculoG cbg;
     Cajero_CubiculoV cbv;
     Cajero_CubiculoUV cbuv;
-    CRUD_Administrador crudadm;
+    CRUD_GestionEmpresa crudadm;
+    CRUD_Productos crudprod;
+    CRUD_Clientes crudcli;
     ADM_Clientes admcli;
     ADM_Compras admco;
     ADM_Reservas admr;
@@ -46,13 +53,21 @@ public class ControladorInicio implements ActionListener {
     ADM_ActualizarArea acarea;
     ADM_RegistrarLocal rl;
     ADM_ActualizarLocal acloc;
+    ADM_RegistrarProducto rep;
+    ADM_ActualizarProducto acprod;
+    ADM_RegistrarProveedor repv;
+    ADM_ActualizarProveedor acprov;
     int ID_emp;
     int ID_Area;
+    int ID_Local;
+    int ID_prod;
+    int ID_prov;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
              InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
              ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,ADM_RegistrarEmpleado rem,ADM_ActualizarEmpleado raem,
-             ADM_RegistrarArea ram,ADM_ActualizarArea acarea,ADM_RegistrarLocal rl,ADM_ActualizarLocal acloc) {
+             ADM_RegistrarArea ram,ADM_ActualizarArea acarea,ADM_RegistrarLocal rl,ADM_ActualizarLocal acloc,ADM_RegistrarProducto rep,ADM_ActualizarProducto acprod,
+             ADM_RegistrarProveedor repv,ADM_ActualizarProveedor acprov) {
         this.panel = panel;
         this.ic = ic;
         this.csa = csa;
@@ -84,6 +99,10 @@ public class ControladorInicio implements ActionListener {
         this.acarea=acarea;
         this.rl=rl;
         this.acloc=acloc;
+        this.rep=rep;
+        this.acprod=acprod;
+        this.repv=repv;
+        this.acprov=acprov;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
@@ -125,6 +144,8 @@ public class ControladorInicio implements ActionListener {
         adgl.btnarea.addActionListener(this);
         admp.btnRetrocederAdmin.addActionListener(this);
         admp.btnproveedor.addActionListener(this);
+        admp.btnRegistrarProducto.addActionListener(this);
+        admp.btnActualizarProducto.addActionListener(this);
         cbg.btnRetrocederAdmin.addActionListener(this);
         cbg.btnadquirir.addActionListener(this);
         cbg.btnadquirir1.addActionListener(this);
@@ -136,6 +157,8 @@ public class ControladorInicio implements ActionListener {
         cbuv.btnadquirir1.addActionListener(this);
         admpro.btnRetrocederAdmin.addActionListener(this);
         admpro.btnproductos.addActionListener(this);
+        admpro.btnRegistrarProveedor.addActionListener(this);
+        admpro.btnActualizarProveedor.addActionListener(this);
         admcli.btnRetrocederAdmin.addActionListener(this);
         admcli.btnClientes.addActionListener(this);
         admcli.btnCompras.addActionListener(this);
@@ -161,62 +184,70 @@ public class ControladorInicio implements ActionListener {
         rl.btnRegistrarLocal.addActionListener(this);
         acloc.btnRetrocederAdmin.addActionListener(this);
         acloc.btnActualizarLocal.addActionListener(this);
+        rep.btnRetrocederAdmin.addActionListener(this);
+        rep.btnRegistrarProducto.addActionListener(this);
+        acprod.btnRetrocederAdmin.addActionListener(this);
+        acprod.btnActualizarProducto.addActionListener(this);
+        repv.btnRetrocederAdmin.addActionListener(this);
+        repv.btnRegistrarProveedor.addActionListener(this);
+        acprov.btnRetrocederAdmin.addActionListener(this);
+        acprov.btnActualizarProveedor.addActionListener(this);
     } 
     void TablaEmp() {
         AgregarFrame(adme);
         adme.setTitle("Registro de Empleados");
         adme.setVisible(true);
-        crudadm = new CRUD_Administrador();
+        crudadm = new CRUD_GestionEmpresa();
         crudadm.MostrarTablaEmpleados(adme.tblDatosEmp);
     }
     void TablaArea() {
         AgregarFrame(adga);
         adga.setTitle("Registro de Area");
         adga.setVisible(true);
-        crudadm = new CRUD_Administrador();
+        crudadm = new CRUD_GestionEmpresa();
         crudadm.MostrarTablaArea(adga.tblDatosArea);
     }
     void TablaLocales() {
         AgregarFrame(adgl);
         adgl.setTitle("Registro de Locales");
         adgl.setVisible(true);
-        crudadm = new CRUD_Administrador();
+        crudadm = new CRUD_GestionEmpresa();
         crudadm.MostrarTablaLocales(adgl.tblDatosLocales);
     }
     void TablaProductos() {
         AgregarFrame(admp);
         admp.setTitle("Registro de Productos");
         admp.setVisible(true);
-        crudadm = new CRUD_Administrador();
-        crudadm.MostrarTablaProductos(admp.tblDatosProductos);
+        crudprod = new CRUD_Productos();
+        crudprod.MostrarTablaProductos(admp.tblDatosProductos);
     }
     void TablaProovedores() {
         AgregarFrame(admpro);
         admpro.setTitle("Registro de Proveedores");
         admpro.setVisible(true);
-        crudadm = new CRUD_Administrador();
-        crudadm.MostrarTablaProveedor(admpro.tblDatosProveedor);
+        crudprod = new CRUD_Productos();
+        crudprod.MostrarTablaProveedor(admpro.tblDatosProveedor);
     }
     void TablaClientes() {
         AgregarFrame(admcli);
         admcli.setTitle("Registro de Clientes");
         admcli.setVisible(true);
-        crudadm = new CRUD_Administrador();
-        crudadm.MostrarTablaClientes(admcli.tblDatosClientes);
+        crudcli = new CRUD_Clientes();
+        crudcli.MostrarTablaClientes(admcli.tblDatosClientes);
     }
     void TablaCompras() {
         AgregarFrame(admco);
         admco.setTitle("Registro de Compras");
         admco.setVisible(true);
-        crudadm = new CRUD_Administrador();
-        crudadm.MostrarTablaCompras(admco.tblDatosCompras);
+        crudcli = new CRUD_Clientes();
+        crudcli.MostrarTablaCompras(admco.tblDatosCompras);
     }
     void TablaReservas() {
         AgregarFrame(admr);
         admr.setTitle("Registro de Reservas");
         admr.setVisible(true);
-        crudadm = new CRUD_Administrador();
-        crudadm.MostrarTablaReservas(admr.tblDatosReservas);
+        crudcli = new CRUD_Clientes();
+        crudcli.MostrarTablaReservas(admr.tblDatosReservas);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -393,7 +424,7 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource()==rem.btnRegistrarEmpleado){
             em = ProcesosAdmin.LeerDatosEmpleado(rem);
-                crudadm = new CRUD_Administrador();
+                crudadm = new CRUD_GestionEmpresa();
                 crudadm.RegistrarEmpleado(em);
                 TablaEmp();
         }
@@ -403,7 +434,7 @@ public class ControladorInicio implements ActionListener {
             AgregarFrame(raem);
             raem.setTitle("Actualizar Empleado");
             raem.setVisible(true);
-            crudadm = new CRUD_Administrador();
+            crudadm = new CRUD_GestionEmpresa();
             em = crudadm.BuscarEmpleado(ID_emp);
             if (em == null) {
                 Mensajes.M1("El id " + ID_emp + " no existe en la tabla de empleados");
@@ -423,7 +454,7 @@ public class ControladorInicio implements ActionListener {
         }
         else if (e.getSource() == raem.btnActualizarEmpleado) {
             em = ProcesosAdmin.ActualizarDatosEmpleado(raem);
-            crudadm = new CRUD_Administrador();
+            crudadm = new CRUD_GestionEmpresa();
             crudadm.ActualizarEmpleado(em, ID_emp);
             TablaEmp();
         }
@@ -446,7 +477,7 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource()==ram.btnRegistrarArea){
             ar = ProcesosAdmin.LeerDatosArea(ram);
-                crudadm = new CRUD_Administrador();
+                crudadm = new CRUD_GestionEmpresa();
                 crudadm.RegistrarArea(ar);
             TablaArea();
         }
@@ -459,7 +490,7 @@ public class ControladorInicio implements ActionListener {
             AgregarFrame(acarea);
             acarea.setTitle("Actualizar Area");
             acarea.setVisible(true);
-            crudadm = new CRUD_Administrador();
+            crudadm = new CRUD_GestionEmpresa();
             ar = crudadm.BuscarArea(ID_Area);
             if (ar == null) {
                 Mensajes.M1("El id " + ID_Area + " no existe en la tabla de area");
@@ -470,7 +501,7 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource()==acarea.btnActualizarArea){
             ar = ProcesosAdmin.ActualizarDatosArea(acarea);
-            crudadm = new CRUD_Administrador();
+            crudadm = new CRUD_GestionEmpresa();
             crudadm.ActualizarArea(ar, ID_Area);
             TablaArea();
         }
@@ -493,9 +524,44 @@ public class ControladorInicio implements ActionListener {
             TablaArea();
         }
         if (e.getSource() == adgl.btnRegistrarLocal) {
-            AgregarFrame(rem);
-            rem.setTitle("Registrar empleado");
-            rem.setVisible(true);
+            AgregarFrame(rl);
+            rl.setTitle("Registrar Local");
+            rl.setVisible(true);
+        }
+        if (e.getSource()==rl.btnRetrocederAdmin){
+                TablaLocales();
+        }
+        if (e.getSource()==rl.btnRegistrarLocal){
+            loc = ProcesosAdmin.LeerDatosLocal(rl);
+                crudadm = new CRUD_GestionEmpresa();
+                crudadm.RegistrarLocal(loc);
+                TablaLocales();
+        }
+        //Actualizar Local
+        if (e.getSource()==adgl.btnActualizarLocal){
+            ID_Local = Mensajes.M2("Ingrese el ID del Local a buscar..");
+            AgregarFrame(acloc);
+            acloc.setTitle("Actualizar Local");
+            acloc.setVisible(true);
+            crudadm = new CRUD_GestionEmpresa();
+            loc = crudadm.BuscarLocal(ID_Local);
+            if (loc == null) {
+                Mensajes.M1("El id " + ID_Local + " no existe en la tabla de locales");
+                TablaArea();
+            } else {
+                acloc.txtdireccionlocal.setText(loc.getDireccionlocal());
+                acloc.txtnombrelocal.setText(loc.getNombrelocal());
+                acloc.txtelefonolocal.setText(loc.getTelefonolocal());
+            }
+        }
+        if (e.getSource()==acloc.btnRetrocederAdmin){
+            TablaLocales();
+        }
+        if (e.getSource()==acloc.btnActualizarLocal){
+            loc = ProcesosAdmin.ActualizarDatosLocal(acloc);
+            crudadm = new CRUD_GestionEmpresa();
+            crudadm.ActualizarLocal(loc, ID_Local);
+            TablaLocales();
         }
         if (e.getSource() == adme.btnRetrocederAdmin) {
             AgregarFrame(ina);
@@ -510,9 +576,50 @@ public class ControladorInicio implements ActionListener {
             ina.setTitle("Interfaz Admin");
             ina.setVisible(true);
         }
+        //Registrar Producto
         if (e.getSource() == admp.btnproveedor) {
             TablaProovedores();
         }
+        if (e.getSource() == admp.btnRegistrarProducto) {
+            AgregarFrame(rep);
+            rep.setTitle("Registrar Producto");
+            rep.setVisible(true);
+        }
+        if (e.getSource() == rep.btnRegistrarProducto) {
+            prod = ProcesosAdmin.LeerDatosProducto(rep);
+                crudprod = new CRUD_Productos();
+                crudprod.RegistrarProductos(prod);
+                TablaProductos();
+        }
+        //Actualizar Producto
+        if (e.getSource()==admp.btnActualizarProducto){
+            ID_prod = Mensajes.M2("Ingrese el ID del Producto a buscar..");
+            AgregarFrame(acprod);
+            acprod.setTitle("Actualizar Producto");
+            acprod.setVisible(true);
+            crudprod = new CRUD_Productos();
+            prod = crudprod.BuscarProducto(ID_prod);
+            if (prod == null) {
+                Mensajes.M1("El id " + ID_prod + " no existe en la tabla de productos");
+                TablaProductos();
+            } else {
+                acprod.txtcodcategoria.setText(Integer.toString(prod.getCodCategoria()));
+                acprod.txtcodprov.setText(Integer.toString(prod.getCodProveedor()));
+                acprod.txtprecioprod.setText(Double.toString(prod.getPrecioprod()));
+                acprod.txtnombreprod.setText(prod.getNombreprod());
+                acprod.txtfechavencimientoprod.setText(prod.getFechavencimientoprod());
+            }
+        }
+        if (e.getSource()==acprod.btnRetrocederAdmin){
+            TablaProductos();
+        }
+        if (e.getSource()==acprod.btnActualizarProducto){
+            prod = ProcesosAdmin.ActualizarDatosProducto(acprod);
+            crudprod = new CRUD_Productos();
+            crudprod.ActualizarProducto(prod, ID_prod);
+            TablaProductos();
+        }
+        //Registrar Proveedor
         if (e.getSource() == admpro.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
@@ -520,6 +627,43 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == admpro.btnproductos) {
             TablaProductos();
+        }
+        if (e.getSource() == admpro.btnRegistrarProveedor) {
+            AgregarFrame(repv);
+            repv.setTitle("Registrar Proveedor");
+            repv.setVisible(true);
+        }
+        if (e.getSource() == repv.btnRegistrarProveedor) {
+            prov = ProcesosAdmin.LeerDatosProveedor(repv);
+                crudprod = new CRUD_Productos();
+                crudprod.RegistrarProveedor(prov);
+                TablaProovedores();
+        }
+        //Actualizar Proveedor
+        if (e.getSource()==admpro.btnActualizarProveedor){
+            ID_prov = Mensajes.M2("Ingrese el ID del Proveedor a buscar..");
+            AgregarFrame(acprov);
+            acprov.setTitle("Actualizar Proveedor");
+            acprov.setVisible(true);
+            crudprod = new CRUD_Productos();
+            prov = crudprod.BuscarProveedor(ID_prov);
+            if (prov == null) {
+                Mensajes.M1("El id " + ID_prov + " no existe en la tabla de proveedores");
+                TablaProovedores();
+            } else {
+                acprov.txtnombreprov.setText(prov.getNombreprov());
+                acprov.txtcontactoprov.setText(prov.getContactoprov());
+                acprov.txtpaisprov.setText(prov.getPaisprov());
+            }
+        }
+        if (e.getSource()==acprov.btnRetrocederAdmin){
+            TablaProovedores();
+        }
+        if (e.getSource()==acprov.btnActualizarProveedor){
+            prov = ProcesosAdmin.ActualizarDatosProveedor(acprov);
+            crudprod = new CRUD_Productos();
+            crudprod.ActualizarProveedor(prov, ID_prov);
+            TablaProovedores();
         }
         if (e.getSource() == ina.btnClientes) {
             TablaClientes();

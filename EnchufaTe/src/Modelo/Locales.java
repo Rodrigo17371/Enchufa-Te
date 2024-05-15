@@ -12,7 +12,7 @@ public class Locales {
     int codlocal;
     String direccionlocal;
     String nombrelocal;
-    int telefonolocal;
+    String telefonolocal;
     //Getter and Setter
 
     public int getCodlocal() {
@@ -39,11 +39,11 @@ public class Locales {
         this.nombrelocal = nombrelocal;
     }
 
-    public int getTelefonolocal() {
+    public String getTelefonolocal() {
         return telefonolocal;
     }
 
-    public void setTelefonolocal(int telefonolocal) {
+    public void setTelefonolocal(String telefonolocal) {
         this.telefonolocal = telefonolocal;
     }
     

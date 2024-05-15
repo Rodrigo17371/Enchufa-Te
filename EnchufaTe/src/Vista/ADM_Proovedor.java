@@ -40,7 +40,6 @@ public class ADM_Proovedor extends javax.swing.JInternalFrame {
         tblDatosProveedor = new javax.swing.JTable();
         btnRegistrarProveedor = new javax.swing.JButton();
         btnActualizarProveedor = new javax.swing.JButton();
-        btnEliminarProveedor = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,33 +92,25 @@ public class ADM_Proovedor extends javax.swing.JInternalFrame {
 
         btnRegistrarProveedor.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarProveedor.setText("Registrar");
         btnRegistrarProveedor.setBorderPainted(false);
         btnRegistrarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarProveedorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 160, 40));
 
         btnActualizarProveedor.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarProveedor.setText("Actualizar");
         btnActualizarProveedor.setBorderPainted(false);
         btnActualizarProveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarProveedorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
-
-        btnEliminarProveedor.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarProveedor.setBorderPainted(false);
-        btnEliminarProveedor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarProveedorActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnActualizarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 520, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
@@ -147,14 +138,9 @@ public class ADM_Proovedor extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarProveedorActionPerformed
 
-    private void btnEliminarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProveedorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarProveedorActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarProveedor;
-    public javax.swing.JButton btnEliminarProveedor;
     public javax.swing.JButton btnRegistrarProveedor;
     public javax.swing.JButton btnRetrocederAdmin;
     public javax.swing.JButton btnproductos;

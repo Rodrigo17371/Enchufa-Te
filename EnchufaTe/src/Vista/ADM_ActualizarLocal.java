@@ -30,16 +30,9 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
-        txtcodlocal = new javax.swing.JTextField();
-        txtcodarea = new javax.swing.JTextField();
-        txtnombreempleado = new javax.swing.JTextField();
-        txtapempleado = new javax.swing.JTextField();
-        txtfechaempleado = new javax.swing.JTextField();
-        txtdniempleado = new javax.swing.JTextField();
-        txtsexoempleado = new javax.swing.JTextField();
-        txtcelularempleado = new javax.swing.JTextField();
-        txtcorreoempleado = new javax.swing.JTextField();
-        txtsalarioempleado = new javax.swing.JTextField();
+        txtdireccionlocal = new javax.swing.JTextField();
+        txtnombrelocal = new javax.swing.JTextField();
+        txtelefonolocal = new javax.swing.JTextField();
         btnActualizarLocal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -56,95 +49,32 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtcodlocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodlocal.setBorder(null);
-        txtcodlocal.addActionListener(new java.awt.event.ActionListener() {
+        txtdireccionlocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtdireccionlocal.setBorder(null);
+        txtdireccionlocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodlocalActionPerformed(evt);
+                txtdireccionlocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtdireccionlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
 
-        txtcodarea.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodarea.setBorder(null);
-        txtcodarea.addActionListener(new java.awt.event.ActionListener() {
+        txtnombrelocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtnombrelocal.setBorder(null);
+        txtnombrelocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodareaActionPerformed(evt);
+                txtnombrelocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtnombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
 
-        txtnombreempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtnombreempleado.setBorder(null);
-        txtnombreempleado.addActionListener(new java.awt.event.ActionListener() {
+        txtelefonolocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtelefonolocal.setBorder(null);
+        txtelefonolocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombreempleadoActionPerformed(evt);
+                txtelefonolocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombreempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 210, 40));
-
-        txtapempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtapempleado.setBorder(null);
-        txtapempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtapempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtapempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
-
-        txtfechaempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtfechaempleado.setBorder(null);
-        txtfechaempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtfechaempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtfechaempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
-
-        txtdniempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtdniempleado.setBorder(null);
-        txtdniempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdniempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtdniempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
-
-        txtsexoempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtsexoempleado.setBorder(null);
-        txtsexoempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtsexoempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 210, 40));
-
-        txtcelularempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcelularempleado.setBorder(null);
-        txtcelularempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcelularempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcelularempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, 210, 40));
-
-        txtcorreoempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcorreoempleado.setBorder(null);
-        txtcorreoempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcorreoempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcorreoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 210, 30));
-
-        txtsalarioempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtsalarioempleado.setBorder(null);
-        txtsalarioempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtsalarioempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtsalarioempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 430, 210, 40));
+        getContentPane().add(txtelefonolocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 210, 40));
 
         btnActualizarLocal.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -167,45 +97,17 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
-    private void txtcodlocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodlocalActionPerformed
+    private void txtdireccionlocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdireccionlocalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodlocalActionPerformed
+    }//GEN-LAST:event_txtdireccionlocalActionPerformed
 
-    private void txtcodareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodareaActionPerformed
+    private void txtnombrelocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombrelocalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodareaActionPerformed
+    }//GEN-LAST:event_txtnombrelocalActionPerformed
 
-    private void txtnombreempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreempleadoActionPerformed
+    private void txtelefonolocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtelefonolocalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtnombreempleadoActionPerformed
-
-    private void txtapempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtapempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtapempleadoActionPerformed
-
-    private void txtfechaempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechaempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtfechaempleadoActionPerformed
-
-    private void txtdniempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdniempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtdniempleadoActionPerformed
-
-    private void txtsexoempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsexoempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtsexoempleadoActionPerformed
-
-    private void txtcelularempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcelularempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcelularempleadoActionPerformed
-
-    private void txtcorreoempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcorreoempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcorreoempleadoActionPerformed
-
-    private void txtsalarioempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsalarioempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtsalarioempleadoActionPerformed
+    }//GEN-LAST:event_txtelefonolocalActionPerformed
 
     private void btnActualizarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarLocalActionPerformed
         // TODO add your handling code here:
@@ -216,15 +118,8 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnActualizarLocal;
     public javax.swing.JButton btnRetrocederAdmin;
     private javax.swing.JLabel jLabel2;
-    public javax.swing.JTextField txtapempleado;
-    public javax.swing.JTextField txtcelularempleado;
-    public javax.swing.JTextField txtcodarea;
-    public javax.swing.JTextField txtcodlocal;
-    public javax.swing.JTextField txtcorreoempleado;
-    public javax.swing.JTextField txtdniempleado;
-    public javax.swing.JTextField txtfechaempleado;
-    public javax.swing.JTextField txtnombreempleado;
-    public javax.swing.JTextField txtsalarioempleado;
-    public javax.swing.JTextField txtsexoempleado;
+    public javax.swing.JTextField txtdireccionlocal;
+    public javax.swing.JTextField txtelefonolocal;
+    public javax.swing.JTextField txtnombrelocal;
     // End of variables declaration//GEN-END:variables
 }
