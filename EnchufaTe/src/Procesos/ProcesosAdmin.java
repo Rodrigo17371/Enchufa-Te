@@ -137,5 +137,27 @@ public class ProcesosAdmin {
        com.setCantidadcompra(Integer.parseInt(acom.txtcantidadcompra.getText()));
        return com;
   }
+    public static Reserva LeerDatosReserva(ADM_RegistrarReserva rgr){
+       Reserva res= new Reserva();
+       res.setCodcliente(Integer.parseInt(rgr.txtcodcliente.getText()));
+       res.setCodempleado(Integer.parseInt(rgr.txtcodempleado.getText()));
+       res.setFechareserva(rgr.txtfechareserva.getText());
+       res.setHorareserva(rgr.txthorareserva.getText());
+       res.setCodservicio(Integer.parseInt(rgr.txtcodservicio.getText()));
+       res.setTipopagoreserva(rgr.txttipopagoreserva.getText());
+       res.setCantidadreserva(Integer.parseInt(rgr.txtcantidadreserva.getText()));
+       return res;
+  }
+    public static Reserva ActualizarDatosReserva(ADM_ActualizarReserva acre){
+       Reserva res= new Reserva();
+       res.setCodcliente(Integer.parseInt(acre.txtcodcliente.getText()));
+       res.setCodempleado(Integer.parseInt(acre.txtcodempleado.getText()));
+       res.setFechareserva(acre.txtfechareserva.getText());
+       res.setHorareserva(acre.txthorareserva.getText());
+       res.setCodservicio(Integer.parseInt(acre.txtcodservicio.getText()));
+       res.setTipopagoreserva(acre.txttipopagoreserva.getText());
+       res.setCantidadreserva(Integer.parseInt(acre.txtcantidadreserva.getText()));
+       return res;
+  }
     
 }

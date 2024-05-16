@@ -22,6 +22,7 @@ public class ControladorInicio implements ActionListener {
     Proveedor prov;
     Clientes cli;
     Compra com;
+    Reserva res;
     IngresoCliente ic;
     IngresoCajero icj;
     IngresoAdministrador iad;
@@ -62,7 +63,9 @@ public class ControladorInicio implements ActionListener {
     ADM_RegistrarCliente rec;
     ADM_ActualizarCliente acli;
     ADM_RegistrarCompra rgc;
-    ADM_ActualizarCompra acom;
+    ADM_ActualizarCompra acom; 
+    ADM_RegistrarReserva rgr;
+    ADM_ActualizarReserva acre;
     int ID_emp;
     int ID_Area;
     int ID_Local;
@@ -70,12 +73,14 @@ public class ControladorInicio implements ActionListener {
     int ID_prov;
     int ID_cliente;
     int ID_compra;
+    int ID_reserva;
     public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
             Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
              InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
              ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,ADM_RegistrarEmpleado rem,ADM_ActualizarEmpleado raem,
              ADM_RegistrarArea ram,ADM_ActualizarArea acarea,ADM_RegistrarLocal rl,ADM_ActualizarLocal acloc,ADM_RegistrarProducto rep,ADM_ActualizarProducto acprod,
-             ADM_RegistrarProveedor repv,ADM_ActualizarProveedor acprov,ADM_RegistrarCliente rec,ADM_ActualizarCliente acli,ADM_RegistrarCompra rgc,ADM_ActualizarCompra acom) {
+             ADM_RegistrarProveedor repv,ADM_ActualizarProveedor acprov,ADM_RegistrarCliente rec,ADM_ActualizarCliente acli,ADM_RegistrarCompra rgc,ADM_ActualizarCompra acom,
+             ADM_RegistrarReserva rgr,ADM_ActualizarReserva acre) {
         this.panel = panel;
         this.ic = ic;
         this.csa = csa;
@@ -115,6 +120,8 @@ public class ControladorInicio implements ActionListener {
         this.acli=acli;
         this.rgc=rgc;
         this.acom=acom;
+        this.rgr=rgr;
+        this.acre=acre;
         panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
         panel.CLT_Cubiculos.addActionListener(this);
@@ -184,6 +191,8 @@ public class ControladorInicio implements ActionListener {
         admco.btnCompras.addActionListener(this);
         admco.btnReservas.addActionListener(this);
         admr.btnRetrocederAdmin.addActionListener(this);
+        admr.btnRegistrarReserva.addActionListener(this);
+        admr.btnActualizarReserva.addActionListener(this);
         admr.btnClientes.addActionListener(this);
         admr.btnCompras.addActionListener(this);
         admr.btnReservas.addActionListener(this);
@@ -216,6 +225,10 @@ public class ControladorInicio implements ActionListener {
         rgc.btnRegistrarCompra.addActionListener(this);
         acom.btnRetrocederAdmin.addActionListener(this);
         acom.btnActualizarCompra.addActionListener(this);
+        rgr.btnRetrocederAdmin.addActionListener(this);
+        rgr.btnRegistrarReserva.addActionListener(this);
+        acre.btnRetrocederAdmin.addActionListener(this);
+        acre.btnActualizarReserva.addActionListener(this);
     } 
     void TablaEmp() {
         AgregarFrame(adme);
@@ -609,6 +622,9 @@ public class ControladorInicio implements ActionListener {
             rep.setTitle("Registrar Producto");
             rep.setVisible(true);
         }
+        if (e.getSource() == rep.btnRetrocederAdmin) {
+            TablaProductos();
+        }
         if (e.getSource() == rep.btnRegistrarProducto) {
             prod = ProcesosAdmin.LeerDatosProducto(rep);
                 crudprod = new CRUD_Productos();
@@ -651,11 +667,14 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == admpro.btnproductos) {
             TablaProductos();
-        }
+        } 
         if (e.getSource() == admpro.btnRegistrarProveedor) {
             AgregarFrame(repv);
             repv.setTitle("Registrar Proveedor");
             repv.setVisible(true);
+        }
+        if (e.getSource() == repv.btnRetrocederAdmin) {
+            TablaProovedores();
         }
         if (e.getSource() == repv.btnRegistrarProveedor) {
             prov = ProcesosAdmin.LeerDatosProveedor(repv);
@@ -767,6 +786,12 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == rgc.btnRetrocederAdmin) {
             TablaCompras();
         }
+        if (e.getSource() == rgc.btnRegistrarCompra) {
+            com = ProcesosAdmin.LeerDatosCompra(rgc);
+                crudcli = new CRUD_Clientes();
+                crudcli.RegistrarCompra(com);
+                TablaCompras();
+        }
         //Actualizar Compra
         if (e.getSource()==admco.btnActualizarCompra){
             ID_compra = Mensajes.M2("Ingrese el ID de la compra a buscar..");
@@ -776,7 +801,7 @@ public class ControladorInicio implements ActionListener {
             crudcli = new CRUD_Clientes();
             com = crudcli.BuscarCompra(ID_compra);
             if (com == null) {
-                Mensajes.M1("El id " + ID_compra + " no existe en la tabla de productos");
+                Mensajes.M1("El id " + ID_compra + " no existe en la tabla de compras");
                 TablaCompras();
             } else {
                 acom.txtcodcliente.setText(Integer.toString(com.getCodcliente()));
@@ -789,7 +814,7 @@ public class ControladorInicio implements ActionListener {
             }
         }
         if (e.getSource()==acom.btnRetrocederAdmin){
-            TablaClientes();
+            TablaCompras();
         }
         if (e.getSource()==acom.btnActualizarCompra){
             com = ProcesosAdmin.ActualizarDatosCompra(acom);
@@ -797,12 +822,7 @@ public class ControladorInicio implements ActionListener {
             crudcli.ActualizarCompra(com, ID_compra);
             TablaCompras();
         }
-        if (e.getSource() == rgc.btnRegistrarCompra) {
-            com = ProcesosAdmin.LeerDatosCompra(rgc);
-                crudcli = new CRUD_Clientes();
-                crudcli.RegistrarCompra(com);
-                TablaCompras();
-        }
+        //Registrar Reserva
         if (e.getSource() == admr.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
@@ -813,6 +833,50 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == admr.btnCompras) {
             TablaCompras();
+        }
+        if (e.getSource() == admr.btnRegistrarReserva) {
+            AgregarFrame(rgr);
+            rgr.setTitle("Registrar Reserva");
+            rgr.setVisible(true);
+        }
+        if (e.getSource() == rgr.btnRetrocederAdmin) {
+            TablaReservas();
+        }
+        if (e.getSource() == rgr.btnRegistrarReserva) {
+            res = ProcesosAdmin.LeerDatosReserva(rgr);
+                crudcli = new CRUD_Clientes();
+                crudcli.RegistrarReserva(res);
+                TablaReservas();
+        }
+        //Actualizar Reserva
+        if (e.getSource()==admr.btnActualizarReserva){
+            ID_reserva = Mensajes.M2("Ingrese el ID de la reserva a buscar..");
+            AgregarFrame(acre);
+            acre.setTitle("Actualizar reserva");
+            acre.setVisible(true);
+            crudcli = new CRUD_Clientes();
+            res = crudcli.BuscarReserva(ID_reserva);
+            if (res == null) {
+                Mensajes.M1("El id " + ID_reserva + " no existe en la tabla de reservas");
+                TablaReservas();
+            } else {
+                acre.txtcodcliente.setText(Integer.toString(res.getCodcliente()));
+                acre.txtcodempleado.setText(Integer.toString(res.getCodempleado()));
+                acre.txtfechareserva.setText(res.getFechareserva());
+                acre.txthorareserva.setText(res.getHorareserva());
+                acre.txtcodservicio.setText(Integer.toString(res.getCodservicio()));
+                acre.txttipopagoreserva.setText(res.getTipopagoreserva());
+                acre.txtcantidadreserva.setText(Integer.toString(res.getCantidadreserva()));
+            }
+        }
+        if (e.getSource()==acre.btnRetrocederAdmin){
+            TablaReservas();
+        }
+        if (e.getSource()==acre.btnActualizarReserva){
+            res = ProcesosAdmin.ActualizarDatosReserva(acre);
+            crudcli = new CRUD_Clientes();
+            crudcli.ActualizarReserva(res, ID_reserva);
+            TablaReservas();
         }
     }
 

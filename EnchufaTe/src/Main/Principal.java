@@ -47,6 +47,8 @@ public class Principal {
     public static ADM_ActualizarCliente acli;
     public static ADM_RegistrarCompra rgc;
     public static ADM_ActualizarCompra acom;
+    public static ADM_RegistrarReserva rgr;
+    public static ADM_ActualizarReserva acre;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -88,6 +90,8 @@ public class Principal {
          acli= new ADM_ActualizarCliente();
          rgc= new ADM_RegistrarCompra();
          acom= new ADM_ActualizarCompra();
+         rgr= new ADM_RegistrarReserva();
+         acre=new ADM_ActualizarReserva();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
@@ -129,9 +133,11 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(acli);
         SwingUtilities.updateComponentTreeUI(rgc);
         SwingUtilities.updateComponentTreeUI(acom);
+        SwingUtilities.updateComponentTreeUI(rgr);
+        SwingUtilities.updateComponentTreeUI(acre);
         ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc
                 ,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc
-                ,rep,acprod,repv,acprov,rec,acli,rgc,acom);
+                ,rep,acprod,repv,acprov,rec,acli,rgc,acom,rgr,acre);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         

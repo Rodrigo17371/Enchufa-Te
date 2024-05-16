@@ -258,5 +258,93 @@ public class CRUD_Clientes extends ConectarBD {
             }
         }
     }
+    public void RegistrarReserva(Reserva res) {
+        try {
+            int codreserva;
+
+                // Si el proveedor no existe, inserta un nuevo registro en la tabla de proveedores
+                ps = conexion.prepareStatement("INSERT INTO reserva (CodCliente,CodEmpleado,Fecha,Hora) VALUES (?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+                ps.setInt(1, res.getCodcliente());
+                ps.setInt(2, res.getCodempleado());
+                ps.setString(3, res.getFechareserva());
+                ps.setString(4, res.getHorareserva());
+                ps.executeUpdate();
+                ResultSet generatedKeys = ps.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    codreserva = generatedKeys.getInt(1);
+                } else {
+                    throw new SQLException("Fallo al obtener ID de la reserva.");
+                }
+
+            // Insertar en la tabla DESCRIPCION_PROVEEDORES
+            ps = conexion.prepareStatement("INSERT INTO detallereserva  (CodReserva, CodServicio, TipoPago,Cantidad) VALUES (?,?,?,?)");
+            ps.setInt(1, codreserva);
+            ps.setInt(2, res.getCodservicio());
+            ps.setString(3, res.getTipopagoreserva());
+            ps.setInt(4, res.getCantidadreserva());
+            ps.executeUpdate();
+            Mensajes.M1("Datos de la reserva insertados correctamente;!");
+            conexion.close();
+        } catch (Exception ex) {
+            Mensajes.M1("ERROR no se puede insertar." + ex);
+        }
+    }
+    public Reserva BuscarReserva(int ID_reserva) {
+        Reserva res = null;
+        try {
+            rs = st.executeQuery("SELECT c.CodCliente, c.CodEmpleado, c.Fecha, c.Hora, d.CodServicio, d.TipoPago, d.Cantidad "
+                    + "FROM reserva c JOIN detallereserva d ON c.CodReserva = d.CodReserva WHERE c.CodReserva =" + ID_reserva + ";");
+            if (rs.next()) {
+                res = new Reserva();
+                res.setCodcliente(rs.getInt(1));
+                res.setCodempleado(rs.getInt(2));
+                res.setFechareserva(rs.getString(3));
+                res.setHorareserva(rs.getString(4));
+                res.setCodservicio(rs.getInt(5));
+                res.setTipopagoreserva(rs.getString(6));
+                res.setCantidadreserva(rs.getInt(7));
+            }
+        } catch (Exception ex) {
+            Mensajes.M1("ERROR no se puede consultar el registro.." + ex);
+        }
+        return res;
+    }
+    public void ActualizarReserva(Reserva res, int ID_reserva) {
+        try {
+            conexion.setAutoCommit(false); // Iniciar transacción
+
+            // Actualizar los datos principales del empleado
+            ps = conexion.prepareStatement("UPDATE reserva SET CodCliente = ?, CodEmpleado = ?, Fecha = ?, Hora = ? WHERE CodReserva = ?;");
+            ps.setInt(1, res.getCodcliente());
+            ps.setInt(2, res.getCodempleado());
+            ps.setString(3, res.getFechareserva());
+            ps.setString(4, res.getHorareserva());
+            ps.setInt(5, ID_reserva);
+            ps.executeUpdate();
+            
+            ps = conexion.prepareStatement("UPDATE detallereserva SET CodServicio = ?, TipoPago = ?, Cantidad = ? WHERE CodReserva = ?");
+            ps.setInt(1, res.getCodservicio());
+            ps.setString(2, res.getTipopagoreserva());
+            ps.setInt(3, res.getCantidadreserva());
+            ps.setInt(4, ID_reserva);
+            ps.executeUpdate();
+            conexion.commit(); // Confirmar transacción
+            Mensajes.M1("Datos de la reserva actualizados correctamente!");
+        } catch (Exception ex) {
+            try {
+                conexion.rollback(); // Deshacer transacción en caso de error
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            Mensajes.M1("ERROR no se puede actualizar el registro.." + ex);
+        } finally {
+            try {
+                conexion.setAutoCommit(true); // Restaurar el modo de autocommit
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
