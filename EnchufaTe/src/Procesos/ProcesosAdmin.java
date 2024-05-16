@@ -19,7 +19,7 @@ public class ProcesosAdmin {
        em.setApellido_emp(rem.txtapempleado.getText());
        em.setFechanacimiento_emp(rem.txtfechaempleado.getText());
        em.setDni_emp(rem.txtdniempleado.getText());
-       em.setSexo_emp(rem.txtsexoempleado.getText());
+       em.setSexo_emp(rem.cbxsexoempleado.getSelectedItem().toString());
        em.setCelular_emp(rem.txtcelularempleado.getText());
        em.setCorreo_emp(rem.txtcorreoempleado.getText());
        em.setSalario_emp(Double.parseDouble(rem.txtsalarioempleado.getText()));
@@ -33,7 +33,7 @@ public class ProcesosAdmin {
        em.setApellido_emp(raem.txtapempleado.getText());
        em.setFechanacimiento_emp(raem.txtfechaempleado.getText());
        em.setDni_emp(raem.txtdniempleado.getText());
-       em.setSexo_emp(raem.txtsexoempleado.getText());
+       em.setSexo_emp(raem.cbxsexoempleado.getSelectedItem().toString());
        em.setCelular_emp(raem.txtcelularempleado.getText());
        em.setCorreo_emp(raem.txtcorreoempleado.getText());
        em.setSalario_emp(Double.parseDouble(raem.txtsalarioempleado.getText()));
@@ -94,6 +94,48 @@ public class ProcesosAdmin {
        prov.setContactoprov(acprov.txtcontactoprov.getText());
        prov.setPaisprov(acprov.txtpaisprov.getText());
        return prov;
+  }
+    public static Clientes LeerDatosClientes(ADM_RegistrarCliente rec){
+       Clientes cli= new Clientes();
+       cli.setNombre_cli(rec.txtnombrecliente.getText());
+       cli.setApe_cli(rec.txtapecliente.getText());
+       cli.setFechanacimiento_cli(rec.txtfechacliente.getText());
+       cli.setDni_cli(rec.txtdnicliente.getText());
+       cli.setCelular_cli(rec.txtcelularcliente.getText());
+       cli.setSexo_cli(rec.cbxsexocliente.getSelectedItem().toString());
+       return cli;
+  }
+    public static Clientes ActualizarDatosClientes (ADM_ActualizarCliente acli){
+       Clientes cli= new Clientes();
+       cli.setNombre_cli(acli.txtnombrecliente.getText());
+       cli.setApe_cli(acli.txtapecliente.getText());
+       cli.setFechanacimiento_cli(acli.txtfechacliente.getText());
+       cli.setDni_cli(acli.txtdnicliente.getText());
+       cli.setCelular_cli(acli.txtcelularcliente.getText());
+       cli.setSexo_cli(acli.cbxsexocliente.getSelectedItem().toString());
+       return cli;
+  }
+    public static Compra LeerDatosCompra(ADM_RegistrarCompra rgc){
+       Compra com= new Compra();
+       com.setCodcliente(Integer.parseInt(rgc.txtcodcliente.getText()));
+       com.setCodempleado(Integer.parseInt(rgc.txtcodempleado.getText()));
+       com.setFechacompra(rgc.txtfechacompra.getText());
+       com.setHoracompra(rgc.txthoracompra.getText());
+       com.setCodproducto(Integer.parseInt(rgc.txtcodproducto.getText()));
+       com.setTipopagocompra(rgc.txttipopago.getText());
+       com.setCantidadcompra(Integer.parseInt(rgc.txtcantidadcompra.getText()));
+       return com;
+  }
+    public static Compra ActualizarDatosCompra (ADM_ActualizarCompra acom){
+       Compra com= new Compra();
+       com.setCodcliente(Integer.parseInt(acom.txtcodcliente.getText()));
+       com.setCodempleado(Integer.parseInt(acom.txtcodempleado.getText()));
+       com.setFechacompra(acom.txtfechacompra.getText());
+       com.setHoracompra(acom.txthoracompra.getText());
+       com.setCodproducto(Integer.parseInt(acom.txtcodproducto.getText()));
+       com.setTipopagocompra(acom.txttipopago.getText());
+       com.setCantidadcompra(Integer.parseInt(acom.txtcantidadcompra.getText()));
+       return com;
   }
     
 }

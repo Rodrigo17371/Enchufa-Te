@@ -40,7 +40,6 @@ public class ADM_Clientes extends javax.swing.JInternalFrame {
         tblDatosClientes = new javax.swing.JTable();
         btnRegistrarCliente = new javax.swing.JButton();
         btnActualizarCliente = new javax.swing.JButton();
-        btnEliminarCliente = new javax.swing.JButton();
         btnReservas = new javax.swing.JButton();
         btnCompras = new javax.swing.JButton();
         btnClientes = new javax.swing.JButton();
@@ -76,33 +75,25 @@ public class ADM_Clientes extends javax.swing.JInternalFrame {
 
         btnRegistrarCliente.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnRegistrarCliente.setText("Registrar");
         btnRegistrarCliente.setBorderPainted(false);
         btnRegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 160, 40));
+        getContentPane().add(btnRegistrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, 160, 40));
 
         btnActualizarCliente.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
+        btnActualizarCliente.setText("Actualizar");
         btnActualizarCliente.setBorderPainted(false);
         btnActualizarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 540, 160, 40));
-
-        btnEliminarCliente.setBackground(new java.awt.Color(153, 153, 153));
-        btnEliminarCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnEliminarCliente.setBorderPainted(false);
-        btnEliminarCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarClienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnEliminarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, 160, 40));
+        getContentPane().add(btnActualizarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, 160, 40));
 
         btnReservas.setBackground(new java.awt.Color(255, 255, 255));
         btnReservas.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -152,10 +143,6 @@ public class ADM_Clientes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnActualizarClienteActionPerformed
 
-    private void btnEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarClienteActionPerformed
-
     private void btnReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnReservasActionPerformed
@@ -173,7 +160,6 @@ public class ADM_Clientes extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnActualizarCliente;
     public javax.swing.JButton btnClientes;
     public javax.swing.JButton btnCompras;
-    public javax.swing.JButton btnEliminarCliente;
     public javax.swing.JButton btnRegistrarCliente;
     public javax.swing.JButton btnReservas;
     public javax.swing.JButton btnRetrocederAdmin;

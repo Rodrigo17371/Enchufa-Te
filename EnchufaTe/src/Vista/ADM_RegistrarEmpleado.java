@@ -18,6 +18,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        cbxsexoempleado.setBackground(new java.awt.Color(0,0,0,1));
     }
 
     /**
@@ -36,11 +37,11 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
         txtapempleado = new javax.swing.JTextField();
         txtfechaempleado = new javax.swing.JTextField();
         txtdniempleado = new javax.swing.JTextField();
-        txtsexoempleado = new javax.swing.JTextField();
         txtcelularempleado = new javax.swing.JTextField();
         txtcorreoempleado = new javax.swing.JTextField();
         txtsalarioempleado = new javax.swing.JTextField();
         btnRegistrarEmpleado = new javax.swing.JButton();
+        cbxsexoempleado = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -110,15 +111,6 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
         });
         getContentPane().add(txtdniempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
 
-        txtsexoempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtsexoempleado.setBorder(null);
-        txtsexoempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtsexoempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 210, 40));
-
         txtcelularempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcelularempleado.setBorder(null);
         txtcelularempleado.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +149,11 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRegistrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
+        cbxsexoempleado.setBackground(new java.awt.Color(255, 0, 0));
+        cbxsexoempleado.setForeground(new java.awt.Color(255, 255, 255));
+        cbxsexoempleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+        getContentPane().add(cbxsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 210, 40));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
@@ -191,10 +188,6 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdniempleadoActionPerformed
 
-    private void txtsexoempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsexoempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtsexoempleadoActionPerformed
-
     private void txtcelularempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcelularempleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcelularempleadoActionPerformed
@@ -215,6 +208,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnRegistrarEmpleado;
     public javax.swing.JButton btnRetrocederAdmin;
+    public javax.swing.JComboBox<String> cbxsexoempleado;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JTextField txtapempleado;
     public javax.swing.JTextField txtcelularempleado;
@@ -225,6 +219,5 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txtfechaempleado;
     public javax.swing.JTextField txtnombreempleado;
     public javax.swing.JTextField txtsalarioempleado;
-    public javax.swing.JTextField txtsexoempleado;
     // End of variables declaration//GEN-END:variables
 }
