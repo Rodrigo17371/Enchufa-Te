@@ -107,8 +107,8 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
         });
         getContentPane().add(txtprecioprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 210, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

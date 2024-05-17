@@ -122,9 +122,7 @@ public class ControladorInicio implements ActionListener {
         this.acom=acom;
         this.rgr=rgr;
         this.acre=acre;
-        panel.CLT_SVAD.addActionListener(this);
         panel.ADM_Cubiculos.addActionListener(this);
-        panel.CLT_Cubiculos.addActionListener(this);
         ic.btnSiguienteCliente.addActionListener(this);
         csa.btnpagar12.addActionListener(this);
         csa.btnpagar1.addActionListener(this);
@@ -292,16 +290,6 @@ public class ControladorInicio implements ActionListener {
             AgregarFrame(iad);
             iad.setTitle("Admin");
             iad.setVisible(true);
-        }
-        if (e.getSource() == panel.CLT_SVAD) {
-            AgregarFrame(ic);
-            ic.setTitle("Tienda");
-            ic.setVisible(true);
-        }
-        if (e.getSource() == panel.CLT_Cubiculos) {
-            AgregarFrame(icj);
-            icj.setTitle("Cubiculos");
-            icj.setVisible(true);
         }
         if (e.getSource() == ic.btnSiguienteCliente) {
             AgregarFrame(csa);

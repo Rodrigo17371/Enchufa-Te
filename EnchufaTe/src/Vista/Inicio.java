@@ -25,9 +25,6 @@ public class Inicio extends javax.swing.JFrame {
 
         dspEscritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        CLT_Cubiculos = new javax.swing.JMenuItem();
-        CLT_SVAD = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         ADM_Cubiculos = new javax.swing.JMenuItem();
 
@@ -39,29 +36,9 @@ public class Inicio extends javax.swing.JFrame {
         dspEscritorio.setToolTipText("");
         getContentPane().add(dspEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1470, 690));
 
-        jMenu1.setText("CLIENTE");
-
-        CLT_Cubiculos.setText("Cubiculos");
-        CLT_Cubiculos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CLT_CubiculosActionPerformed(evt);
-            }
-        });
-        jMenu1.add(CLT_Cubiculos);
-
-        CLT_SVAD.setText("Servicios Adicionales");
-        CLT_SVAD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CLT_SVADActionPerformed(evt);
-            }
-        });
-        jMenu1.add(CLT_SVAD);
-
-        jMenuBar1.add(jMenu1);
-
         jMenu2.setText("ADMINISTRADOR");
 
-        ADM_Cubiculos.setText("Gestion Cubiculos");
+        ADM_Cubiculos.setText("Gestion de la empresa");
         ADM_Cubiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ADM_CubiculosActionPerformed(evt);
@@ -75,15 +52,6 @@ public class Inicio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CLT_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_CubiculosActionPerformed
-
-
-    }//GEN-LAST:event_CLT_CubiculosActionPerformed
-
-    private void CLT_SVADActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLT_SVADActionPerformed
-    
-    }//GEN-LAST:event_CLT_SVADActionPerformed
 
     private void ADM_CubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADM_CubiculosActionPerformed
 
@@ -123,10 +91,7 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem ADM_Cubiculos;
-    public javax.swing.JMenuItem CLT_Cubiculos;
-    public javax.swing.JMenuItem CLT_SVAD;
     public javax.swing.JDesktopPane dspEscritorio;
-    public javax.swing.JMenu jMenu1;
     public javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables

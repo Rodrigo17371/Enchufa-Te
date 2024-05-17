@@ -114,7 +114,7 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
         cbxsexocliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
         getContentPane().add(cbxsexocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 400, 210, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cliente.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();
