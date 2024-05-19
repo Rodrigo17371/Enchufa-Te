@@ -246,7 +246,6 @@ public class ControladorInicio implements ActionListener {
             iad.setTitle("Admin");
             iad.setVisible(true);
         }
-        
         if (e.getSource() == iad.btnIngresarAdm) {
             crudlog= new CRUD_Login();
             log= ProcesosAdmin.LeerDatosLogin(iad);
@@ -720,11 +719,6 @@ public class ControladorInicio implements ActionListener {
         int y = (panel.dspEscritorio.getHeight() - frame.getHeight()) / 2;
         frame.setLocation(x, y);
         panel.dspEscritorio.repaint();
-    }
-    void AgregarFrameemtp(JInternalFrame frame) {
-        emtp.dspEscritorio.removeAll();
-        emtp.dspEscritorio.add(frame);
-        emtp.dspEscritorio.repaint();
     }
 
 }

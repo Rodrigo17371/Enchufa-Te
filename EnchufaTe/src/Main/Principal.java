@@ -105,9 +105,29 @@ public class Principal {
                 ,rep,acprod,repv,acprov,rec,acli,rgc,acom,rgr,acre);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
-        
         iad.BorrarBordesIngresoAdmin();
         panel.setVisible(true);
+        panel.dspEscritorio.removeAll();
+        panel.dspEscritorio.add(iad);
+        int x = (panel.dspEscritorio.getWidth() - iad.getWidth()) / 2;
+        int y = (panel.dspEscritorio.getHeight() - iad.getHeight()) / 2;
+        iad.setLocation(x, y);
+        panel.dspEscritorio.repaint();
+        iad.setTitle("Admin");
+        iad.setVisible(true);
+
+        
     }
+     /*
+     void AgregarFramePrincipal(JInternalFrame frame) {
+        panel.dspEscritorio.removeAll();
+        panel.dspEscritorio.add(iad);
+        int x = (panel.dspEscritorio.getWidth() - frame.getWidth()) / 2;
+        int y = (panel.dspEscritorio.getHeight() - frame.getHeight()) / 2;
+        frame.setLocation(x, y);
+        panel.dspEscritorio.repaint();
+        iad.setTitle("Admin");
+        iad.setVisible(true);
+    }*/
     
 }
