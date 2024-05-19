@@ -9,24 +9,12 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class Principal {
     public static Inicio panel;
     public static IngresoAdministrador iad;
-    public static IngresoCajero icj;
-    public static IngresoCliente ic;
-    public static Cliente_ServiciosAdicionales csa;
     public static EscMetodosPago emtp;
-    public static Cliente_Visa cv;
-    public static Cliente_Plin cp;
-    public static Cliente_Yape cy;
-    public static Cliente_PagoEfectivo cpe;
-    public static Cliente_Boleta cb;
-    public static Cajero_Cubiculos ccb;
     public static InterfazAdmin ina;
     public static ADM_Cubiculos admc;
     public static ADM_GesEmpleado adme;
     public static ADM_Productos admp;
     public static Fondo fond;
-    public static Cajero_CubiculoG cbg;
-    public static Cajero_CubiculoV cbv;
-    public static Cajero_CubiculoUV cbuv;
     public static ADM_GesArea adga;
     public static ADM_GesLocal adgl;
     public static ADM_Proovedor admpro;
@@ -52,24 +40,12 @@ public class Principal {
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
-         icj= new IngresoCajero();
-         ic= new IngresoCliente();
-         csa= new Cliente_ServiciosAdicionales();
          emtp= new EscMetodosPago();
-         cv= new Cliente_Visa();
-         cp= new Cliente_Plin();
-         cy= new Cliente_Yape();
-         cpe= new Cliente_PagoEfectivo();
-         cb= new Cliente_Boleta();
-         ccb= new Cajero_Cubiculos();
          ina= new InterfazAdmin();
          admc= new ADM_Cubiculos();
          adme= new ADM_GesEmpleado();
          admp= new ADM_Productos();
          fond= new Fondo();
-         cbg= new Cajero_CubiculoG();
-         cbv= new Cajero_CubiculoV();
-         cbuv= new Cajero_CubiculoUV();
          adga= new ADM_GesArea();
          adgl= new ADM_GesLocal();
          admpro= new ADM_Proovedor();
@@ -95,24 +71,13 @@ public class Principal {
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
-        SwingUtilities.updateComponentTreeUI(icj);
-        SwingUtilities.updateComponentTreeUI(ic);
-        SwingUtilities.updateComponentTreeUI(csa);
+
         SwingUtilities.updateComponentTreeUI(emtp);
-        SwingUtilities.updateComponentTreeUI(cv);
-        SwingUtilities.updateComponentTreeUI(cp);
-        SwingUtilities.updateComponentTreeUI(cy);
-        SwingUtilities.updateComponentTreeUI(cpe);
-        SwingUtilities.updateComponentTreeUI(cb);
-        SwingUtilities.updateComponentTreeUI(ccb);
         SwingUtilities.updateComponentTreeUI(ina);
         SwingUtilities.updateComponentTreeUI(admc);
         SwingUtilities.updateComponentTreeUI(adme);
         SwingUtilities.updateComponentTreeUI(admp);
         SwingUtilities.updateComponentTreeUI(fond);
-        SwingUtilities.updateComponentTreeUI(cbg);
-        SwingUtilities.updateComponentTreeUI(cbv);
-        SwingUtilities.updateComponentTreeUI(cbuv);
         SwingUtilities.updateComponentTreeUI(adga);
         SwingUtilities.updateComponentTreeUI(adgl);
         SwingUtilities.updateComponentTreeUI(admpro);
@@ -135,15 +100,13 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(acom);
         SwingUtilities.updateComponentTreeUI(rgr);
         SwingUtilities.updateComponentTreeUI(acre);
-        ControladorInicio ci= new ControladorInicio(panel,csa,ic,emtp,cv,cp,cy,cpe,cb,ccb,icj,iad,ina,admc
-                ,adme,admp,cbg,cbv,cbuv,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc
+        ControladorInicio ci= new ControladorInicio(panel,emtp,iad,ina,admc
+                ,adme,admp,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc
                 ,rep,acprod,repv,acprov,rec,acli,rgc,acom,rgr,acre);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         
         iad.BorrarBordesIngresoAdmin();
-        icj.BorrarBordesIngresoCliente();
-        ic.BorrarBordesIngresoCliente();
         panel.setVisible(true);
     }
     

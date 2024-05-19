@@ -11,6 +11,23 @@ import Vista.*;
  */
 public class ProcesosAdmin {
     
+    public static Login LeerDatosLogin(IngresoAdministrador iad){
+        Login log=new Login();
+        log.setUsuario_login(iad.txtUsuarioAdm.getText());
+        log.setContraseña_login(iad.txtContraseñaAdm.getText());
+        return log;
+    }
+    public static Login BorrarDatosEscritos(IngresoAdministrador iad) {
+    Login log = new Login();
+    log.setUsuario_login(iad.txtUsuarioAdm.getText());
+    log.setContraseña_login(iad.txtContraseñaAdm.getText());
+
+    // Borrar lo que estaba escrito antes
+    iad.txtUsuarioAdm.setText("");
+    iad.txtContraseñaAdm.setText("");
+
+    return log;
+}
     public static Empleados LeerDatosEmpleado(ADM_RegistrarEmpleado rem){
        Empleados em= new Empleados();
        em.setCodlocal(Integer.parseInt(rem.txtcodlocal.getText()));

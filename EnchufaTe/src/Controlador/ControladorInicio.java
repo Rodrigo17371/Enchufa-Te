@@ -1,8 +1,6 @@
 package Controlador;
 
-import DAO.CRUD_GestionEmpresa;
-import DAO.CRUD_Productos;
-import DAO.CRUD_Clientes;
+import DAO.*;
 import Main.Principal;
 import Procesos.ProcesosAdmin;
 import Vista.*;
@@ -12,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import Formatos.Mensajes;
+import javax.swing.JOptionPane;
 public class ControladorInicio implements ActionListener {
 
     Inicio panel;
@@ -23,17 +22,9 @@ public class ControladorInicio implements ActionListener {
     Clientes cli;
     Compra com;
     Reserva res;
-    IngresoCliente ic;
-    IngresoCajero icj;
+    Login log;
     IngresoAdministrador iad;
-    Cliente_ServiciosAdicionales csa;
     EscMetodosPago emtp;
-    Cliente_Visa cv;
-    Cliente_Plin cp;
-    Cliente_Yape cy;
-    Cliente_PagoEfectivo cpe;
-    Cliente_Boleta cb;
-    Cajero_Cubiculos ccb;
     InterfazAdmin ina;
     ADM_Cubiculos admc;
     ADM_GesEmpleado adme;
@@ -41,12 +32,10 @@ public class ControladorInicio implements ActionListener {
     ADM_Proovedor admpro;
     ADM_GesArea adga;
     ADM_GesLocal adgl;
-    Cajero_CubiculoG cbg;
-    Cajero_CubiculoV cbv;
-    Cajero_CubiculoUV cbuv;
     CRUD_GestionEmpresa crudadm;
     CRUD_Productos crudprod;
     CRUD_Clientes crudcli;
+    CRUD_Login crudlog;
     ADM_Clientes admcli;
     ADM_Compras admco;
     ADM_Reservas admr;
@@ -74,32 +63,18 @@ public class ControladorInicio implements ActionListener {
     int ID_cliente;
     int ID_compra;
     int ID_reserva;
-    public ControladorInicio(Inicio panel, Cliente_ServiciosAdicionales csa, IngresoCliente ic, EscMetodosPago emtp, Cliente_Visa cv,
-            Cliente_Plin cp, Cliente_Yape cy, Cliente_PagoEfectivo cpe, Cliente_Boleta cb, Cajero_Cubiculos ccb, IngresoCajero icj, IngresoAdministrador iad,
-             InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, Cajero_CubiculoG cbg, Cajero_CubiculoV cbv, Cajero_CubiculoUV cbuv,
-             ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,ADM_RegistrarEmpleado rem,ADM_ActualizarEmpleado raem,
+    public ControladorInicio(Inicio panel, EscMetodosPago emtp, IngresoAdministrador iad,
+             InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp,ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,ADM_RegistrarEmpleado rem,ADM_ActualizarEmpleado raem,
              ADM_RegistrarArea ram,ADM_ActualizarArea acarea,ADM_RegistrarLocal rl,ADM_ActualizarLocal acloc,ADM_RegistrarProducto rep,ADM_ActualizarProducto acprod,
              ADM_RegistrarProveedor repv,ADM_ActualizarProveedor acprov,ADM_RegistrarCliente rec,ADM_ActualizarCliente acli,ADM_RegistrarCompra rgc,ADM_ActualizarCompra acom,
              ADM_RegistrarReserva rgr,ADM_ActualizarReserva acre) {
         this.panel = panel;
-        this.ic = ic;
-        this.csa = csa;
         this.emtp = emtp;
-        this.cv = cv;
-        this.cp = cp;
-        this.cy = cy;
-        this.cpe = cpe;
-        this.cb = cb;
-        this.ccb = ccb;
-        this.icj = icj;
         this.iad = iad;
         this.ina = ina;
         this.admc = admc;
         this.adme = adme;
         this.admp = admp;
-        this.cbg= cbg;
-        this.cbv= cbv;
-        this.cbuv=cbuv;
         this.adga=adga;
         this.adgl=adgl;
         this.admpro=admpro;
@@ -123,21 +98,10 @@ public class ControladorInicio implements ActionListener {
         this.rgr=rgr;
         this.acre=acre;
         panel.ADM_Cubiculos.addActionListener(this);
-        ic.btnSiguienteCliente.addActionListener(this);
-        csa.btnpagar12.addActionListener(this);
-        csa.btnpagar1.addActionListener(this);
-        csa.btnpagar13.addActionListener(this);
         emtp.btnPagoEfectivo.addActionListener(this);
         emtp.btnPlin.addActionListener(this);
         emtp.btnVisa.addActionListener(this);
         emtp.btnYape.addActionListener(this);
-        cv.btnpagarahora.addActionListener(this);
-        ccb.btngeneral.addActionListener(this);
-        ccb.btngeneral1.addActionListener(this);
-        ccb.btnvip.addActionListener(this);
-        ccb.btnvip1.addActionListener(this);
-        ccb.btnultravip.addActionListener(this);
-        icj.btnSiguienteCliente.addActionListener(this);
         iad.btnIngresarAdm.addActionListener(this);
         ina.btnCubiculos.addActionListener(this);
         ina.btnEmpleados.addActionListener(this);
@@ -163,15 +127,6 @@ public class ControladorInicio implements ActionListener {
         admp.btnproveedor.addActionListener(this);
         admp.btnRegistrarProducto.addActionListener(this);
         admp.btnActualizarProducto.addActionListener(this);
-        cbg.btnRetrocederAdmin.addActionListener(this);
-        cbg.btnadquirir.addActionListener(this);
-        cbg.btnadquirir1.addActionListener(this);
-        cbv.btnRetrocederAdmin.addActionListener(this);
-        cbv.btnadquirir.addActionListener(this);
-        cbv.btnadquirir1.addActionListener(this);
-        cbuv.btnRetrocederAdmin.addActionListener(this);
-        cbuv.btnadquirir.addActionListener(this);
-        cbuv.btnadquirir1.addActionListener(this);
         admpro.btnRetrocederAdmin.addActionListener(this);
         admpro.btnproductos.addActionListener(this);
         admpro.btnRegistrarProveedor.addActionListener(this);
@@ -291,130 +246,20 @@ public class ControladorInicio implements ActionListener {
             iad.setTitle("Admin");
             iad.setVisible(true);
         }
-        if (e.getSource() == ic.btnSiguienteCliente) {
-            AgregarFrame(csa);
-            csa.setTitle("Productos");
-            csa.setVisible(true);
-        }
-        if (e.getSource() == csa.btnpagar12) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == csa.btnpagar1) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == csa.btnpagar13) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == emtp.btnVisa) {
-            AgregarFrameemtp(cv);
-            cv.setTitle("Visa");
-            cv.setVisible(true);
-        }
-        if (e.getSource() == emtp.btnPlin) {
-            AgregarFrameemtp(cp);
-            cp.setTitle("Plin");
-            cp.setVisible(true);
-        }
-        if (e.getSource() == emtp.btnYape) {
-            AgregarFrameemtp(cy);
-            cy.setTitle("Yape");
-            cy.setVisible(true);
-        }
-        if (e.getSource() == emtp.btnPagoEfectivo) {
-            AgregarFrameemtp(cpe);
-            cpe.setTitle("Pago Efectivo");
-            cpe.setVisible(true);
-        }
-        if (e.getSource() == cv.btnpagarahora) {
-            AgregarFrame(cb);
-            cb.setTitle("Boleta");
-            cb.setVisible(true);
-        }
-        if (e.getSource() == icj.btnSiguienteCliente) {
-            AgregarFrame(ccb);
-            ccb.setTitle("Cubiculos");
-            ccb.setVisible(true);
-        }
-        if (e.getSource() == ccb.btngeneral) {
-            AgregarFrame(cbg);
-            cbg.setTitle("Cubiculos General");
-            cbg.setVisible(true);
-        }
-        if (e.getSource() == ccb.btngeneral1) {
-            AgregarFrame(cbg);
-            cbg.setTitle("Cubiculos General");
-            cbg.setVisible(true);
-        }
-        if (e.getSource() == ccb.btnvip) {
-            AgregarFrame(cbv);
-            cbv.setTitle("Cubiculos VIP");
-            cbv.setVisible(true);
-        }
-        if (e.getSource() == ccb.btnvip1) {
-            AgregarFrame(cbv);
-            cbv.setTitle("Cubiculos VIP");
-            cbv.setVisible(true);
-        }
-        if (e.getSource() == ccb.btnultravip) {
-            AgregarFrame(cbuv);
-            cbuv.setTitle("Cubiculos ULTRAVIP");
-            cbuv.setVisible(true);
-        }
-        if (e.getSource() == cbg.btnadquirir) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == cbg.btnadquirir1) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == cbv.btnadquirir) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == cbv.btnadquirir1) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == cbuv.btnadquirir) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == cbuv.btnadquirir1) {
-            AgregarFrame(emtp);
-            emtp.setTitle("Metodos de Pago");
-            emtp.setVisible(true);
-        }
-        if (e.getSource() == cbg.btnRetrocederAdmin) {
-            AgregarFrame(ccb);
-            ccb.setTitle("Cubiculos");
-            ccb.setVisible(true);
-        }
-        if (e.getSource() == cbuv.btnRetrocederAdmin) {
-            AgregarFrame(ccb);
-            ccb.setTitle("Cubiculos");
-            ccb.setVisible(true);
-        }
-        if (e.getSource() == cbv.btnRetrocederAdmin) {
-            AgregarFrame(ccb);
-            ccb.setTitle("Cubiculos");
-            ccb.setVisible(true);
-        }
+        
         if (e.getSource() == iad.btnIngresarAdm) {
-            AgregarFrame(ina);
+            crudlog= new CRUD_Login();
+            log= ProcesosAdmin.LeerDatosLogin(iad);
+            if(crudlog.verificarCuentaAdmin(log)){
+                AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
             ina.setVisible(true);
+            }
+            else {
+                // Mostrar mensaje de error o realizar otra acción
+                JOptionPane.showMessageDialog(iad, "Cuenta no válida. Verifica tu usuario y contraseña.");
+            }
+            Procesos.ProcesosAdmin.BorrarDatosEscritos(iad);
         }
         if (e.getSource() == ina.btnCubiculos) {
             AgregarFrame(admc);

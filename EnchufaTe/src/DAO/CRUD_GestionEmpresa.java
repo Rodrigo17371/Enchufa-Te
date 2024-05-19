@@ -34,7 +34,7 @@ public class CRUD_GestionEmpresa extends ConectarBD {
                 row[6] = rs.getInt(7);
                 row[7] = rs.getString(8);
                 row[8] = rs.getInt(9);
-                row[9] = rs.getInt(10);
+                row[9] = rs.getString(10);
                 row[10] = rs.getDouble(11);
                 modelo.addRow(row);
             }//fin del while

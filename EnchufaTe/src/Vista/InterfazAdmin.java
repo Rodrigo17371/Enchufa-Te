@@ -43,6 +43,7 @@ public class InterfazAdmin extends javax.swing.JInternalFrame {
         btnClientes = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnProductos.setBackground(new java.awt.Color(255, 255, 255));
