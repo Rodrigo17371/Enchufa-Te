@@ -10,7 +10,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import Formatos.Mensajes;
+import java.net.URL;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
 public class ControladorInicio implements ActionListener {
 
     Inicio panel;
@@ -23,6 +27,7 @@ public class ControladorInicio implements ActionListener {
     Compra com;
     Reserva res;
     Login log;
+    Cubiculo cu;
     IngresoAdministrador iad;
     EscMetodosPago emtp;
     InterfazAdmin ina;
@@ -36,6 +41,7 @@ public class ControladorInicio implements ActionListener {
     CRUD_Productos crudprod;
     CRUD_Clientes crudcli;
     CRUD_Login crudlog;
+    CRUD_Cubiculos crudcub;
     ADM_Clientes admcli;
     ADM_Compras admco;
     ADM_Reservas admr;
@@ -52,9 +58,11 @@ public class ControladorInicio implements ActionListener {
     ADM_RegistrarCliente rec;
     ADM_ActualizarCliente acli;
     ADM_RegistrarCompra rgc;
-    ADM_ActualizarCompra acom; 
+    ADM_ActualizarCompra acom;
     ADM_RegistrarReserva rgr;
     ADM_ActualizarReserva acre;
+    ADM_RegistrarCubiculo rgcu;
+    ADM_ActualizarCubiculo actcubi;
     int ID_emp;
     int ID_Area;
     int ID_Local;
@@ -63,11 +71,12 @@ public class ControladorInicio implements ActionListener {
     int ID_cliente;
     int ID_compra;
     int ID_reserva;
+    int ID_Cubiculo;
     public ControladorInicio(Inicio panel, EscMetodosPago emtp, IngresoAdministrador iad,
-             InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp,ADM_GesArea adga,ADM_GesLocal adgl,ADM_Proovedor admpro,ADM_Clientes admcli,ADM_Compras admco,ADM_Reservas admr,ADM_RegistrarEmpleado rem,ADM_ActualizarEmpleado raem,
-             ADM_RegistrarArea ram,ADM_ActualizarArea acarea,ADM_RegistrarLocal rl,ADM_ActualizarLocal acloc,ADM_RegistrarProducto rep,ADM_ActualizarProducto acprod,
-             ADM_RegistrarProveedor repv,ADM_ActualizarProveedor acprov,ADM_RegistrarCliente rec,ADM_ActualizarCliente acli,ADM_RegistrarCompra rgc,ADM_ActualizarCompra acom,
-             ADM_RegistrarReserva rgr,ADM_ActualizarReserva acre) {
+            InterfazAdmin ina, ADM_Cubiculos admc, ADM_GesEmpleado adme, ADM_Productos admp, ADM_GesArea adga, ADM_GesLocal adgl, ADM_Proovedor admpro, ADM_Clientes admcli, ADM_Compras admco, ADM_Reservas admr, ADM_RegistrarEmpleado rem, ADM_ActualizarEmpleado raem,
+            ADM_RegistrarArea ram, ADM_ActualizarArea acarea, ADM_RegistrarLocal rl, ADM_ActualizarLocal acloc, ADM_RegistrarProducto rep, ADM_ActualizarProducto acprod,
+            ADM_RegistrarProveedor repv, ADM_ActualizarProveedor acprov, ADM_RegistrarCliente rec, ADM_ActualizarCliente acli, ADM_RegistrarCompra rgc, ADM_ActualizarCompra acom,
+            ADM_RegistrarReserva rgr, ADM_ActualizarReserva acre,ADM_RegistrarCubiculo rgcu,ADM_ActualizarCubiculo actcubi) {
         this.panel = panel;
         this.emtp = emtp;
         this.iad = iad;
@@ -75,28 +84,30 @@ public class ControladorInicio implements ActionListener {
         this.admc = admc;
         this.adme = adme;
         this.admp = admp;
-        this.adga=adga;
-        this.adgl=adgl;
-        this.admpro=admpro;
-        this.admcli=admcli;
-        this.admco=admco;
-        this.admr=admr;
-        this.rem=rem;
-        this.raem=raem;
-        this.ram=ram;
-        this.acarea=acarea;
-        this.rl=rl;
-        this.acloc=acloc;
-        this.rep=rep;
-        this.acprod=acprod;
-        this.repv=repv;
-        this.acprov=acprov;
-        this.rec=rec;
-        this.acli=acli;
-        this.rgc=rgc;
-        this.acom=acom;
-        this.rgr=rgr;
-        this.acre=acre;
+        this.adga = adga;
+        this.adgl = adgl;
+        this.admpro = admpro;
+        this.admcli = admcli;
+        this.admco = admco;
+        this.admr = admr;
+        this.rem = rem;
+        this.raem = raem;
+        this.ram = ram;
+        this.acarea = acarea;
+        this.rl = rl;
+        this.acloc = acloc;
+        this.rep = rep;
+        this.acprod = acprod;
+        this.repv = repv;
+        this.acprov = acprov;
+        this.rec = rec;
+        this.acli = acli;
+        this.rgc = rgc;
+        this.acom = acom;
+        this.rgr = rgr;
+        this.acre = acre;
+        this.rgcu=rgcu;
+        this.actcubi=actcubi;
         panel.ADM_Cubiculos.addActionListener(this);
         emtp.btnPagoEfectivo.addActionListener(this);
         emtp.btnPlin.addActionListener(this);
@@ -107,6 +118,9 @@ public class ControladorInicio implements ActionListener {
         ina.btnEmpleados.addActionListener(this);
         ina.btnProductos.addActionListener(this);
         ina.btnClientes.addActionListener(this);
+        admc.btnCubiculos.addActionListener(this);
+        admc.btnRegistrarCubiculo.addActionListener(this);
+        admc.btnActualizarCubiculo.addActionListener(this);
         admc.btnRetrocederAdmin.addActionListener(this);
         adme.btnRetrocederAdmin.addActionListener(this);
         adme.btnEmpleados.addActionListener(this);
@@ -182,7 +196,12 @@ public class ControladorInicio implements ActionListener {
         rgr.btnRegistrarReserva.addActionListener(this);
         acre.btnRetrocederAdmin.addActionListener(this);
         acre.btnActualizarReserva.addActionListener(this);
-    } 
+        rgcu.btnRetrocederAdmin.addActionListener(this);
+        rgcu.btnRegistrarCubiculo.addActionListener(this);
+        actcubi.btnRetrocederAdmin.addActionListener(this);
+        actcubi.btnActualizarCubiculo.addActionListener(this);
+    }
+
     void TablaEmp() {
         AgregarFrame(adme);
         adme.setTitle("Registro de Empleados");
@@ -190,6 +209,7 @@ public class ControladorInicio implements ActionListener {
         crudadm = new CRUD_GestionEmpresa();
         crudadm.MostrarTablaEmpleados(adme.tblDatosEmp);
     }
+
     void TablaArea() {
         AgregarFrame(adga);
         adga.setTitle("Registro de Area");
@@ -197,6 +217,7 @@ public class ControladorInicio implements ActionListener {
         crudadm = new CRUD_GestionEmpresa();
         crudadm.MostrarTablaArea(adga.tblDatosArea);
     }
+
     void TablaLocales() {
         AgregarFrame(adgl);
         adgl.setTitle("Registro de Locales");
@@ -204,6 +225,7 @@ public class ControladorInicio implements ActionListener {
         crudadm = new CRUD_GestionEmpresa();
         crudadm.MostrarTablaLocales(adgl.tblDatosLocales);
     }
+
     void TablaProductos() {
         AgregarFrame(admp);
         admp.setTitle("Registro de Productos");
@@ -211,6 +233,7 @@ public class ControladorInicio implements ActionListener {
         crudprod = new CRUD_Productos();
         crudprod.MostrarTablaProductos(admp.tblDatosProductos);
     }
+
     void TablaProovedores() {
         AgregarFrame(admpro);
         admpro.setTitle("Registro de Proveedores");
@@ -218,6 +241,7 @@ public class ControladorInicio implements ActionListener {
         crudprod = new CRUD_Productos();
         crudprod.MostrarTablaProveedor(admpro.tblDatosProveedor);
     }
+
     void TablaClientes() {
         AgregarFrame(admcli);
         admcli.setTitle("Registro de Clientes");
@@ -225,6 +249,7 @@ public class ControladorInicio implements ActionListener {
         crudcli = new CRUD_Clientes();
         crudcli.MostrarTablaClientes(admcli.tblDatosClientes);
     }
+
     void TablaCompras() {
         AgregarFrame(admco);
         admco.setTitle("Registro de Compras");
@@ -232,6 +257,7 @@ public class ControladorInicio implements ActionListener {
         crudcli = new CRUD_Clientes();
         crudcli.MostrarTablaCompras(admco.tblDatosCompras);
     }
+
     void TablaReservas() {
         AgregarFrame(admr);
         admr.setTitle("Registro de Reservas");
@@ -239,6 +265,15 @@ public class ControladorInicio implements ActionListener {
         crudcli = new CRUD_Clientes();
         crudcli.MostrarTablaReservas(admr.tblDatosReservas);
     }
+
+    void TablaCubiculos() {
+        AgregarFrame(admc);
+        admc.setTitle("Registro de Cubiculos");
+        admc.setVisible(true);
+        crudcub = new CRUD_Cubiculos();
+        crudcub.MostrarTablaCubiculos(admc.tblDatosCubiculos);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == panel.ADM_Cubiculos) {
@@ -247,28 +282,68 @@ public class ControladorInicio implements ActionListener {
             iad.setVisible(true);
         }
         if (e.getSource() == iad.btnIngresarAdm) {
-            crudlog= new CRUD_Login();
-            log= ProcesosAdmin.LeerDatosLogin(iad);
-            if(crudlog.verificarCuentaAdmin(log)){
+            crudlog = new CRUD_Login();
+            log = ProcesosAdmin.LeerDatosLogin(iad);
+            if (crudlog.verificarCuentaAdmin(log)) {
                 AgregarFrame(ina);
-            ina.setTitle("Interfaz Admin");
-            ina.setVisible(true);
-            }
-            else {
+                ina.setTitle("Interfaz Admin");
+                ina.setVisible(true);
+            } else {
                 // Mostrar mensaje de error o realizar otra acción
                 JOptionPane.showMessageDialog(iad, "Cuenta no válida. Verifica tu usuario y contraseña.");
             }
             Procesos.ProcesosAdmin.BorrarDatosEscritos(iad);
         }
         if (e.getSource() == ina.btnCubiculos) {
-            AgregarFrame(admc);
-            admc.setTitle("Estado de Cubiculos");
-            admc.setVisible(true);
+            TablaCubiculos();
+
+        }
+        if (e.getSource() == admc.btnCubiculos) {
+            TablaCubiculos();
         }
         if (e.getSource() == admc.btnRetrocederAdmin) {
             AgregarFrame(ina);
             ina.setTitle("Interfaz Admin");
             ina.setVisible(true);
+        }
+        //Registrar Cubiculo
+        if (e.getSource() == admc.btnRegistrarCubiculo) {
+            AgregarFrame(rgcu);
+            rgcu.setTitle("Registrar cubiculo");
+            rgcu.setVisible(true);
+        }
+        if (e.getSource() == rgcu.btnRetrocederAdmin) {
+            TablaCubiculos();
+        }
+        if (e.getSource() == rgcu.btnRegistrarCubiculo) {
+            cu = ProcesosAdmin.LeerDatosCubiculo(rgcu);
+            crudcub = new CRUD_Cubiculos();
+            crudcub.RegistrarCubiculo(cu);
+            TablaCubiculos();
+        }
+        //Actualizar Cubiculo
+        if (e.getSource() == admc.btnActualizarCubiculo) {
+            ID_Cubiculo = Mensajes.M2("Ingrese el ID del cubiculo a buscar..");
+            AgregarFrame(actcubi);
+            actcubi.setTitle("Actualizar Cubiculo");
+            actcubi.setVisible(true);
+            crudcub = new CRUD_Cubiculos();
+            cu = crudcub.BuscarCubiculo(ID_Cubiculo);
+            if (cu == null) {
+                Mensajes.M1("El id " + ID_Cubiculo + " no existe en la tabla de cubiculos");
+                TablaCubiculos();
+            } else {
+                actcubi.txtNivel_cubiculo.setText(Integer.toString(cu.getNivel()));
+                actcubi.cbxestado_cubiculo.setSelectedItem(cu.getEstado());
+            }
+        } else if (e.getSource() == actcubi.btnActualizarCubiculo) {
+            cu = ProcesosAdmin.ActualizarDatosCubiculo(actcubi);
+            crudcub = new CRUD_Cubiculos();
+            crudcub.ActualizarCubiculo(cu, ID_Cubiculo);
+            TablaCubiculos();
+        }
+        if (e.getSource() == actcubi.btnRetrocederAdmin) {
+            TablaCubiculos();
         }
         if (e.getSource() == ina.btnEmpleados) {
             TablaEmp();
@@ -291,11 +366,11 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == rem.btnRetrocederAdmin) {
             TablaEmp();
         }
-        if (e.getSource()==rem.btnRegistrarEmpleado){
+        if (e.getSource() == rem.btnRegistrarEmpleado) {
             em = ProcesosAdmin.LeerDatosEmpleado(rem);
-                crudadm = new CRUD_GestionEmpresa();
-                crudadm.RegistrarEmpleado(em);
-                TablaEmp();
+            crudadm = new CRUD_GestionEmpresa();
+            crudadm.RegistrarEmpleado(em);
+            TablaEmp();
         }
         //Actualizar Empleados
         if (e.getSource() == adme.btnActualizarEmpleado) {
@@ -320,8 +395,7 @@ public class ControladorInicio implements ActionListener {
                 raem.txtcorreoempleado.setText(em.getCorreo_emp());
                 raem.txtsalarioempleado.setText(Double.toString(em.getSalario_emp()));
             }
-        }
-        else if (e.getSource() == raem.btnActualizarEmpleado) {
+        } else if (e.getSource() == raem.btnActualizarEmpleado) {
             em = ProcesosAdmin.ActualizarDatosEmpleado(raem);
             crudadm = new CRUD_GestionEmpresa();
             crudadm.ActualizarEmpleado(em, ID_emp);
@@ -344,17 +418,17 @@ public class ControladorInicio implements ActionListener {
         if (e.getSource() == ram.btnRetrocederAdmin) {
             TablaArea();
         }
-        if (e.getSource()==ram.btnRegistrarArea){
+        if (e.getSource() == ram.btnRegistrarArea) {
             ar = ProcesosAdmin.LeerDatosArea(ram);
-                crudadm = new CRUD_GestionEmpresa();
-                crudadm.RegistrarArea(ar);
+            crudadm = new CRUD_GestionEmpresa();
+            crudadm.RegistrarArea(ar);
             TablaArea();
         }
         //Actualizar Area
         if (e.getSource() == acarea.btnRetrocederAdmin) {
             TablaArea();
         }
-        if (e.getSource()==adga.btnActualizarArea){
+        if (e.getSource() == adga.btnActualizarArea) {
             ID_Area = Mensajes.M2("Ingrese el ID del Area a buscar..");
             AgregarFrame(acarea);
             acarea.setTitle("Actualizar Area");
@@ -368,7 +442,7 @@ public class ControladorInicio implements ActionListener {
                 acarea.txtdescripcionarea.setText(ar.getDescripcionarea());
             }
         }
-        if (e.getSource()==acarea.btnActualizarArea){
+        if (e.getSource() == acarea.btnActualizarArea) {
             ar = ProcesosAdmin.ActualizarDatosArea(acarea);
             crudadm = new CRUD_GestionEmpresa();
             crudadm.ActualizarArea(ar, ID_Area);
@@ -397,17 +471,17 @@ public class ControladorInicio implements ActionListener {
             rl.setTitle("Registrar Local");
             rl.setVisible(true);
         }
-        if (e.getSource()==rl.btnRetrocederAdmin){
-                TablaLocales();
+        if (e.getSource() == rl.btnRetrocederAdmin) {
+            TablaLocales();
         }
-        if (e.getSource()==rl.btnRegistrarLocal){
+        if (e.getSource() == rl.btnRegistrarLocal) {
             loc = ProcesosAdmin.LeerDatosLocal(rl);
-                crudadm = new CRUD_GestionEmpresa();
-                crudadm.RegistrarLocal(loc);
-                TablaLocales();
+            crudadm = new CRUD_GestionEmpresa();
+            crudadm.RegistrarLocal(loc);
+            TablaLocales();
         }
         //Actualizar Local
-        if (e.getSource()==adgl.btnActualizarLocal){
+        if (e.getSource() == adgl.btnActualizarLocal) {
             ID_Local = Mensajes.M2("Ingrese el ID del Local a buscar..");
             AgregarFrame(acloc);
             acloc.setTitle("Actualizar Local");
@@ -423,10 +497,10 @@ public class ControladorInicio implements ActionListener {
                 acloc.txtelefonolocal.setText(loc.getTelefonolocal());
             }
         }
-        if (e.getSource()==acloc.btnRetrocederAdmin){
+        if (e.getSource() == acloc.btnRetrocederAdmin) {
             TablaLocales();
         }
-        if (e.getSource()==acloc.btnActualizarLocal){
+        if (e.getSource() == acloc.btnActualizarLocal) {
             loc = ProcesosAdmin.ActualizarDatosLocal(acloc);
             crudadm = new CRUD_GestionEmpresa();
             crudadm.ActualizarLocal(loc, ID_Local);
@@ -459,12 +533,12 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == rep.btnRegistrarProducto) {
             prod = ProcesosAdmin.LeerDatosProducto(rep);
-                crudprod = new CRUD_Productos();
-                crudprod.RegistrarProductos(prod);
-                TablaProductos();
+            crudprod = new CRUD_Productos();
+            crudprod.RegistrarProductos(prod);
+            TablaProductos();
         }
         //Actualizar Producto
-        if (e.getSource()==admp.btnActualizarProducto){
+        if (e.getSource() == admp.btnActualizarProducto) {
             ID_prod = Mensajes.M2("Ingrese el ID del Producto a buscar..");
             AgregarFrame(acprod);
             acprod.setTitle("Actualizar Producto");
@@ -482,10 +556,10 @@ public class ControladorInicio implements ActionListener {
                 acprod.txtfechavencimientoprod.setText(prod.getFechavencimientoprod());
             }
         }
-        if (e.getSource()==acprod.btnRetrocederAdmin){
+        if (e.getSource() == acprod.btnRetrocederAdmin) {
             TablaProductos();
         }
-        if (e.getSource()==acprod.btnActualizarProducto){
+        if (e.getSource() == acprod.btnActualizarProducto) {
             prod = ProcesosAdmin.ActualizarDatosProducto(acprod);
             crudprod = new CRUD_Productos();
             crudprod.ActualizarProducto(prod, ID_prod);
@@ -499,7 +573,7 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == admpro.btnproductos) {
             TablaProductos();
-        } 
+        }
         if (e.getSource() == admpro.btnRegistrarProveedor) {
             AgregarFrame(repv);
             repv.setTitle("Registrar Proveedor");
@@ -510,12 +584,12 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == repv.btnRegistrarProveedor) {
             prov = ProcesosAdmin.LeerDatosProveedor(repv);
-                crudprod = new CRUD_Productos();
-                crudprod.RegistrarProveedor(prov);
-                TablaProovedores();
+            crudprod = new CRUD_Productos();
+            crudprod.RegistrarProveedor(prov);
+            TablaProovedores();
         }
         //Actualizar Proveedor
-        if (e.getSource()==admpro.btnActualizarProveedor){
+        if (e.getSource() == admpro.btnActualizarProveedor) {
             ID_prov = Mensajes.M2("Ingrese el ID del Proveedor a buscar..");
             AgregarFrame(acprov);
             acprov.setTitle("Actualizar Proveedor");
@@ -531,10 +605,10 @@ public class ControladorInicio implements ActionListener {
                 acprov.txtpaisprov.setText(prov.getPaisprov());
             }
         }
-        if (e.getSource()==acprov.btnRetrocederAdmin){
+        if (e.getSource() == acprov.btnRetrocederAdmin) {
             TablaProovedores();
         }
-        if (e.getSource()==acprov.btnActualizarProveedor){
+        if (e.getSource() == acprov.btnActualizarProveedor) {
             prov = ProcesosAdmin.ActualizarDatosProveedor(acprov);
             crudprod = new CRUD_Productos();
             crudprod.ActualizarProveedor(prov, ID_prov);
@@ -565,12 +639,12 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == rec.btnRegistrarCliente) {
             cli = ProcesosAdmin.LeerDatosClientes(rec);
-                crudcli = new CRUD_Clientes();
-                crudcli.RegistrarClientes(cli);
-                TablaClientes();
+            crudcli = new CRUD_Clientes();
+            crudcli.RegistrarClientes(cli);
+            TablaClientes();
         }
         //Actualizar Cliente
-        if (e.getSource()==admcli.btnActualizarCliente){
+        if (e.getSource() == admcli.btnActualizarCliente) {
             ID_cliente = Mensajes.M2("Ingrese el ID del cliente a buscar..");
             AgregarFrame(acli);
             acli.setTitle("Actualizar cliente");
@@ -589,10 +663,10 @@ public class ControladorInicio implements ActionListener {
                 acli.cbxsexocliente.setSelectedItem(cli.getSexo_cli());
             }
         }
-        if (e.getSource()==acli.btnRetrocederAdmin){
+        if (e.getSource() == acli.btnRetrocederAdmin) {
             TablaClientes();
         }
-        if (e.getSource()==acli.btnActualizarCliente){
+        if (e.getSource() == acli.btnActualizarCliente) {
             cli = ProcesosAdmin.ActualizarDatosClientes(acli);
             crudcli = new CRUD_Clientes();
             crudcli.ActualizarCliente(cli, ID_cliente);
@@ -620,12 +694,12 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == rgc.btnRegistrarCompra) {
             com = ProcesosAdmin.LeerDatosCompra(rgc);
-                crudcli = new CRUD_Clientes();
-                crudcli.RegistrarCompra(com);
-                TablaCompras();
+            crudcli = new CRUD_Clientes();
+            crudcli.RegistrarCompra(com);
+            TablaCompras();
         }
         //Actualizar Compra
-        if (e.getSource()==admco.btnActualizarCompra){
+        if (e.getSource() == admco.btnActualizarCompra) {
             ID_compra = Mensajes.M2("Ingrese el ID de la compra a buscar..");
             AgregarFrame(acom);
             acom.setTitle("Actualizar compra");
@@ -645,10 +719,10 @@ public class ControladorInicio implements ActionListener {
                 acom.txtcantidadcompra.setText(Integer.toString(com.getCantidadcompra()));
             }
         }
-        if (e.getSource()==acom.btnRetrocederAdmin){
+        if (e.getSource() == acom.btnRetrocederAdmin) {
             TablaCompras();
         }
-        if (e.getSource()==acom.btnActualizarCompra){
+        if (e.getSource() == acom.btnActualizarCompra) {
             com = ProcesosAdmin.ActualizarDatosCompra(acom);
             crudcli = new CRUD_Clientes();
             crudcli.ActualizarCompra(com, ID_compra);
@@ -676,12 +750,12 @@ public class ControladorInicio implements ActionListener {
         }
         if (e.getSource() == rgr.btnRegistrarReserva) {
             res = ProcesosAdmin.LeerDatosReserva(rgr);
-                crudcli = new CRUD_Clientes();
-                crudcli.RegistrarReserva(res);
-                TablaReservas();
+            crudcli = new CRUD_Clientes();
+            crudcli.RegistrarReserva(res);
+            TablaReservas();
         }
         //Actualizar Reserva
-        if (e.getSource()==admr.btnActualizarReserva){
+        if (e.getSource() == admr.btnActualizarReserva) {
             ID_reserva = Mensajes.M2("Ingrese el ID de la reserva a buscar..");
             AgregarFrame(acre);
             acre.setTitle("Actualizar reserva");
@@ -701,10 +775,10 @@ public class ControladorInicio implements ActionListener {
                 acre.txtcantidadreserva.setText(Integer.toString(res.getCantidadreserva()));
             }
         }
-        if (e.getSource()==acre.btnRetrocederAdmin){
+        if (e.getSource() == acre.btnRetrocederAdmin) {
             TablaReservas();
         }
-        if (e.getSource()==acre.btnActualizarReserva){
+        if (e.getSource() == acre.btnActualizarReserva) {
             res = ProcesosAdmin.ActualizarDatosReserva(acre);
             crudcli = new CRUD_Clientes();
             crudcli.ActualizarReserva(res, ID_reserva);

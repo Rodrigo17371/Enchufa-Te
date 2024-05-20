@@ -56,7 +56,7 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
                 txtdireccionlocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtdireccionlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtdireccionlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 120, 210, 40));
 
         txtnombrelocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtnombrelocal.setBorder(null);
@@ -65,7 +65,7 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
                 txtnombrelocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtnombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
 
         txtelefonolocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtelefonolocal.setBorder(null);
@@ -74,7 +74,7 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
                 txtelefonolocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtelefonolocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 210, 40));
+        getContentPane().add(txtelefonolocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 210, 40));
 
         btnRegistrarLocal.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -85,7 +85,7 @@ public class ADM_RegistrarLocal extends javax.swing.JInternalFrame {
                 btnRegistrarLocalActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
+        getContentPane().add(btnRegistrarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 160, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));

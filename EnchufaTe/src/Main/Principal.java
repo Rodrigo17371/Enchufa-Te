@@ -37,6 +37,8 @@ public class Principal {
     public static ADM_ActualizarCompra acom;
     public static ADM_RegistrarReserva rgr;
     public static ADM_ActualizarReserva acre;
+    public static ADM_RegistrarCubiculo rgcu;
+    public static ADM_ActualizarCubiculo actcubi;
      public static void main(String[] args) throws UnsupportedLookAndFeelException{
          panel= new Inicio();
          iad= new IngresoAdministrador();
@@ -68,10 +70,11 @@ public class Principal {
          acom= new ADM_ActualizarCompra();
          rgr= new ADM_RegistrarReserva();
          acre=new ADM_ActualizarReserva();
+         rgcu= new ADM_RegistrarCubiculo();
+         actcubi= new ADM_ActualizarCubiculo();
         UIManager.setLookAndFeel(new FlatCarbonIJTheme());
         SwingUtilities.updateComponentTreeUI(panel);
         SwingUtilities.updateComponentTreeUI(iad);
-
         SwingUtilities.updateComponentTreeUI(emtp);
         SwingUtilities.updateComponentTreeUI(ina);
         SwingUtilities.updateComponentTreeUI(admc);
@@ -100,9 +103,11 @@ public class Principal {
         SwingUtilities.updateComponentTreeUI(acom);
         SwingUtilities.updateComponentTreeUI(rgr);
         SwingUtilities.updateComponentTreeUI(acre);
+        SwingUtilities.updateComponentTreeUI(rgcu);
+        SwingUtilities.updateComponentTreeUI(actcubi);
         ControladorInicio ci= new ControladorInicio(panel,emtp,iad,ina,admc
                 ,adme,admp,adga,adgl,admpro,admcli,admco,admr,rem,raem,ram,acarea,rl,acloc
-                ,rep,acprod,repv,acprov,rec,acli,rgc,acom,rgr,acre);
+                ,rep,acprod,repv,acprov,rec,acli,rgc,acom,rgr,acre,rgcu,actcubi);
         panel.setTitle("Enchufa Te");
         panel.setLocationRelativeTo(null);
         iad.BorrarBordesIngresoAdmin();
@@ -118,16 +123,4 @@ public class Principal {
 
         
     }
-     /*
-     void AgregarFramePrincipal(JInternalFrame frame) {
-        panel.dspEscritorio.removeAll();
-        panel.dspEscritorio.add(iad);
-        int x = (panel.dspEscritorio.getWidth() - frame.getWidth()) / 2;
-        int y = (panel.dspEscritorio.getHeight() - frame.getHeight()) / 2;
-        frame.setLocation(x, y);
-        panel.dspEscritorio.repaint();
-        iad.setTitle("Admin");
-        iad.setVisible(true);
-    }*/
-    
 }

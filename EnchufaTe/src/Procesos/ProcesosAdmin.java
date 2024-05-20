@@ -176,5 +176,17 @@ public class ProcesosAdmin {
        res.setCantidadreserva(Integer.parseInt(acre.txtcantidadreserva.getText()));
        return res;
   }
+    public static Cubiculo LeerDatosCubiculo(ADM_RegistrarCubiculo rgcu){
+       Cubiculo cu= new Cubiculo();
+       cu.setNivel(Integer.parseInt(rgcu.txtNivel_cubiculo.getText()));
+       cu.setEstado(rgcu.cbxestado_cubiculo.getSelectedItem().toString());
+       return cu;
+  }
+    public static Cubiculo ActualizarDatosCubiculo(ADM_ActualizarCubiculo actcubi){
+       Cubiculo cu= new Cubiculo();
+       cu.setNivel(Integer.parseInt(actcubi.txtNivel_cubiculo.getText()));
+       cu.setEstado(actcubi.cbxestado_cubiculo.getSelectedItem().toString());
+       return cu;
+  }
     
 }

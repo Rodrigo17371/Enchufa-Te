@@ -30,10 +30,10 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
+        btnActualizarLocal = new javax.swing.JButton();
         txtdireccionlocal = new javax.swing.JTextField();
         txtnombrelocal = new javax.swing.JTextField();
         txtelefonolocal = new javax.swing.JTextField();
-        btnActualizarLocal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,33 +49,6 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtdireccionlocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtdireccionlocal.setBorder(null);
-        txtdireccionlocal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdireccionlocalActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtdireccionlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
-
-        txtnombrelocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtnombrelocal.setBorder(null);
-        txtnombrelocal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombrelocalActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtnombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
-
-        txtelefonolocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtelefonolocal.setBorder(null);
-        txtelefonolocal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtelefonolocalActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtelefonolocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 210, 40));
-
         btnActualizarLocal.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarLocal.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
         btnActualizarLocal.setText("Actualizar");
@@ -87,6 +60,33 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnActualizarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
+        txtdireccionlocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtdireccionlocal.setBorder(null);
+        txtdireccionlocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtdireccionlocalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtdireccionlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 120, 210, 40));
+
+        txtnombrelocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtnombrelocal.setBorder(null);
+        txtnombrelocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnombrelocalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtnombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
+
+        txtelefonolocal.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtelefonolocal.setBorder(null);
+        txtelefonolocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtelefonolocalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtelefonolocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 210, 40));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
@@ -96,6 +96,10 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
     private void btnRetrocederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederAdminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
+
+    private void btnActualizarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarLocalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnActualizarLocalActionPerformed
 
     private void txtdireccionlocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdireccionlocalActionPerformed
         // TODO add your handling code here:
@@ -108,10 +112,6 @@ public class ADM_ActualizarLocal extends javax.swing.JInternalFrame {
     private void txtelefonolocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtelefonolocalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtelefonolocalActionPerformed
-
-    private void btnActualizarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarLocalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarLocalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

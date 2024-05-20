@@ -8,17 +8,16 @@ package Vista;
  *
  * @author usuario
  */
-public class ADM_Cubiculos extends javax.swing.JInternalFrame {
+public class ADM_ActualizarCubiculo extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ADM_Cubiculos1
      */
-    public ADM_Cubiculos() {
+    public ADM_ActualizarCubiculo() {
         initComponents();
+
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
-        btnCubiculos.setContentAreaFilled(false);
-        btnCubiculos.setBorder(null);
     }
 
     /**
@@ -30,25 +29,13 @@ public class ADM_Cubiculos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCubiculos = new javax.swing.JButton();
         btnRetrocederAdmin = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblDatosCubiculos = new javax.swing.JTable();
-        btnRegistrarCubiculo = new javax.swing.JButton();
+        txtNivel_cubiculo = new javax.swing.JTextField();
         btnActualizarCubiculo = new javax.swing.JButton();
+        cbxestado_cubiculo = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnCubiculos.setBackground(new java.awt.Color(255, 255, 255));
-        btnCubiculos.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnCubiculos.setBorderPainted(false);
-        btnCubiculos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCubiculosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnCubiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 160, 30));
 
         btnRetrocederAdmin.setBackground(new java.awt.Color(255, 255, 255));
         btnRetrocederAdmin.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -61,31 +48,14 @@ public class ADM_Cubiculos extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        tblDatosCubiculos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(tblDatosCubiculos);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 740, 440));
-
-        btnRegistrarCubiculo.setBackground(new java.awt.Color(153, 153, 153));
-        btnRegistrarCubiculo.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
-        btnRegistrarCubiculo.setText("Registrar");
-        btnRegistrarCubiculo.setBorderPainted(false);
-        btnRegistrarCubiculo.addActionListener(new java.awt.event.ActionListener() {
+        txtNivel_cubiculo.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtNivel_cubiculo.setBorder(null);
+        txtNivel_cubiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarCubiculoActionPerformed(evt);
+                txtNivel_cubiculoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrarCubiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 530, 160, 40));
+        getContentPane().add(txtNivel_cubiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
 
         btnActualizarCubiculo.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarCubiculo.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -96,25 +66,26 @@ public class ADM_Cubiculos extends javax.swing.JInternalFrame {
                 btnActualizarCubiculoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarCubiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 530, 160, 40));
+        getContentPane().add(btnActualizarCubiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cubiculos.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -30, 1500, 670));
+        cbxestado_cubiculo.setBackground(new java.awt.Color(255, 0, 0));
+        cbxestado_cubiculo.setForeground(new java.awt.Color(255, 255, 255));
+        cbxestado_cubiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libre", "Ocupado" }));
+        getContentPane().add(cbxestado_cubiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCubiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCubiculosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCubiculosActionPerformed
 
     private void btnRetrocederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederAdminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
-    private void btnRegistrarCubiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCubiculoActionPerformed
+    private void txtNivel_cubiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNivel_cubiculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarCubiculoActionPerformed
+    }//GEN-LAST:event_txtNivel_cubiculoActionPerformed
 
     private void btnActualizarCubiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarCubiculoActionPerformed
         // TODO add your handling code here:
@@ -123,11 +94,9 @@ public class ADM_Cubiculos extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizarCubiculo;
-    public javax.swing.JButton btnCubiculos;
-    public javax.swing.JButton btnRegistrarCubiculo;
     public javax.swing.JButton btnRetrocederAdmin;
+    public javax.swing.JComboBox<String> cbxestado_cubiculo;
     private javax.swing.JLabel jLabel2;
-    public javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable tblDatosCubiculos;
+    public javax.swing.JTextField txtNivel_cubiculo;
     // End of variables declaration//GEN-END:variables
 }
