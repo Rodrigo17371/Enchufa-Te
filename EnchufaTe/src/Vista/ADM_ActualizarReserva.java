@@ -18,6 +18,22 @@ public class ADM_ActualizarReserva extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        txtcodcliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechareserva.setBackground(new java.awt.Color(0,0,0,1));
+        txthorareserva.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodservicio.setBackground(new java.awt.Color(0,0,0,1));
+        txttipopagoreserva.setBackground(new java.awt.Color(0,0,0,1));
+        txtcantidadreserva.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesReserva() {
+        txtcodcliente.setBorder(null);
+        txtcodempleado.setBorder(null);
+        txtfechareserva.setBorder(null);
+        txthorareserva.setBorder(null);
+        txtcodservicio.setBorder(null);
+        txttipopagoreserva.setBorder(null);
+        txtcantidadreserva.setBorder(null);
     }
 
     /**
@@ -30,14 +46,14 @@ public class ADM_ActualizarReserva extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
-        txtcodcliente = new javax.swing.JTextField();
-        txtcodempleado = new javax.swing.JTextField();
-        txtfechareserva = new javax.swing.JTextField();
-        txthorareserva = new javax.swing.JTextField();
-        txtcodservicio = new javax.swing.JTextField();
-        txttipopagoreserva = new javax.swing.JTextField();
-        txtcantidadreserva = new javax.swing.JTextField();
         btnActualizarReserva = new javax.swing.JButton();
+        txtcodservicio = new javax.swing.JTextField();
+        txtcantidadreserva = new javax.swing.JTextField();
+        txttipopagoreserva = new javax.swing.JTextField();
+        txthorareserva = new javax.swing.JTextField();
+        txtfechareserva = new javax.swing.JTextField();
+        txtcodempleado = new javax.swing.JTextField();
+        txtcodcliente = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,69 +69,6 @@ public class ADM_ActualizarReserva extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtcodcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodcliente.setBorder(null);
-        txtcodcliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
-
-        txtcodempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodempleado.setBorder(null);
-        txtcodempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
-
-        txtfechareserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtfechareserva.setBorder(null);
-        txtfechareserva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtfechareservaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtfechareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 210, 40));
-
-        txthorareserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txthorareserva.setBorder(null);
-        txthorareserva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txthorareservaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txthorareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
-
-        txtcodservicio.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodservicio.setBorder(null);
-        txtcodservicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodservicioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodservicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
-
-        txttipopagoreserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txttipopagoreserva.setBorder(null);
-        txttipopagoreserva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txttipopagoreservaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txttipopagoreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
-
-        txtcantidadreserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcantidadreserva.setBorder(null);
-        txtcantidadreserva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcantidadreservaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcantidadreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 210, 40));
-
         btnActualizarReserva.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarReserva.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
         btnActualizarReserva.setText("Actualizar");
@@ -127,7 +80,70 @@ public class ADM_ActualizarReserva extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnActualizarReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cliente.png"))); // NOI18N
+        txtcodservicio.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcodservicio.setBorder(null);
+        txtcodservicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodservicioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcodservicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 310, 50));
+
+        txtcantidadreserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcantidadreserva.setBorder(null);
+        txtcantidadreserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcantidadreservaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcantidadreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 310, 40));
+
+        txttipopagoreserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txttipopagoreserva.setBorder(null);
+        txttipopagoreserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttipopagoreservaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txttipopagoreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 290, 310, 40));
+
+        txthorareserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txthorareserva.setBorder(null);
+        txthorareserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txthorareservaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txthorareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 310, 40));
+
+        txtfechareserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtfechareserva.setBorder(null);
+        txtfechareserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfechareservaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtfechareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 310, 40));
+
+        txtcodempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcodempleado.setBorder(null);
+        txtcodempleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodempleadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 310, 40));
+
+        txtcodcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcodcliente.setBorder(null);
+        txtcodcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcodcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 310, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ACTUALIZARESERVA.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();
@@ -137,37 +153,37 @@ public class ADM_ActualizarReserva extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
-    private void txtcodclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodclienteActionPerformed
+    private void btnActualizarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarReservaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodclienteActionPerformed
-
-    private void txtcodempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodempleadoActionPerformed
-
-    private void txtfechareservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechareservaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtfechareservaActionPerformed
-
-    private void txthorareservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txthorareservaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txthorareservaActionPerformed
+    }//GEN-LAST:event_btnActualizarReservaActionPerformed
 
     private void txtcodservicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodservicioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcodservicioActionPerformed
 
-    private void txttipopagoreservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttipopagoreservaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txttipopagoreservaActionPerformed
-
     private void txtcantidadreservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcantidadreservaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcantidadreservaActionPerformed
 
-    private void btnActualizarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarReservaActionPerformed
+    private void txttipopagoreservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttipopagoreservaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarReservaActionPerformed
+    }//GEN-LAST:event_txttipopagoreservaActionPerformed
+
+    private void txthorareservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txthorareservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txthorareservaActionPerformed
+
+    private void txtfechareservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechareservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfechareservaActionPerformed
+
+    private void txtcodempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodempleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodempleadoActionPerformed
+
+    private void txtcodclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodclienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodclienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

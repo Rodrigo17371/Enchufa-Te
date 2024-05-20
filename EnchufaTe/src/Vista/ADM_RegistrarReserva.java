@@ -18,6 +18,22 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        txtcodcliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechareserva.setBackground(new java.awt.Color(0,0,0,1));
+        txthorareserva.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodservicio.setBackground(new java.awt.Color(0,0,0,1));
+        txttipopagoreserva.setBackground(new java.awt.Color(0,0,0,1));
+        txtcantidadreserva.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesReserva() {
+        txtcodcliente.setBorder(null);
+        txtcodempleado.setBorder(null);
+        txtfechareserva.setBorder(null);
+        txthorareserva.setBorder(null);
+        txtcodservicio.setBorder(null);
+        txttipopagoreserva.setBorder(null);
+        txtcantidadreserva.setBorder(null);
     }
 
     /**
@@ -60,7 +76,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txtcodclienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtcodcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 310, 40));
 
         txtcodempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcodempleado.setBorder(null);
@@ -69,7 +85,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txtcodempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 310, 40));
 
         txtfechareserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtfechareserva.setBorder(null);
@@ -78,7 +94,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txtfechareservaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtfechareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 210, 40));
+        getContentPane().add(txtfechareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 310, 40));
 
         txthorareserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txthorareserva.setBorder(null);
@@ -87,7 +103,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txthorareservaActionPerformed(evt);
             }
         });
-        getContentPane().add(txthorareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
+        getContentPane().add(txthorareserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 310, 40));
 
         txtcodservicio.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcodservicio.setBorder(null);
@@ -96,7 +112,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txtcodservicioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodservicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
+        getContentPane().add(txtcodservicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 310, 50));
 
         txttipopagoreserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txttipopagoreserva.setBorder(null);
@@ -105,7 +121,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txttipopagoreservaActionPerformed(evt);
             }
         });
-        getContentPane().add(txttipopagoreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
+        getContentPane().add(txttipopagoreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 290, 310, 40));
 
         txtcantidadreserva.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcantidadreserva.setBorder(null);
@@ -114,7 +130,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
                 txtcantidadreservaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcantidadreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 210, 40));
+        getContentPane().add(txtcantidadreserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 310, 40));
 
         btnRegistrarReserva.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarReserva.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -127,7 +143,7 @@ public class ADM_RegistrarReserva extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRegistrarReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cliente.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/REGISTRARESERVA.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();

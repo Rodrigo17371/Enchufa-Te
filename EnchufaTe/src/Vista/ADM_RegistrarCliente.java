@@ -19,6 +19,18 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
         cbxsexocliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtnombrecliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtapecliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechacliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtdnicliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtcelularcliente.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesClientes() {
+        txtnombrecliente.setBorder(null);
+        txtapecliente.setBorder(null);
+        txtfechacliente.setBorder(null);
+        txtdnicliente.setBorder(null);
+        txtcelularcliente.setBorder(null);
     }
 
     /**
@@ -60,7 +72,7 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
                 txtnombreclienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombrecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 210, 40));
+        getContentPane().add(txtnombrecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 310, 50));
 
         txtapecliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtapecliente.setBorder(null);
@@ -69,7 +81,7 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
                 txtapeclienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtapecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 120, 210, 40));
+        getContentPane().add(txtapecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 310, 50));
 
         txtfechacliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtfechacliente.setBorder(null);
@@ -78,7 +90,7 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
                 txtfechaclienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtfechacliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
+        getContentPane().add(txtfechacliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 140, 50));
 
         txtdnicliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtdnicliente.setBorder(null);
@@ -87,7 +99,7 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
                 txtdniclienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtdnicliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
+        getContentPane().add(txtdnicliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 310, 40));
 
         txtcelularcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcelularcliente.setBorder(null);
@@ -96,7 +108,7 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
                 txtcelularclienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcelularcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 210, 40));
+        getContentPane().add(txtcelularcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 310, 40));
 
         btnRegistrarCliente.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -112,9 +124,9 @@ public class ADM_RegistrarCliente extends javax.swing.JInternalFrame {
         cbxsexocliente.setBackground(new java.awt.Color(255, 0, 0));
         cbxsexocliente.setForeground(new java.awt.Color(255, 255, 255));
         cbxsexocliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
-        getContentPane().add(cbxsexocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 400, 210, 40));
+        getContentPane().add(cbxsexocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 140, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cliente.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/REGISTRARCLIENTE.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();

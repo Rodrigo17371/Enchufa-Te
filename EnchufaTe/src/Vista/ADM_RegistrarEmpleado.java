@@ -19,6 +19,26 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
         cbxsexoempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodlocal.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodarea.setBackground(new java.awt.Color(0,0,0,1));
+        txtnombreempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtapempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechaempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtdniempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtcorreoempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtcelularempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtsalarioempleado.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesEmpleados() {
+        txtcodlocal.setBorder(null);
+        txtcodarea.setBorder(null);
+        txtnombreempleado.setBorder(null);
+        txtapempleado.setBorder(null);
+        txtfechaempleado.setBorder(null);
+        txtdniempleado.setBorder(null);
+        txtcorreoempleado.setBorder(null);
+        txtcelularempleado.setBorder(null);
+        txtsalarioempleado.setBorder(null);
     }
 
     /**
@@ -64,7 +84,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcodlocalActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtcodlocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 310, 50));
 
         txtcodarea.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcodarea.setBorder(null);
@@ -73,7 +93,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcodareaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtcodarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 290, 50));
 
         txtnombreempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtnombreempleado.setBorder(null);
@@ -82,7 +102,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtnombreempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombreempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 210, 40));
+        getContentPane().add(txtnombreempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 206, 310, 40));
 
         txtapempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtapempleado.setBorder(null);
@@ -91,7 +111,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtapempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtapempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
+        getContentPane().add(txtapempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 250, 50));
 
         txtfechaempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtfechaempleado.setBorder(null);
@@ -100,7 +120,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtfechaempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtfechaempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
+        getContentPane().add(txtfechaempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 140, 40));
 
         txtdniempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtdniempleado.setBorder(null);
@@ -109,7 +129,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtdniempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtdniempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
+        getContentPane().add(txtdniempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 290, 140, 40));
 
         txtcelularempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcelularempleado.setBorder(null);
@@ -118,7 +138,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcelularempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcelularempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 340, 210, 40));
+        getContentPane().add(txtcelularempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 360, 140, 40));
 
         txtcorreoempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcorreoempleado.setBorder(null);
@@ -127,7 +147,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtcorreoempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcorreoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 210, 30));
+        getContentPane().add(txtcorreoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 310, 40));
 
         txtsalarioempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtsalarioempleado.setBorder(null);
@@ -136,7 +156,7 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
                 txtsalarioempleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtsalarioempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 430, 210, 40));
+        getContentPane().add(txtsalarioempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, 240, 40));
 
         btnRegistrarEmpleado.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarEmpleado.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -152,9 +172,9 @@ public class ADM_RegistrarEmpleado extends javax.swing.JInternalFrame {
         cbxsexoempleado.setBackground(new java.awt.Color(255, 0, 0));
         cbxsexoempleado.setForeground(new java.awt.Color(255, 255, 255));
         cbxsexoempleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
-        getContentPane().add(cbxsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 210, 40));
+        getContentPane().add(cbxsexoempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 140, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/REGISTRAREMPLEADO.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();

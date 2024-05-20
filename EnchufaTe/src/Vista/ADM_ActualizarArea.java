@@ -54,7 +54,7 @@ public class ADM_ActualizarArea extends javax.swing.JInternalFrame {
                 txtdescripcionareaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtdescripcionarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 610, 300));
+        getContentPane().add(txtdescripcionarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 610, 300));
 
         btnActualizarArea.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarArea.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -67,7 +67,7 @@ public class ADM_ActualizarArea extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnActualizarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ACTUALIZARDESCRIPCIONAREA.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();

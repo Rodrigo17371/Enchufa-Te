@@ -67,7 +67,7 @@ public class ADM_RegistrarArea extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRegistrarArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/GestionEmpresa.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/REGISTRARDESCRIPCIONAREA.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();

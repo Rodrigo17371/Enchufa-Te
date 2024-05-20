@@ -18,6 +18,14 @@ public class ADM_RegistrarProveedor extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        txtcontactoprov.setBackground(new java.awt.Color(0,0,0,1));
+        txtnombreprov.setBackground(new java.awt.Color(0,0,0,1));
+        txtpaisprov.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesProveedor() {
+        txtcontactoprov.setBorder(null);
+        txtnombreprov.setBorder(null);
+        txtpaisprov.setBorder(null);
     }
 
     /**
@@ -56,7 +64,7 @@ public class ADM_RegistrarProveedor extends javax.swing.JInternalFrame {
                 txtnombreprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombreprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtnombreprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 300, 50));
 
         txtcontactoprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcontactoprov.setBorder(null);
@@ -65,7 +73,7 @@ public class ADM_RegistrarProveedor extends javax.swing.JInternalFrame {
                 txtcontactoprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcontactoprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtcontactoprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 140, 300, 50));
 
         txtpaisprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtpaisprov.setBorder(null);
@@ -74,7 +82,7 @@ public class ADM_RegistrarProveedor extends javax.swing.JInternalFrame {
                 txtpaisprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtpaisprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 210, 40));
+        getContentPane().add(txtpaisprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 300, 50));
 
         btnRegistrarProveedor.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -87,7 +95,7 @@ public class ADM_RegistrarProveedor extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRegistrarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/REGISTRARPROVED.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
 
         pack();

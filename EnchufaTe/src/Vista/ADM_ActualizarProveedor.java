@@ -18,6 +18,14 @@ public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        txtcontactoprov.setBackground(new java.awt.Color(0,0,0,1));
+        txtnombreprov.setBackground(new java.awt.Color(0,0,0,1));
+        txtpaisprov.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesProveedor() {
+        txtcontactoprov.setBorder(null);
+        txtnombreprov.setBorder(null);
+        txtpaisprov.setBorder(null);
     }
 
     /**
@@ -30,10 +38,10 @@ public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
+        btnActualizarProveedor = new javax.swing.JButton();
         txtnombreprov = new javax.swing.JTextField();
         txtcontactoprov = new javax.swing.JTextField();
         txtpaisprov = new javax.swing.JTextField();
-        btnActualizarProveedor = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,33 +57,6 @@ public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtnombreprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtnombreprov.setBorder(null);
-        txtnombreprov.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombreprovActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtnombreprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
-
-        txtcontactoprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcontactoprov.setBorder(null);
-        txtcontactoprov.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcontactoprovActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcontactoprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
-
-        txtpaisprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtpaisprov.setBorder(null);
-        txtpaisprov.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpaisprovActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtpaisprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 210, 40));
-
         btnActualizarProveedor.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarProveedor.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
         btnActualizarProveedor.setText("Actualizar");
@@ -87,7 +68,34 @@ public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnActualizarProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
+        txtnombreprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtnombreprov.setBorder(null);
+        txtnombreprov.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnombreprovActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtnombreprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 300, 50));
+
+        txtcontactoprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcontactoprov.setBorder(null);
+        txtcontactoprov.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcontactoprovActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcontactoprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 140, 300, 50));
+
+        txtpaisprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtpaisprov.setBorder(null);
+        txtpaisprov.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpaisprovActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtpaisprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 300, 50));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ACTUALIZARPROVED.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
 
         pack();
@@ -96,6 +104,10 @@ public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
     private void btnRetrocederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederAdminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
+
+    private void btnActualizarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarProveedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnActualizarProveedorActionPerformed
 
     private void txtnombreprovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreprovActionPerformed
         // TODO add your handling code here:
@@ -108,10 +120,6 @@ public class ADM_ActualizarProveedor extends javax.swing.JInternalFrame {
     private void txtpaisprovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpaisprovActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpaisprovActionPerformed
-
-    private void btnActualizarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarProveedorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarProveedorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

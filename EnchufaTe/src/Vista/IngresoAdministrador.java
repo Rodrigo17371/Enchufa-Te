@@ -24,6 +24,7 @@ public class IngresoAdministrador extends javax.swing.JInternalFrame {
         btnIngresarAdm.putClientProperty("JButton.buttonType", "roundRect" );
         configurarTextosIngresoAdmin();
     }
+    
     public void BorrarBordesIngresoAdmin() {
         txtUsuarioAdm.setBorder(null);
         txtContraseñaAdm.setBorder(null);

@@ -19,6 +19,18 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
         cbxsexocliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtnombrecliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtapecliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechacliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtdnicliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtcelularcliente.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesClientes() {
+        txtnombrecliente.setBorder(null);
+        txtapecliente.setBorder(null);
+        txtfechacliente.setBorder(null);
+        txtdnicliente.setBorder(null);
+        txtcelularcliente.setBorder(null);
     }
 
     /**
@@ -31,12 +43,12 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
+        btnActualizarCliente = new javax.swing.JButton();
         txtnombrecliente = new javax.swing.JTextField();
         txtapecliente = new javax.swing.JTextField();
         txtfechacliente = new javax.swing.JTextField();
         txtdnicliente = new javax.swing.JTextField();
         txtcelularcliente = new javax.swing.JTextField();
-        btnActualizarCliente = new javax.swing.JButton();
         cbxsexocliente = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
@@ -53,51 +65,6 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtnombrecliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtnombrecliente.setBorder(null);
-        txtnombrecliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnombreclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtnombrecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 210, 40));
-
-        txtapecliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtapecliente.setBorder(null);
-        txtapecliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtapeclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtapecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 120, 210, 40));
-
-        txtfechacliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtfechacliente.setBorder(null);
-        txtfechacliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtfechaclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtfechacliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
-
-        txtdnicliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtdnicliente.setBorder(null);
-        txtdnicliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdniclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtdnicliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
-
-        txtcelularcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcelularcliente.setBorder(null);
-        txtcelularcliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcelularclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcelularcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 210, 40));
-
         btnActualizarCliente.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarCliente.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
         btnActualizarCliente.setText("Actualizar");
@@ -109,12 +76,57 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnActualizarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
+        txtnombrecliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtnombrecliente.setBorder(null);
+        txtnombrecliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnombreclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtnombrecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 310, 50));
+
+        txtapecliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtapecliente.setBorder(null);
+        txtapecliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtapeclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtapecliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 310, 50));
+
+        txtfechacliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtfechacliente.setBorder(null);
+        txtfechacliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfechaclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtfechacliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 140, 50));
+
+        txtdnicliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtdnicliente.setBorder(null);
+        txtdnicliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtdniclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtdnicliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 310, 40));
+
+        txtcelularcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcelularcliente.setBorder(null);
+        txtcelularcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcelularclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcelularcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 310, 40));
+
         cbxsexocliente.setBackground(new java.awt.Color(255, 0, 0));
         cbxsexocliente.setForeground(new java.awt.Color(255, 255, 255));
         cbxsexocliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
-        getContentPane().add(cbxsexocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 400, 210, 40));
+        getContentPane().add(cbxsexocliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 140, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cliente.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ACTUALIZARCLIENTE.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();
@@ -123,6 +135,10 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
     private void btnRetrocederAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederAdminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
+
+    private void btnActualizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnActualizarClienteActionPerformed
 
     private void txtnombreclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreclienteActionPerformed
         // TODO add your handling code here:
@@ -143,10 +159,6 @@ public class ADM_ActualizarCliente extends javax.swing.JInternalFrame {
     private void txtcelularclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcelularclienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcelularclienteActionPerformed
-
-    private void btnActualizarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

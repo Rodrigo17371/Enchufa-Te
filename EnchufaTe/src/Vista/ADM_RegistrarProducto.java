@@ -18,7 +18,20 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        txtcodcategoria.setBackground(new java.awt.Color(0,0,0,1));
+        txtprecioprod.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodprov.setBackground(new java.awt.Color(0,0,0,1));
+        txtnombreprod.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechavencimientoprod.setBackground(new java.awt.Color(0,0,0,1));
     }
+    public void BorrarBordesProducto() {
+        txtcodcategoria.setBorder(null);
+        txtprecioprod.setBorder(null);
+        txtcodprov.setBorder(null);
+        txtnombreprod.setBorder(null);
+        txtfechavencimientoprod.setBorder(null);
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,7 +71,7 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
                 txtfechavencimientoprodActionPerformed(evt);
             }
         });
-        getContentPane().add(txtfechavencimientoprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, 210, 40));
+        getContentPane().add(txtfechavencimientoprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 300, 50));
 
         txtcodprov.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtcodprov.setBorder(null);
@@ -67,7 +80,7 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
                 txtcodprovActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
+        getContentPane().add(txtcodprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 300, 50));
 
         txtnombreprod.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtnombreprod.setBorder(null);
@@ -76,7 +89,7 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
                 txtnombreprodActionPerformed(evt);
             }
         });
-        getContentPane().add(txtnombreprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, 210, 40));
+        getContentPane().add(txtnombreprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 300, 50));
 
         btnRegistrarProducto.setBackground(new java.awt.Color(153, 153, 153));
         btnRegistrarProducto.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
@@ -96,7 +109,7 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
                 txtcodcategoriaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtcodcategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
+        getContentPane().add(txtcodcategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 310, 50));
 
         txtprecioprod.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         txtprecioprod.setBorder(null);
@@ -105,9 +118,9 @@ public class ADM_RegistrarProducto extends javax.swing.JInternalFrame {
                 txtprecioprodActionPerformed(evt);
             }
         });
-        getContentPane().add(txtprecioprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 210, 40));
+        getContentPane().add(txtprecioprod, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 300, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/productos.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/REGISTRARPRODUCT.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -40, 1440, 710));
 
         pack();

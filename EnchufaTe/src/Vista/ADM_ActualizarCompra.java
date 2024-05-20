@@ -18,6 +18,22 @@ public class ADM_ActualizarCompra extends javax.swing.JInternalFrame {
 
         btnRetrocederAdmin.setContentAreaFilled(false);
         btnRetrocederAdmin.setBorder(null);
+        txtcodcliente.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodempleado.setBackground(new java.awt.Color(0,0,0,1));
+        txtfechacompra.setBackground(new java.awt.Color(0,0,0,1));
+        txthoracompra.setBackground(new java.awt.Color(0,0,0,1));
+        txtcodproducto.setBackground(new java.awt.Color(0,0,0,1));
+        txttipopago.setBackground(new java.awt.Color(0,0,0,1));
+        txtcantidadcompra.setBackground(new java.awt.Color(0,0,0,1));
+    }
+    public void BorrarBordesCompra() {
+        txtcodcliente.setBorder(null);
+        txtcodempleado.setBorder(null);
+        txtfechacompra.setBorder(null);
+        txthoracompra.setBorder(null);
+        txtcodproducto.setBorder(null);
+        txttipopago.setBorder(null);
+        txtcantidadcompra.setBorder(null);
     }
 
     /**
@@ -30,14 +46,14 @@ public class ADM_ActualizarCompra extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btnRetrocederAdmin = new javax.swing.JButton();
-        txtcodcliente = new javax.swing.JTextField();
-        txtcodempleado = new javax.swing.JTextField();
-        txtfechacompra = new javax.swing.JTextField();
-        txthoracompra = new javax.swing.JTextField();
-        txtcodproducto = new javax.swing.JTextField();
-        txttipopago = new javax.swing.JTextField();
-        txtcantidadcompra = new javax.swing.JTextField();
         btnActualizarCompra = new javax.swing.JButton();
+        txthoracompra = new javax.swing.JTextField();
+        txtcodempleado = new javax.swing.JTextField();
+        txttipopago = new javax.swing.JTextField();
+        txtcodproducto = new javax.swing.JTextField();
+        txtfechacompra = new javax.swing.JTextField();
+        txtcodcliente = new javax.swing.JTextField();
+        txtcantidadcompra = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,69 +69,6 @@ public class ADM_ActualizarCompra extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnRetrocederAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, 50));
 
-        txtcodcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodcliente.setBorder(null);
-        txtcodcliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodclienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 210, 40));
-
-        txtcodempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodempleado.setBorder(null);
-        txtcodempleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodempleadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 210, 40));
-
-        txtfechacompra.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtfechacompra.setBorder(null);
-        txtfechacompra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtfechacompraActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtfechacompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 210, 40));
-
-        txthoracompra.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txthoracompra.setBorder(null);
-        txthoracompra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txthoracompraActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txthoracompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, 210, 40));
-
-        txtcodproducto.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcodproducto.setBorder(null);
-        txtcodproducto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcodproductoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcodproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 210, 40));
-
-        txttipopago.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txttipopago.setBorder(null);
-        txttipopago.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txttipopagoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txttipopago, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 210, 40));
-
-        txtcantidadcompra.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        txtcantidadcompra.setBorder(null);
-        txtcantidadcompra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcantidadcompraActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtcantidadcompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 210, 40));
-
         btnActualizarCompra.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizarCompra.setFont(new java.awt.Font("Monospac821 BT", 0, 24)); // NOI18N
         btnActualizarCompra.setText("Actualizar");
@@ -127,7 +80,70 @@ public class ADM_ActualizarCompra extends javax.swing.JInternalFrame {
         });
         getContentPane().add(btnActualizarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 160, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/cliente.png"))); // NOI18N
+        txthoracompra.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txthoracompra.setBorder(null);
+        txthoracompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txthoracompraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txthoracompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 310, 40));
+
+        txtcodempleado.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcodempleado.setBorder(null);
+        txtcodempleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodempleadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcodempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 310, 40));
+
+        txttipopago.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txttipopago.setBorder(null);
+        txttipopago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttipopagoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txttipopago, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 290, 310, 40));
+
+        txtcodproducto.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcodproducto.setBorder(null);
+        txtcodproducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodproductoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcodproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 310, 40));
+
+        txtfechacompra.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtfechacompra.setBorder(null);
+        txtfechacompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfechacompraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtfechacompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 310, 40));
+
+        txtcodcliente.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcodcliente.setBorder(null);
+        txtcodcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodclienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcodcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 310, 40));
+
+        txtcantidadcompra.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        txtcantidadcompra.setBorder(null);
+        txtcantidadcompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcantidadcompraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtcantidadcompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 310, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ACTUALIZARCOMPRA.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -30, 1460, 690));
 
         pack();
@@ -137,37 +153,37 @@ public class ADM_ActualizarCompra extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRetrocederAdminActionPerformed
 
-    private void txtcodclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodclienteActionPerformed
+    private void btnActualizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarCompraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodclienteActionPerformed
-
-    private void txtcodempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodempleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodempleadoActionPerformed
-
-    private void txtfechacompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechacompraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtfechacompraActionPerformed
+    }//GEN-LAST:event_btnActualizarCompraActionPerformed
 
     private void txthoracompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txthoracompraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txthoracompraActionPerformed
 
-    private void txtcodproductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodproductoActionPerformed
+    private void txtcodempleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodempleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodproductoActionPerformed
+    }//GEN-LAST:event_txtcodempleadoActionPerformed
 
     private void txttipopagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttipopagoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txttipopagoActionPerformed
 
+    private void txtcodproductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodproductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodproductoActionPerformed
+
+    private void txtfechacompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfechacompraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfechacompraActionPerformed
+
+    private void txtcodclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodclienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodclienteActionPerformed
+
     private void txtcantidadcompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcantidadcompraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcantidadcompraActionPerformed
-
-    private void btnActualizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarCompraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarCompraActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
